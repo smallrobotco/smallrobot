@@ -1,0 +1,13 @@
+body.index {
+  .hero-wrapper {
+    background-color: $pink;
+
+    .container {
+      background-image: url("/img/hero.jpg");
+      height: 850px;
+      background-position: left top;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+}
