@@ -1,9 +1,9 @@
 /* eslint-env node */
 
 module.exports = function(environment) {
-  var ENV = {
+  let ENV = {
     modulePrefix: 'smallrobotco',
-    environment: environment,
+    environment,
     rootURL: '/',
     locationType: 'router-scroll',
     historySupportMiddleware: true,

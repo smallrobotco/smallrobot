@@ -1,13 +1,56 @@
 body.index {
   .hero-wrapper {
     background-color: $pink;
-
-    .container {
-      background-image: url("/img/hero.jpg");
+    background-image: url("/img/hero.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    .container .row{
       height: 850px;
-      background-position: left top;
-      background-repeat: no-repeat;
-      background-size: cover;
+
+      .hero-col {
+        @include media-breakpoint-up(md) { 
+          background-color: rgba($black, .3);
+        }
+      }
+
+      .hero-block {
+        background-color: rgba($black, .3);
+
+        @include media-breakpoint-up(md) { 
+          background-color: transparent;
+        }
+
+        svg.logo {
+          display: none;
+          max-width: 250px;
+          margin: 0 auto 5rem;
+          padding: 1.5rem;
+        }
+        .hero-text {
+          color: #fff;
+          font-size: 18px;
+          line-height: 2.2rem;
+          // margin-bottom: 4.5rem;
+          // background-color: rgba($black, .1);
+          padding: 1.5rem;
+
+          // b,
+          // strong {
+          //   color: $green;
+          // }
+        }
+        p.byline {
+          border-top: 1px solid $gray;
+          font-family: $font-family-sans-serif;
+          font-size: $font-size-sm;
+          line-height: 1.1rem;
+          font-weight: 300;
+          color: #fff;
+          padding-top: 1rem;
+        }
+      }
     }
   }
 }
