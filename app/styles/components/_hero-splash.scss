@@ -1,25 +1,29 @@
 body.index {
   .hero-wrapper {
     background-color: $pink;
-    background-image: url("/img/hero.jpg");
+    background-image: url("/img/IMG_0289.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    
+
     .container .row{
-      height: 850px;
+      height: 350px;
+
+      @include media-breakpoint-up(md) {
+        height: calc(100vh - 37px);
+      }
 
       .hero-col {
-        @include media-breakpoint-up(md) { 
-          background-color: rgba($black, .3);
+        @include media-breakpoint-up(md) {
+          // background-color: rgba($black, .3);
         }
       }
 
       .hero-block {
-        background-color: rgba($black, .3);
+        background-color: rgba($black, .5);
 
-        @include media-breakpoint-up(md) { 
-          background-color: transparent;
+        @include media-breakpoint-up(md) {
+          // background-color: transparent;
         }
 
         svg.logo {
@@ -30,16 +34,24 @@ body.index {
         }
         .hero-text {
           color: #fff;
-          font-size: 18px;
-          line-height: 2.2rem;
+          font-size: 16px;
+          line-height: 1.4rem;
           // margin-bottom: 4.5rem;
           // background-color: rgba($black, .1);
           padding: 1.5rem;
 
-          // b,
-          // strong {
-          //   color: $green;
-          // }
+          @include media-breakpoint-up(sm) {
+            line-height: 1.6rem;
+          }
+          @include media-breakpoint-up(md) {
+            font-size: 18px;
+          }
+          @include media-breakpoint-up(lg) {
+            line-height: 1.8rem;
+          }
+          @include media-breakpoint-up(xl) {
+            line-height: 2.1rem;
+          }
         }
         p.byline {
           border-top: 1px solid $gray;

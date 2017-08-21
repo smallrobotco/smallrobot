@@ -8,6 +8,11 @@ const Router = Ember.Router.extend(RouterScroll, {
 });
 
 Router.map(function() {
+  // this.route('cardstack', { path: '/', resetNamespace: true }, function() {
+  //     this.route('default-content', { path : '/:slug' });
+  //     this.route('new-content', { path : '/:type/new' });
+  //     this.route('content', { path : '/:type/:slug' });
+  // });
   this.route('development', function() {
     this.route('app');
     this.route('drupal');
