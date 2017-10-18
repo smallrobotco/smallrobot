@@ -1,22 +1,28 @@
 .main-nav {
-  background-color: $black;
-  color: $white;
+  background-color: $white;
+  color: $black;
   font-family: 'Open Sans';
   font-weight: 400;
   text-transform: uppercase;
   font-size: 17px;
   line-height: 17px;
 
+
+
   .site-info {
-    color: $white;
-    padding: 3px 0;
+    @extend .d-flex;
+    @extend .justify-content-start;
+    @extend .align-items-center;
+    height: 70px;
+    color: $black;
+
     a {
-      color: $white;
+      color: $black;
       font-size: 26px;
       line-height: 26px;
       padding: 2px 0;
-      display: flex;
       font-weight: 300;
+      display: flex;
 
       svg {
         height: 26px;
@@ -30,12 +36,12 @@
       &:focus,
       &:active {
         text-decoration: none;
-        color: $white;
+        color: $black;
 
         svg {
 
         .a620be6a-c613-4032-81cc-7dcf5de97f84{
-          fill: $white;
+          fill: $black;
         }
       }
       }
@@ -43,10 +49,12 @@
   }
 
   nav {
-    text-align: right;
-    
+    @extend .d-flex;
+    @extend .justify-content-end;
+    @extend .align-items-center;
+
     a {
-      color: $white;
+      color: $gray-800;
       padding: 10px 15px;
       display: inline-flex;
 
@@ -58,6 +66,6 @@
         color: $green;
       }
     }
-    
+
   }
 }

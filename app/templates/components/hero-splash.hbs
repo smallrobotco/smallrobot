@@ -1,14 +1,16 @@
-<div class="hero-wrapper">
-  <div class="container">
-    <div class="row justify-content-end">
-      <div class="d-flex align-items-end align-items-md-center col-md-5 hero-col">
-        <div class="hero-block">
-          <div class="hero-text">
-            <h2>The Web <b>Application</b></h2>
-            <p class="blurb">
-              We help you, by developing very usable browser based applications, for unique uses. Using Drupal for your backend API, we give your team tools that provide easy content administration.
-            </p>
-            <p class="byline">Kiosk @ Telus World of Science - Vancouver, BC </p>
+<div class="hero-wrapper {{page.heroColor}}">
+  <div class='overlay'>
+    <div class="container">
+      <div class="row justify-content-end">
+        <div class="d-flex align-items-end align-items-md-center col-md-5 hero-col">
+          <div class="hero-block">
+            <div class="hero-text">
+              <h2>{{{page.heroTitle.value}}}</h2>
+              <p class="blurb">
+                {{{page.heroBlurb.value}}}
+              </p>
+              <p class="byline">{{page.heroByline}}</p>
+            </div>
           </div>
         </div>
       </div>

@@ -1,16 +1,54 @@
-body.index {
-  .hero-wrapper {
-    background-color: $pink;
+.hero-splash {
+
+  &.home .hero-wrapper{
     background-image: url("/img/IMG_0289.jpg");
+  }
+
+  .hero-wrapper {
+    background-color: $white;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+
+
+    &.black {
+      .overlay {
+        background-color: rgba($black, 0.4);
+      }
+    }
+    &.gray {
+      .overlay {
+        background-color: rgba($gray-900, 0.4);
+      }
+    }
+    &.green {
+      .overlay {
+        background-color: rgba($green, 0.4);
+      }
+    }
+    &.red {
+      .overlay {
+        background-color: rgba($red, 0.4);
+      }
+    }
+    &.pink {
+      .overlay {
+        background-color: rgba($pink, 0.4);
+      }
+    }
+    &.blue {
+      .overlay {
+        background-color: rgba($blue, 0.4);
+      }
+    }
 
     .container .row{
       height: 350px;
 
       @include media-breakpoint-up(md) {
+        min-height: 300px;
         height: calc(100vh - 37px);
+        max-height: 900px;
       }
 
       .hero-col {
@@ -20,7 +58,7 @@ body.index {
       }
 
       .hero-block {
-        background-color: rgba($black, .5);
+        // background-color: rgba($green, .5);
 
         @include media-breakpoint-up(md) {
           // background-color: transparent;
@@ -33,7 +71,7 @@ body.index {
           padding: 1.5rem;
         }
         .hero-text {
-          color: #fff;
+          color: $white;
           font-size: 16px;
           line-height: 1.4rem;
           // margin-bottom: 4.5rem;
@@ -54,7 +92,7 @@ body.index {
           }
         }
         p.byline {
-          border-top: 1px solid $gray;
+          border-top: 1px solid $gray-400;
           font-family: $font-family-sans-serif;
           font-size: $font-size-sm;
           line-height: 1.1rem;

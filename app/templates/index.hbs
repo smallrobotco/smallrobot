@@ -1,7 +1,5 @@
-{{hero-splash page=home}}
-<div class="content-wrapper">
-  <div class="container">
-    
-  </div>
-</div>
+{{hero-splash page=page class="home"}}
 
+{{#each page.section as |section|}}
+  {{page-section section=section}}
+{{/each}}

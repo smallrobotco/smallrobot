@@ -6,6 +6,8 @@ module.exports = function(environment) {
     modulePrefix: 'smallrobotco',
     environment,
     rootURL: '/',
+    host: 'https://api.smallrobot.co', //drupal
+    namespace: 'api',
     locationType: 'router-scroll',
     historySupportMiddleware: true,
     EmberENV: {
@@ -45,7 +47,6 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
   }
 
   return ENV;
