@@ -6,7 +6,7 @@ import ENV from '../config/environment';
 export default DS.Model.extend({
   filename: DS.attr('string'),
   url: DS.attr('string'),
-  image: DS.hasMany('image', {inverse: 'imageFile'}),
+  image: DS.hasMany('image', {inverse: 'image'}),
   thumbnail: DS.hasMany('image', {inverse: 'thumbnail'}),
 
   fullUrl: computed('url', function() {

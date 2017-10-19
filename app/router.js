@@ -11,27 +11,27 @@ Router.map(function() {
   this.route('index', { path: '/', resetNamespace: true }, function() {
     this.route('default-content', { path : '/:post_slug' });
   });
-  // this.route('development', function() {
-  //   this.route('app');
-  //   this.route('drupal');
-  // });
-  // this.route('consulting', function() {
-  //   this.route('web');
-  // });
-  // this.route('support', function() {
-  //   this.route('drupal');
-  // });
-  // this.route('work', function() {
-  //   this.route('stories', function() {
-  //     this.route('story');
-  //   });
-  // });
-  // this.route('blog', function() {
-  //   this.route('post');
-  // });
-  // this.route('about');
+  this.route('development', function() {
+    this.route('app');
+    this.route('drupal');
+  });
+  this.route('consulting', function() {
+    this.route('web');
+  });
+  this.route('support', function() {
+    this.route('drupal');
+  });
+  this.route('work', function() {
+    this.route('stories', function() {
+      this.route('story');
+    });
+  });
+  this.route('blog', function() {
+    this.route('post');
+  });
+  this.route('about');
   this.route('loading');
-  this.route('notfound', {path: '*path'});
+  this.route('notfound', { path: '*path' });
 });
 
 export default Router;

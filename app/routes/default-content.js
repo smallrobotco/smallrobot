@@ -1,5 +1,5 @@
 import Route from '@ember/routing/route';
-import { computed } from '@ember/object';
+// import { computed } from '@ember/object';
 import RSVP from 'rsvp';
 
 
@@ -21,8 +21,8 @@ export default Route.extend({
     return {
       page_slug: page.get('slug')
     };
-  },
-  setupController(controller, models) {
-    controller.set('page', models.page);
   }
+  // setupController(controller, models) {
+  //   controller.set('page', models.page);
+  // }
 });

@@ -1,7 +1,9 @@
 <div class='page-element'>
-  {{#if column.text}}
-    {{column.text.body.value}}
-  {{else if condition2}}
-
+  {{#if element.body.value }}
+    <div class='text'>{{element.body.value}}</div>
+  {{else if element.image }}
+    <div class='image'>
+      <img src='{{element.image.fullUrl}}' alt='' srcset=''>
+    </div>
   {{/if}}
 </div>

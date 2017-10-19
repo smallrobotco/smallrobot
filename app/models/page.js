@@ -10,6 +10,6 @@ export default DS.Model.extend({
   heroBlurb: DS.attr(''),
   heroByline: DS.attr('string'),
   heroColor: DS.attr('string'),
-  heroBackground: DS.belongsTo('image'),
+  heroBackground: DS.belongsTo('file'),
   section: DS.hasMany('section'),
 });
