@@ -1,16 +1,16 @@
 .hero-splash {
 
-  &.home .hero-wrapper{
-    background-image: url("/img/IMG_0289.jpg");
-  }
-
   .hero-wrapper {
-    background-color: $white;
+    background-color: $gray-700;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
 
-
+    &.none {
+      .overlay {
+        background-color: transparent;
+      }
+    }
     &.black {
       .overlay {
         background-color: rgba($black, 0.4);

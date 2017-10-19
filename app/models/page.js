@@ -5,7 +5,7 @@ export default DS.Model.extend({
   created: DS.attr('string'),
   updated: DS.attr('string'),
   status: DS.attr('boolean'),
-  path: DS.attr(''),
+  slug: DS.attr('string'),
   heroTitle: DS.attr(''),
   heroBlurb: DS.attr(''),
   heroByline: DS.attr('string'),

@@ -1,8 +1,25 @@
 {{angled-divider}}
 <div class="content-wrapper {{section.layout}}">
   <div class="container">
+
     {{#each section.column as |column|}}
-      {{!-- {{page-elememt column=column}} --}}
+
+      <div class='column'>
+
+      {{#each column.element as |element|}}
+
+        {{#if element.body.value }}
+          <div class='text'>{{element.body.value}}</div>
+        {{else if element.image }}
+          <div class='image'>
+            <img src='{{element.image.fullUrl}}' alt='' srcset=''>
+          </div>
+        {{/if}}
+
+      {{/each}}
+
+      </div>
+
     {{/each}}
   </div>
 </div>
