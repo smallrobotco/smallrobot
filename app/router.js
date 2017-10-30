@@ -8,18 +8,8 @@ const Router = EmberRouter.extend(RouterScroll, {
 });
 
 Router.map(function() {
-  this.route('index', { path: '/', resetNamespace: true }, function() {
-    this.route('default-content', { path : '/:post_slug' });
-  });
-  this.route('development', function() {
-    this.route('app');
-    this.route('drupal');
-  });
-  this.route('consulting', function() {
-    this.route('web');
-  });
-  this.route('support', function() {
-    this.route('drupal');
+  this.route('index', { path: '/'}, function() {
+    this.route('page', { path: ':slug'});
   });
   this.route('work', function() {
     this.route('stories', function() {
@@ -29,7 +19,6 @@ Router.map(function() {
   this.route('blog', function() {
     this.route('post');
   });
-  this.route('about');
   this.route('loading');
   this.route('notfound', { path: '*path' });
 });
