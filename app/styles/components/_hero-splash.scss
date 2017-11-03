@@ -1,61 +1,152 @@
 .hero-splash {
 
   .hero-wrapper {
-    background-color: $gray-700;
+    background-color: $gray-200;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
 
-    &.none {
-      .overlay {
-        background-color: transparent;
-      }
+    &.background-black {
+      background-color: $black;
     }
-    &.black {
-      .overlay {
+    &.background-graydark {
+      background-color: $gray-900;
+    }
+    &.background-gray {
+      background-color: $gray-600;
+    }
+    &.background-graylight {
+      background-color: $gray-200;
+    }
+    &.background-green {
+      background-color: $green;
+    }
+    &.background-red {
+      background-color: $red;
+    }
+    &.background-pink {
+      background-color: $pink;
+    }
+    &.background-blue {
+      background-color: $blue;
+    }
+
+    .overlay {
+      background-color: transparent;
+
+      &.overlay-black {
         background-color: rgba($black, 0.4);
       }
-    }
-    &.gray {
-      .overlay {
+      &.overlay-graydark {
         background-color: rgba($gray-900, 0.4);
       }
-    }
-    &.green {
-      .overlay {
+      &.overlay-gray {
+        background-color: rgba($gray-600, 0.4);
+      }
+      &.overlay-green {
         background-color: rgba($green, 0.4);
       }
-    }
-    &.red {
-      .overlay {
+      &.overlay-red {
         background-color: rgba($red, 0.4);
       }
-    }
-    &.pink {
-      .overlay {
+      &.overlay-pink {
         background-color: rgba($pink, 0.4);
       }
-    }
-    &.blue {
-      .overlay {
+      &.overlay-blue {
         background-color: rgba($blue, 0.4);
       }
     }
 
-    .container .row{
-      height: 350px;
+    &.hero-left,
+    &.hero-center,
+    &.hero-right {
 
-      @include media-breakpoint-up(md) {
-        min-height: 300px;
-        height: calc(100vh - 37px);
-        max-height: 900px;
+      .container .row {
+        height: 350px;
+
+        @include media-breakpoint-up(md) {
+          min-height: 400px;
+          height: calc(100vh - 37px);
+          max-height: 450px;
+        }
+
+        @include media-breakpoint-up(lg) {
+          min-height: 400px;
+          height: calc(100vh - 37px);
+          max-height: 450px;
+        }
       }
+    }
 
+    &.hero-left-tall,
+    &.hero-center-tall,
+    &.hero-right-tall {
+
+      .container .row {
+        height: 350px;
+
+        @include media-breakpoint-up(md) {
+          min-height: 400px;
+          height: calc(100vh - 37px);
+          max-height: 650px;
+        }
+
+        @include media-breakpoint-up(lg) {
+          min-height: 400px;
+          height: calc(100vh - 37px);
+          max-height: 800px;
+        }
+      }
+    }
+
+    &.hero-left,
+    &.hero-left-tall {
+      .container .row {
+        @extend .justify-content-start;
+      }
+    }
+
+    &.hero-center,
+    &.hero-center-tall {
+      .container .row {
+        @extend .justify-content-center;
+      }
+    }
+
+    &.hero-right,
+    &.hero-right-tall {
+      .container .row {
+        @extend .justify-content-end;
+      }
+    }
+
+    .container .row{
+      // height: 350px;
+
+      // @include media-breakpoint-up(md) {
+      //   min-height: 400px;
+      //   height: calc(100vh - 37px);
+      //   max-height: 650px;
+      // }
+
+      // @include media-breakpoint-up(lg) {
+      //   min-height: 400px;
+      //   height: calc(100vh - 37px);
+      //   max-height: 800px;
+      // }
       .hero-col {
+        @extend .d-flex;
+        @extend .align-items-end;
+        @extend .align-items-md-center;
+        @extend .col-md-7;
+        @extend .col-lg-6;
+        @extend .col-xl-5;
+
         @include media-breakpoint-up(md) {
           // background-color: rgba($black, .3);
         }
       }
+
 
       .hero-block {
         // background-color: rgba($green, .5);

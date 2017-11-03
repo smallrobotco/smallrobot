@@ -9,7 +9,7 @@ const Router = EmberRouter.extend(RouterScroll, {
 
 Router.map(function() {
   this.route('index', { path: '/'}, function() {
-    this.route('page', { path: ':slug'});
+    // this.route('page', { path: ':slug'});
   });
   this.route('work', function() {
     this.route('stories', function() {
@@ -19,6 +19,11 @@ Router.map(function() {
   this.route('blog', function() {
     this.route('post');
   });
+  this.route('about');
+  this.route('consulting');
+  this.route('development');
+  this.route('support');
+
   this.route('loading');
   this.route('notfound', { path: '*path' });
 });

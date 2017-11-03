@@ -1,0 +1,41 @@
+footer {
+  background: $black;
+  color: $gray-100;
+  padding: 1.5em 0;
+
+  nav {
+    font-family: 'Open Sans';
+    font-weight: 300;
+    text-transform: none;
+    font-size: 16px;
+    line-height: 1.5rem;
+
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        margin: 0;
+      }
+
+      a {
+        color: $gray-100;
+        display: block;
+
+
+        &:hover,
+        &:focus,
+        &:active {
+          text-decoration: none;
+          color: $green;
+        }
+      }
+    }
+
+
+
+  }
+
+}

@@ -1,8 +1,10 @@
 <div class='page-element'>
-  {{#if element.body.value }}
-    <div class='text'>{{element.body.value}}</div>
+  {{#if element.body }}
+    <div class='element-text'>
+      {{element.text}}
+      </div>
   {{else if element.image }}
-    <div class='image'>
+    <div class='element-image'>
       <img src='{{element.image.fullUrl}}' alt='' srcset=''>
     </div>
   {{/if}}

@@ -1,6 +1,6 @@
-.page-section {
+.page-section .outer{
   background-color: #fff;
-  color: #424242;
+  color: $black;
   position: relative;
   font-size: .875rem;
   padding: 15vw 0 20vw;
@@ -15,6 +15,121 @@
     padding: 5vw 0 9vw;
     font-size: 1rem;
   }
+
+  >.ember-view .angled-divider .angled-divider__bottom,
+  >.ember-view .angled-divider .angled-divider__bottom {
+    fill: $white;
+  }
+
+  &.section-background-black {
+    background: $black;
+    color: $gray-400;
+
+    >.ember-view .angled-divider .angled-divider__bottom,
+    >.ember-view .angled-divider .angled-divider__bottom {
+      fill: $black;
+    }
+  } //black
+
+  &.section-background-graydark{
+    background: $gray-900;
+    color: $gray-200;
+
+    >.ember-view .angled-divider .angled-divider__bottom,
+    >.ember-view .angled-divider .angled-divider__bottom {
+      fill: $gray-900;
+    }
+  } //graydark
+
+  &.section-background-gray{
+    background: $gray-600;
+    color: $gray-100;
+
+    >.ember-view .angled-divider .angled-divider__bottom,
+    >.ember-view .angled-divider .angled-divider__bottom {
+      fill: $gray-600;
+    }
+  } //gray
+
+  &.section-background-graylight {
+    background: $gray-200;
+    color: $gray-900;
+
+    >.ember-view .angled-divider .angled-divider__bottom,
+    >.ember-view .angled-divider .angled-divider__bottom {
+      fill: $gray-200;
+    }
+  } //graylight
+
+  &.section-background-blue {
+    background: $blue-dark;
+    color: $gray-200;
+
+    >.ember-view .angled-divider .angled-divider__bottom,
+    >.ember-view .angled-divider .angled-divider__bottom {
+      fill: $blue-dark;
+    }
+  }
+
+  &.section-background-green {
+    background: $green;
+    color: $black;
+
+    >.ember-view .angled-divider .angled-divider__bottom,
+    >.ember-view .angled-divider .angled-divider__bottom {
+      fill: $green;
+    }
+  }
+
+  &.section-background-pink {
+    background: $pink;
+    color: $gray-100;
+
+    >.ember-view .angled-divider .angled-divider__bottom,
+    >.ember-view .angled-divider .angled-divider__bottom {
+      fill: $pink;
+    }
+  }
+
+  &.section-background-red {
+    background: $red;
+    color: $gray-100;
+
+    >.ember-view .angled-divider .angled-divider__bottom,
+    >.ember-view .angled-divider .angled-divider__bottom {
+      fill: $red;
+    }
+  }
+
+  .columns-1,
+  .columns-2,
+  .columns-3,
+  .columns-4 {
+    .column {
+      padding-bottom: 1.5rem;
+    }
+  }
+
+  .columns-1 {
+    .column {
+      @extend .col-12;
+    }
+  }
+  .columns-2 {
+    .column {
+      @extend .col-6;
+    }
+  }
+  .columns-3 {
+    .column {
+      @extend .col-4;
+    }
+  }
+  .columns-4 {
+    .column {
+      @extend .col-3;
+    }
+  }
 }
 
 .page-section--muted {
@@ -22,31 +137,3 @@
   color: #607d8b;
 }
 
-.page-section {
-  background: $white;
-
-  >.ember-view .angled-divider .angled-divider__bottom,
-  >.ember-view .angled-divider .angled-divider__bottom {
-    fill: $white;
-  }
-
-  &.green {
-    background: $green;
-    color: $white;
-
-    >.ember-view .angled-divider .angled-divider__bottom,
-    >.ember-view .angled-divider .angled-divider__bottom {
-      fill: $green;
-    }
-  } //green
-
-  &.dark {
-    background: $black;
-    color: $gray-100;
-
-    >.ember-view .angled-divider .angled-divider__bottom,
-    >.ember-view .angled-divider .angled-divider__bottom {
-      fill: $black;
-    }
-  }
-}

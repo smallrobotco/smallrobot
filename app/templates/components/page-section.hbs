@@ -1,25 +1,26 @@
-{{angled-divider}}
-<div class="content-wrapper {{section.layout}}">
-  <div class="container">
+<div class='outer {{section.background}}'>
+  {{angled-divider}}
+  <div class="content-wrapper {{section.layout}}">
+    <div class="container">
+      <div class='row'>
 
-    {{#each section.column as |column|}}
+      {{#each section.column as |column|}}
+        <div class='column'>
 
-      <div class='column'>
+        {{#each column.element as |element|}}
+          {{#if element.body.value }}
+            <div class='text'>{{element.body.value}}</div>
+          {{else if element.image }}
+            <div class='image'>
+              <img src='{{element.image.fullUrl}}' alt='' srcset=''>
+            </div>
+          {{/if}}
+        {{/each}}
 
-      {{#each column.element as |element|}}
-
-        {{#if element.body.value }}
-          <div class='text'>{{element.body.value}}</div>
-        {{else if element.image }}
-          <div class='image'>
-            <img src='{{element.image.fullUrl}}' alt='' srcset=''>
-          </div>
-        {{/if}}
-
+        </div>
       {{/each}}
 
       </div>
-
-    {{/each}}
+    </div>
   </div>
 </div>
