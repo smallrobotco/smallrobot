@@ -1,26 +1,35 @@
 footer {
   background: $black;
-  color: $gray-100;
+  color: $gray-400;
   padding: 3.5em 0;
   font-family: 'Open Sans';
   font-weight: 300;
   font-size: 16px;
-  line-height: 1.5rem;
+  line-height: 1.5em;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    color: $white;
+  }
 
   a {
-    color: $gray-600;
-    display: block;
-
+    color: $green;
+    text-decoration: underline;
 
     &:hover,
     &.active {
-      text-decoration: none;
-      color: $green;
+      text-decoration: underline;
+      color: $white;
     }
   }
 
   nav {
     color: $gray-100;
+    font-size: 16px;
+    line-height: 1.25em;
 
     ul {
       list-style: none;
@@ -34,14 +43,15 @@ footer {
       }
 
       a {
-        color: $gray-600;
+        color: $pink;
         display: block;
-
+        text-decoration: none;
+        padding: 3px 0;
 
         &:hover,
         &.active {
           text-decoration: none;
-          color: $green;
+          color: $gray-200;
         }
       }
     }
