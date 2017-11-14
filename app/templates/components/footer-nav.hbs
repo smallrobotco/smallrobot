@@ -1,34 +1,49 @@
 <div class='row'>
-  <nav class="col-3">
+  <div class="col-6 col-md-2">
+    <h4>Company Info</h4>
+    <nav>
+      <ul>
+        <li>
+          {{#link-to "about"}}About Us{{/link-to}}
+        </li>
+        <li>
+          {{#link-to "contact"}}Contact Us{{/link-to}}
+        </li>
+        <li>
+        {{#link-to "work"}}Our Work{{/link-to}}
+      </li>
+        <li>
+          {{#link-to "blog"}}Small Robot Blog{{/link-to}}
+        </li>
+
+      </ul>
+    </nav>
+  </div>
+  <div class="col-6 col-md-2">
+  <h4>Servicess</h4>
+  <nav>
     <ul>
       <li>
-        {{#link-to "consulting" tag="li"}}Consulting{{/link-to}}
-      </li>
-      <li>
-        {{#link-to "development"}}Development{{/link-to}}
-      </li>
-      <li>
-        {{#link-to "support"}}Support{{/link-to}}
-      </li>
-      <li>
-        {{#link-to "about"}}About{{/link-to}}
-      </li>
+          {{#link-to "consulting"}}Consulting{{/link-to}}
+        </li>
+        <li>
+          {{#link-to "development"}}Development{{/link-to}}
+        </li>
+        <li>
+          {{#link-to "support"}}Support{{/link-to}}
+        </li>
+        <li>
+          {{#link-to "pricing"}}Pricing{{/link-to}}
+        </li>
     </ul>
   </nav>
-  <nav class="col-3">
-    <ul>
-      <li>
-        {{#link-to "consulting" tag="li"}}Consulting{{/link-to}}
-      </li>
-      <li>
-        {{#link-to "development"}}Development{{/link-to}}
-      </li>
-      <li>
-        {{#link-to "support"}}Support{{/link-to}}
-      </li>
-      <li>
-        {{#link-to "about"}}About{{/link-to}}
-      </li>
-    </ul>
-  </nav>
+  </div>
+  <div class="col-6 col-md-6">
+
+  </div>
+  <div class='col-6 col-md-2'>
+    <b>Small Robot Corp.</b><br>
+    Chilliwack, BC, Canada<br>
+    +1-604-764-6269
+  </div>
 </div>

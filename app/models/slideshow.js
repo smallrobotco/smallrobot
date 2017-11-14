@@ -2,5 +2,8 @@ import DS from 'ember-data';
 
 export default DS.Model.extend({
   created: DS.attr('string'),
-  // element: DS.belongsTo('element'),
+  style: DS.attr('string'),
+  count: DS.attr('number'),
+  slide: DS.hasMany('slide'),
+  element: DS.belongsTo('element')
 });

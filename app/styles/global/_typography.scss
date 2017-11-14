@@ -15,11 +15,48 @@ h3 {
 
 }
 
-p {
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
   display: block;
 
-  .text-align-center {
+  &.text-align-center {
     text-align: center;
   }
 }
 
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+span {
+  &.black {
+    color: $black !important;
+  }
+  &.graydark {
+    color: $gray-900 !important;
+  }
+  &.gray {
+    color: $gray-600 !important;
+  }
+  &.graylight {
+    color: $gray-200 !important;
+  }
+  &.green {
+    color: $green !important;
+  }
+  &.red {
+    color: $red !important;
+  }
+  &.pink {
+    color: $pink !important;
+  }
+  &.blue {
+    color: $blue !important;
+  }
+}

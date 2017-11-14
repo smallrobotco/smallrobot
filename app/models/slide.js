@@ -1,7 +1,7 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
+  body: DS.attr(''),
   image: DS.belongsTo('file'),
-  thumbnail: DS.belongsTo('file'),
-  element: DS.belongsTo('element'),
+  slideshow: DS.belongsTo('slideshow'),
 });

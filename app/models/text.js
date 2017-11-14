@@ -7,7 +7,7 @@ export default DS.Model.extend({
   body: DS.attr(''),
   element: DS.belongsTo('element'),
 
-  text: computed('body', function () {
-    return new htmlSafe(this.get('body.value'));
-  })
+  // text: computed('body', function () {
+  //   return new htmlSafe(this.get('body.value'));
+  // })
 });

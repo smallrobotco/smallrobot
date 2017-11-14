@@ -1,6 +1,9 @@
 body {
 }
 
+.container-fluid {
+  max-width: 1140px;
+}
 .row {
   @include make-row();
 }

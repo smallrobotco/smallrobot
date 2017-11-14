@@ -28,7 +28,7 @@
 
 
 .angled-divider--mirrored,
-.page-section:nth-child(even)>.ember-view .angled-divider {
+.page-section:nth-child(even) .ember-view .angled-divider {
   -webkit-filter: FlipH;
   filter: FlipH;
   height: 2vw;

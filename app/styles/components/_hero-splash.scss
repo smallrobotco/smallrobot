@@ -1,34 +1,42 @@
 .hero-splash {
 
   .hero-wrapper {
-    background-color: $gray-200;
+    background-color: transparent;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    color: $gray-900;
 
     &.background-black {
       background-color: $black;
+      color: $white;
     }
     &.background-graydark {
       background-color: $gray-900;
+      color: $white;
     }
     &.background-gray {
       background-color: $gray-600;
+      color: $white;
     }
     &.background-graylight {
       background-color: $gray-200;
     }
     &.background-green {
       background-color: $green;
+      color: $white;
     }
     &.background-red {
       background-color: $red;
+      color: $white;
     }
     &.background-pink {
       background-color: $pink;
+      color: $white;
     }
     &.background-blue {
       background-color: $blue;
+      color: $white;
     }
 
     .overlay {
@@ -42,6 +50,9 @@
       }
       &.overlay-gray {
         background-color: rgba($gray-600, 0.4);
+      }
+      &.overlay-graylight {
+        background-color: rgba($gray-200, 0.4);
       }
       &.overlay-green {
         background-color: rgba($green, 0.4);
@@ -61,19 +72,19 @@
     &.hero-center,
     &.hero-right {
 
-      .container .row {
-        height: 350px;
+      .container-fluid .row {
+        height: 300px;
 
         @include media-breakpoint-up(md) {
-          min-height: 400px;
+          min-height: 450px;
           height: calc(100vh - 37px);
-          max-height: 450px;
+          max-height: 500px;
         }
 
         @include media-breakpoint-up(lg) {
-          min-height: 400px;
+          min-height: 450px;
           height: calc(100vh - 37px);
-          max-height: 450px;
+          max-height: 500px;
         }
       }
     }
@@ -82,58 +93,46 @@
     &.hero-center-tall,
     &.hero-right-tall {
 
-      .container .row {
-        height: 350px;
+      .container-fluid .row {
+        height: 500px;
 
         @include media-breakpoint-up(md) {
-          min-height: 400px;
+          min-height: 450px;
           height: calc(100vh - 37px);
-          max-height: 650px;
+          max-height: 700px;
         }
 
         @include media-breakpoint-up(lg) {
-          min-height: 400px;
+          min-height: 450px;
           height: calc(100vh - 37px);
-          max-height: 800px;
+          max-height: 850px;
         }
       }
     }
 
     &.hero-left,
     &.hero-left-tall {
-      .container .row {
+      .container-fluid .row {
         @extend .justify-content-start;
       }
     }
 
     &.hero-center,
     &.hero-center-tall {
-      .container .row {
+      .container-fluid .row {
         @extend .justify-content-center;
       }
     }
 
     &.hero-right,
     &.hero-right-tall {
-      .container .row {
+      .container-fluid .row {
         @extend .justify-content-end;
       }
     }
 
-    .container .row{
-      // height: 350px;
+    .container-fluid .row{
 
-      // @include media-breakpoint-up(md) {
-      //   min-height: 400px;
-      //   height: calc(100vh - 37px);
-      //   max-height: 650px;
-      // }
-
-      // @include media-breakpoint-up(lg) {
-      //   min-height: 400px;
-      //   height: calc(100vh - 37px);
-      //   max-height: 800px;
-      // }
       .hero-col {
         @extend .d-flex;
         @extend .align-items-end;
@@ -141,19 +140,10 @@
         @extend .col-md-7;
         @extend .col-lg-6;
         @extend .col-xl-5;
-
-        @include media-breakpoint-up(md) {
-          // background-color: rgba($black, .3);
-        }
       }
 
 
       .hero-block {
-        // background-color: rgba($green, .5);
-
-        @include media-breakpoint-up(md) {
-          // background-color: transparent;
-        }
 
         svg.logo {
           display: none;
@@ -162,11 +152,8 @@
           padding: 1.5rem;
         }
         .hero-text {
-          color: $white;
           font-size: 16px;
           line-height: 1.4rem;
-          // margin-bottom: 4.5rem;
-          // background-color: rgba($black, .1);
           padding: 1.5rem;
 
           @include media-breakpoint-up(sm) {
@@ -188,7 +175,6 @@
           font-size: $font-size-sm;
           line-height: 1.1rem;
           font-weight: 300;
-          color: #fff;
           padding-top: 1rem;
         }
       }

@@ -3,17 +3,29 @@
   color: $black;
   position: relative;
   font-size: .875rem;
-  padding: 15vw 0 20vw;
+  padding: 6vw 0;
 
   @include media-breakpoint-up(md) {
-    padding: 6vw 0 10vw;
+    padding: 6vw 0;
   }
   @include media-breakpoint-up(lg) {
     font-size: 1rem;
   }
   @include media-breakpoint-up(xl) {
-    padding: 5vw 0 9vw;
+    padding: 5vw 0;
     font-size: 1rem;
+  }
+  &.divided {
+    padding: 5vw 0;
+
+      @include media-breakpoint-up(md) {
+        padding: 5vw 0;
+      }
+      @include media-breakpoint-up(lg) {
+      }
+      @include media-breakpoint-up(xl) {
+        padding: 4vw 0;
+      }
   }
 
   >.ember-view .angled-divider .angled-divider__bottom,
@@ -31,7 +43,7 @@
     }
   } //black
 
-  &.section-background-graydark{
+  &.section-background-graydark {
     background: $gray-900;
     color: $gray-200;
 
@@ -41,7 +53,7 @@
     }
   } //graydark
 
-  &.section-background-gray{
+  &.section-background-gray {
     background: $gray-600;
     color: $gray-100;
 
@@ -62,12 +74,12 @@
   } //graylight
 
   &.section-background-blue {
-    background: $blue-dark;
+    background: $blue;
     color: $gray-200;
 
     >.ember-view .angled-divider .angled-divider__bottom,
     >.ember-view .angled-divider .angled-divider__bottom {
-      fill: $blue-dark;
+      fill: $blue;
     }
   }
 
@@ -101,33 +113,86 @@
     }
   }
 
+  &.section-background-black,
+  &.section-background-graydark,
+  &.section-background-gray,
+  &.section-background-graylight,
+  &.section-background-blue,
+  &.section-background-green,
+  &.section-background-pink,
+  &.section-background-red {
+
+    .slide-inner {
+      svg {
+        opacity: 0.9;
+        transition-property: opacity;
+        transition-duration: 0.25s;
+        transition-timing-function: linear, ease-in-out;
+
+        &:hover {
+          opacity: 1;
+        }
+
+        path,
+        rect {
+          fill: $white;
+        }
+      }
+    }
+  }
+  &.section-background-graylight,
+  &.section-background-green {
+
+    .slide-inner {
+      svg {
+        path,
+        rect {
+          fill: $gray-900;
+        }
+      }
+    }
+    .swiper-next,
+    .swiper-prev {
+      svg {
+        path,
+        rect {
+          fill: $gray-900;
+        }
+      }
+    }
+  }
+
   .columns-1,
   .columns-2,
   .columns-3,
   .columns-4 {
-    .column {
+    .section-column {
       padding-bottom: 1.5rem;
     }
   }
 
   .columns-1 {
-    .column {
+    .section-column {
       @extend .col-12;
     }
   }
   .columns-2 {
-    .column {
-      @extend .col-6;
+    .section-column {
+      @extend .col-12;
+      @extend .col-sm-6;
     }
   }
   .columns-3 {
-    .column {
-      @extend .col-4;
+    .section-column {
+      @extend .col-12;
+      @extend .col-sm-4;
     }
   }
   .columns-4 {
-    .column {
-      @extend .col-3;
+    .section-column {
+      @extend .col-12;
+      @extend .col-sm-6;
+      @extend .col-lg-3;
     }
   }
 }
@@ -137,3 +202,87 @@
   color: #607d8b;
 }
 
+  .image img{
+    display: block;
+  }
+
+  .swiper-slide {
+    -webkit-flex-shrink: 0;
+    -ms-flex: 0 0 auto;
+    flex-shrink: 0;
+    width: 100%;
+    height: auto;
+    position: relative;
+    cursor: grab;
+
+    .slide-inner {
+      width: 100%;
+
+      .text {
+        // padding: 5px;
+
+        // @include media-breakpoint-up(md) {
+        //   padding: 10px;
+        // }
+
+        // @include media-breakpoint-up(lg) {
+        //   padding: 30px;
+        // }
+      }
+    }
+  }
+  .slideshow {
+    position: relative;
+    margin-top: 20px;
+    padding: 0px 10px;
+
+    @include media-breakpoint-up(md) {
+      margin-top: 40px;
+      padding: 0px 50px;
+    }
+  }
+  .swiper-next,
+  .swiper-prev {
+    z-index: 99;
+    position: absolute;
+    top: 0px;
+    left: -30px;
+    width: 30px;
+    height: 115px;
+    border: none;
+    border-radius: 0;
+    background: none;
+    cursor: pointer;
+    -webkit-transform: none;
+    transform: none;
+    opacity: 0.6;
+    display: none;
+
+    @include media-breakpoint-up(md) {
+      display: block;
+      width: 60px;
+      height: 100%;
+    }
+
+    &.swiper-button-disabled {
+      opacity: 0.2;
+      cursor: unset;
+    }
+
+    svg {
+      position: absolute;
+      left: 20%;
+      top: 0;
+      width: 60%;
+      height: 100%;
+
+        path {
+          fill: #fff;
+        }
+    }
+  }
+
+  .swiper-next {
+    left: auto;
+    right: -30px;
+  }

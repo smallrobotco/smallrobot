@@ -1,3 +1,9 @@
-<div class="container">
-  Not Found. 
-</div>
+{{#if page}}
+  {{hero-splash page=page}}
+
+  {{#each page.section as |section|}}
+    {{page-section section=section}}
+  {{/each}}
+{{else}}
+  {{loading-spinner}}
+{{/if}}

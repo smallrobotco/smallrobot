@@ -6,6 +6,7 @@ export default DS.Model.extend({
   updated: DS.attr('string'),
   status: DS.attr('boolean'),
   slug: DS.attr('string'),
+  heroActive: DS.attr('boolean'),
   heroTitle: DS.attr(''),
   heroBlurb: DS.attr(''),
   heroByline: DS.attr('string'),

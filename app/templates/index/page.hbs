@@ -1,9 +1,0 @@
-{{#if model}}
-  {{hero-splash page=model}}
-
-  {{#each model.section as |section|}}
-    {{page-section section=section}}
-  {{/each}}
-{{else}}
-  <span>Loading...</span>
-{{/if}}

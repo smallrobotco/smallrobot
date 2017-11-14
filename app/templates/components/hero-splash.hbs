@@ -1,25 +1,32 @@
-<div class="hero-wrapper {{page.heroColor}} {{page.heroLayout}}" style="{{page.heroBackground.inlineBackground}}">
-  <div class='overlay {{page.heroOverlay}}'>
-    <div class="container">
-      <div class="row">
-        <div class="hero-col">
-          <div class="hero-block col">
-            <div class="hero-text">
-              {{#if page.heroTitle}}
-                <h2>{{{page.heroTitle.value}}}</h2>
-              {{/if}}
-              {{#if page.heroBlurb}}
-                <p class="blurb">
-                  {{{page.heroBlurb.value}}}
-                </p>
-              {{/if}}
-              {{#if page.heroByline}}
-                <p class="byline">{{page.heroByline}}</p>
-              {{/if}}
+{{#if page.heroActive}}
+  {{ main-nav class="hero" heroColor=page.heroColor heroOverlay=page.heroOverlay }}
+  <section class="hero-splash">
+    <div class="hero-wrapper {{page.heroColor}} {{page.heroLayout}}" style="{{page.heroBackground.inlineBackground}}">
+      <div class='overlay {{page.heroOverlay}}'>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="hero-col">
+              <div class="hero-block col">
+                <div class="hero-text">
+                  {{#if page.heroTitle}}
+                    <h2>{{{page.heroTitle.value}}}</h2>
+                  {{/if}}
+                  {{#if page.heroBlurb}}
+                    <p class="blurb">
+                      {{{page.heroBlurb.value}}}
+                    </p>
+                  {{/if}}
+                  {{#if page.heroByline}}
+                    <p class="byline">{{page.heroByline}}</p>
+                  {{/if}}
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
+  </section>
+{{else}}
+  {{main-nav}}
+{{/if}}
