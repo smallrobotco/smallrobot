@@ -3,7 +3,10 @@
 
 module.exports = function(deployTarget) {
   let ENV = {
-    build: {}
+    build: {
+      repo: 'git@github.com:bmx269/smallrobot.git',
+      commitMessage: 'Deployed %@'
+    }
     // include other plugin configuration that applies to all deploy targets here
   };
 
@@ -13,7 +16,7 @@ module.exports = function(deployTarget) {
   }
 
   if (deployTarget === 'staging') {
-    ENV.build.environment = 'production';
+    ENV.build.environment = 'staging';
     // configure other plugins for staging deploy target here
   }
 
