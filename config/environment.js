@@ -48,7 +48,7 @@ module.exports = function(environment) {
 
   if (environment === 'production') {
     ENV.rootURL = '/smallrobot';
-    ENV.locationType = 'hash';
+    ENV.locationType = 'auto';
   }
 
   return ENV;
