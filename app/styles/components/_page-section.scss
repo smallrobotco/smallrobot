@@ -1,6 +1,5 @@
 .page-section .outer{
   background-color: #fff;
-  color: $black;
   position: relative;
   font-size: .875rem;
   padding: 6vw 0;
@@ -285,4 +284,46 @@
   .swiper-next {
     left: auto;
     right: -30px;
+  }
+
+
+  .section-column {
+
+    &.top {
+      display: flex;
+      .element-text,
+      .element-image  {
+        @extend .d-flex;
+        @extend .align-items-start;
+        @extend .align-items-md-start;
+      }
+    }
+    &.middle {
+      display: flex;
+      .element-text,
+      .element-image  {
+        @extend .d-flex;
+        @extend .align-items-center;
+        @extend .align-items-md-center;
+      }
+    }
+    &.bottom {
+      display: flex;
+      .element-text,
+      .element-image  {
+        @extend .d-flex;
+        @extend .align-items-end;
+        @extend .align-items-md-end;
+      }
+    }
+
+    .element-text {
+      // text-align: justify;
+      max-width: 32em;
+      margin: 0 auto;
+    }
+    .element-image {
+      // text-align: justify;
+      margin: 0 auto;
+    }
   }

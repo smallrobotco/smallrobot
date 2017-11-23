@@ -20,5 +20,6 @@ module.exports = function(defaults) {
       ]
     }
   });
+  // app.import('bower_components/jquery.stellar/jquery.stellar.js');
   return app.toTree();
 };

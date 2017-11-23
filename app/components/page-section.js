@@ -22,5 +22,5 @@ export default Component.extend({
       slidesPerView: 4,
       spaceBetween: 80
     }
-  }
+  },
 });

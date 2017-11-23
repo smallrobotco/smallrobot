@@ -58,5 +58,8 @@
   },
   "engines": {
     "node": "^4.5 || 6.* || >= 7.*"
+  },
+  "dependencies": {
+    "jquery.stellar": "^0.6.2"
   }
 }

@@ -134,7 +134,7 @@ $enable-print-styles:       true !default;
 // variables. Mostly focused on spacing.
 // You can add more entries to the $spacers map, should you need more variation.
 
-$spacer: 1rem !default;
+$spacer: 1.5rem !default;
 $spacers: (
   0: 0,
   1: ($spacer * .25),
@@ -157,7 +157,7 @@ $sizes: (
 // Settings for the `<body>` element.
 
 $body-bg:       $white !default;
-$body-color:    $gray-900 !default;
+$body-color:    $gray-700 !default;
 
 // Links
 //
@@ -232,20 +232,21 @@ $transition-collapse:    height .35s ease !default;
 //
 // Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif: 'Raleway', sans-serif;
-$font-family-serif:      'Playfair Display', serif;
+$font-family-sans-serif: 'Open Sans', sans-serif;
+$font-family-sans-serif-alt: 'Raleway', sans-serif;
+$font-family-serif:      'Lora', serif;
 $font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
-$font-family-base:       $font-family-serif;
+$font-family-base:       $font-family-sans-serif;
 
 $font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
 $font-size-lg:   1.25rem !default;
 $font-size-sm:   .875rem !default;
 
 $font-weight-normal: 400;
-$font-weight-bold: 800;
+$font-weight-bold: 700;
 
 $font-weight-base: $font-weight-normal !default;
-$line-height-base: 1.5 !default;
+$line-height-base: 1.7 !default;
 
 $h1-font-size: 2.5rem !default;
 $h2-font-size: 2rem !default;
@@ -255,7 +256,7 @@ $h5-font-size: 1rem !default;
 $h6-font-size: 1rem !default;
 
 $headings-margin-bottom: ($spacer / 2) !default;
-$headings-font-family:   $font-family-sans-serif;
+$headings-font-family:   $font-family-sans-serif-alt;
 $headings-font-weight:   200;
 $headings-line-height:   1.1 !default;
 $headings-color:         inherit !default;

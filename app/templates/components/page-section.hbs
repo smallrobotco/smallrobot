@@ -1,4 +1,4 @@
-<div class="outer {{section.background}} {{if section.divider 'divided'}}">
+<div class="outer {{section.background}} {{if section.divider 'divided'}} {{if section.paralax 'paralax'}}"   style="{{section.backgroundImage.inlineBackground}}">
   {{#if section.divider}}
     {{angled-divider}}
   {{/if}}
@@ -7,12 +7,14 @@
       <div class='row'>
 
       {{#each section.column as |column|}}
-        <div class='section-column'>
+        <div class='section-column {{column.alignment}}'>
 
         {{#each column.element as |element|}}
           {{#if element.body }}
             <div class='element-text'>
-              {{html-safe element.body.value}}
+              <div class='inner'>
+                {{html-safe element.body.value}}
+              </div>
             </div>
           {{else if element.image }}
             <div class='image'>
