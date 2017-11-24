@@ -1,4 +1,4 @@
-<div class="outer {{section.background}} {{if section.divider 'divided'}} {{if section.paralax 'paralax'}}"   style="{{section.backgroundImage.inlineBackground}}">
+<div class="outer {{section.background}}{{if section.divider ' divided'}}{{if section.backgroundImage ' background-image'}}{{if section.parallax ' parallax'}}" style="{{section.backgroundImage.inlineBackground}}">
   {{#if section.divider}}
     {{angled-divider}}
   {{/if}}
@@ -28,7 +28,7 @@
               centered=false
               nextButton='.swiper-next'
               prevButton='.swiper-prev'
-              slidesPerView=4
+              slidesPerView=5
               spaceBetween=80
               registerAs=itemSwiper
               breakpoints=breakpoints

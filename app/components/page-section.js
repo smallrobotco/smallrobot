@@ -15,11 +15,11 @@ export default Component.extend({
       spaceBetween: 30
     },
     900: {
-      slidesPerView: 3,
+      slidesPerView: 4,
       spaceBetween: 80
     },
     1200: {
-      slidesPerView: 4,
+      slidesPerView: 5,
       spaceBetween: 80
     }
   },

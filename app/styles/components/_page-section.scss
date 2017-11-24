@@ -27,13 +27,26 @@
       }
   }
 
+  &.background-image {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &.parallax {
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
   >.ember-view .angled-divider .angled-divider__bottom,
   >.ember-view .angled-divider .angled-divider__bottom {
     fill: $white;
   }
 
   &.section-background-black {
-    background: $black;
+    background-color: $black;
     color: $gray-400;
 
     >.ember-view .angled-divider .angled-divider__bottom,
@@ -43,7 +56,7 @@
   } //black
 
   &.section-background-graydark {
-    background: $gray-900;
+    background-color: $gray-900;
     color: $gray-200;
 
     >.ember-view .angled-divider .angled-divider__bottom,
@@ -53,7 +66,7 @@
   } //graydark
 
   &.section-background-gray {
-    background: $gray-600;
+    background-color: $gray-600;
     color: $gray-100;
 
     >.ember-view .angled-divider .angled-divider__bottom,
@@ -63,7 +76,7 @@
   } //gray
 
   &.section-background-graylight {
-    background: $gray-200;
+    background-color: $gray-200;
     color: $gray-900;
 
     >.ember-view .angled-divider .angled-divider__bottom,
@@ -73,7 +86,7 @@
   } //graylight
 
   &.section-background-blue {
-    background: $blue;
+    background-color: $blue;
     color: $gray-200;
 
     >.ember-view .angled-divider .angled-divider__bottom,
@@ -82,8 +95,13 @@
     }
   }
 
+  &.section-background-blue-grad {
+    @include gradient-directional(($blue - 20), $blue, 135deg);
+
+  }
+
   &.section-background-green {
-    background: $green;
+    background-color: $green;
     color: $black;
 
     >.ember-view .angled-divider .angled-divider__bottom,
@@ -93,7 +111,7 @@
   }
 
   &.section-background-pink {
-    background: $pink;
+    background-color: $pink;
     color: $gray-100;
 
     >.ember-view .angled-divider .angled-divider__bottom,
@@ -103,7 +121,7 @@
   }
 
   &.section-background-red {
-    background: $red;
+    background-color: $red;
     color: $gray-100;
 
     >.ember-view .angled-divider .angled-divider__bottom,

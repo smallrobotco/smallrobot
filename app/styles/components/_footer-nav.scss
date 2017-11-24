@@ -1,7 +1,13 @@
+// @include media-breakpoint-up(xs) { ... }
+// @include media-breakpoint-up(sm) { ... }
+// @include media-breakpoint-up(md) { ... }
+// @include media-breakpoint-up(lg) { ... }
+// @include media-breakpoint-up(xl) { ... }
+
 footer {
-  background: $black;
+  background: $gray-900;
   color: $gray-400;
-  padding: 3.5em 0;
+  padding: 3.5rem 0 1rem;
   font-family: $font-family-sans-serif;
   font-weight: 300;
   font-size: 16px;
@@ -30,6 +36,7 @@ footer {
     color: $gray-100;
     font-size: 16px;
     line-height: 1.25em;
+    margin-bottom: 1.5rem;
 
     ul {
       list-style: none;
@@ -56,4 +63,26 @@ footer {
       }
     }
   }
-}
+
+  .intro {
+    margin-bottom: 2rem;
+  }
+  .contact {
+    text-align: center;
+    // margin-top: 2rem;
+
+  // @include media-breakpoint-up(xs) { ... }
+  // @include media-breakpoint-up(sm) { ... }
+  // @include media-breakpoint-up(md) { ... }
+  // @include media-breakpoint-up(lg) { ... }
+  // @include media-breakpoint-up(xl) { ... }
+  }
+
+  .copyright {
+    color: $gray-600;
+    font-size: .7rem;
+    line-height: 1rem;
+    text-align: center;
+  }
+} // footer
+
