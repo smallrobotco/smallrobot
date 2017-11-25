@@ -1,11 +1,4 @@
 {{#if page}}
-  {{#if page.heroColor}}
-    {{set-body-class page.heroColor}}
-  {{/if}}
-
-  {{#if page.heroOverlay}}
-    {{set-body-class page.heroOverlay}}
-  {{/if}}
   {{hero-splash page=page}}
 
   {{#each page.section as |section|}}
