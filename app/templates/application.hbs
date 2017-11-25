@@ -1,7 +1,46 @@
-{{liquid-outlet}}
-<footer>
-  <div class='container-fluid'>
-    {{footer-nav}}
-  </div>
-</footer>
+
+    {{#burger-menu
+      position="right"
+      animation="reveal"
+      itemAnimation="stack"
+      dismissOnItemClick="true"
+      as |burger|}}
+      {{#burger.menu
+        itemTagName="li"
+        dismissOnItemClick="true"
+        as |menu|}}
+        <a class="menu-close" {{action burger.state.actions.close}}><i aria-hidden="true" class="fa fa-times"></i> Close</a>
+
+        <ul>
+          {{#menu.item}}
+            {{#link-to "index" tag="li"}}Home{{/link-to}}
+          {{/menu.item}}
+          {{#menu.item}}
+            {{#link-to "consulting" tag="li"}}Consulting{{/link-to}}
+          {{/menu.item}}
+          {{#menu.item}}
+            {{#link-to "development"}}Development{{/link-to}}
+          {{/menu.item}}
+          {{#menu.item}}
+            {{#link-to "support"}}Support{{/link-to}}
+          {{/menu.item}}
+          {{#menu.item}}
+            {{#link-to "about"}}About{{/link-to}}
+          {{/menu.item}}
+        </ul>
+      {{/burger.menu}}
+
+      {{#burger.outlet}}
+        <a class="hamburger right" {{action burger.state.actions.toggle}}><i aria-hidden="true" class="fa fa-bars"></i> Menu</a>
+
+        {{liquid-outlet}}
+        <footer>
+          <div class='container-fluid'>
+            {{footer-nav}}
+          </div>
+        </footer>
+      {{/burger.outlet}}
+    {{/burger-menu}}
+
+
 
