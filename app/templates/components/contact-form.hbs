@@ -1,0 +1,38 @@
+<div class="outer">
+    {{angled-divider}}
+  <div class="content-wrapper {{section.layout}}">
+    <div class="container-fluid">
+      <div class='row'>
+        {{!-- {{#validated-form
+          model        = (changeset models.contactForm UserValidations)
+          on-submit    = submitContact
+          as |f|}} --}}
+
+          {{!-- {{f.input label="Subject" name="title"}} --}}
+           {{!-- {{f.input
+            type     = "select"
+            label    = "Inquiry Type"
+            name     = "messageType"
+            options  = messageTypes
+            value    =
+          }} --}}
+          {{!-- {{f.input label="First name" name="firstName"}} --}}
+          {{!-- {{f.input label="Last name" name="lastName"}} --}}
+          {{!-- {{f.input type="textarea" label="About me" name="aboutMe"}} --}}
+
+          {{!-- {{f.input
+            type     = "select"
+            label    = "Estimated Project Budget"
+            name     = "budget"
+            options  = budgets
+            value    = model.budget
+            }} --}}
+
+          {{!-- {{f.input type="textarea" label="Message" name="messageBody"}} --}}
+
+          {{!-- {{f.submit label="Save"}} --}}
+        {{!-- {{/validated-form}} --}}
+      </div>
+    </div>
+  </div>
+</div>

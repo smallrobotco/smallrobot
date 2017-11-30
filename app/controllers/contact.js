@@ -1,8 +1,9 @@
-import Component from '@ember/component';
+import Controller from '@ember/controller';
+// import { computed } from '@ember/object';
 // import ContactValidations from 'dummy/validations/contact';
 // import { task } from 'ember-concurrency';
 
-export default Component.extend({
+export default Controller.extend({
   // ContactValidations,
 
   // submitContact: task(function * (model) {
