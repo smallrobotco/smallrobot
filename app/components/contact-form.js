@@ -1,12 +1,12 @@
 import Component from '@ember/component';
-// import ContactValidations from 'dummy/validations/contact';
-// import { task } from 'ember-concurrency';
+import ContactValidations from 'dummy/validations/contact';
+import { task } from 'ember-concurrency';
 
 export default Component.extend({
-  // ContactValidations,
+  ContactValidations,
 
-  // submitContact: task(function * (model) {
-  //   yield model.save();
-  //   // ... more code to show success messages etc.
-  // })
+  submitContact: task(function * (model) {
+    yield model.save();
+    // ... more code to show success messages etc.
+  })
 });

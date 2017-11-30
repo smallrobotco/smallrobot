@@ -5,7 +5,7 @@
     {{page-section section=section}}
   {{/each}}
 
-  {{contact-form}}
+  {{contact-form model=(changeset model contacts) }}
 
 {{else}}
   {{loading-spinner}}
