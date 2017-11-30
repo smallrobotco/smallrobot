@@ -1,5 +1,6 @@
 # See https://help.github.com/ignore-files/ for more about ignoring files.
 
+
 # compiled output
 /dist
 /tmp
@@ -16,8 +17,10 @@
 npm-debug.log*
 yarn-error.log
 testem.log
+.env
 
 # ember-try
 .node_modules.ember-try/
 bower.json.ember-try
 package.json.ember-try
+.DS_Store
