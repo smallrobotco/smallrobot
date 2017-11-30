@@ -1,1 +1,9 @@
-{{outlet}}
+{{#if post}}
+  {{hero-splash page=post}}
+
+  {{#each post.section as |section|}}
+    {{page-section section=section}}
+  {{/each}}
+{{else}}
+  {{loading-spinner}}
+{{/if}}

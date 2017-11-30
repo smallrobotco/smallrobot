@@ -1,6 +1,7 @@
 import EmberRouter from '@ember/routing/router';
 import RouterScroll from 'ember-router-scroll';
 import config from './config/environment';
+// import googlePageview from './mixins/google-pageview';
 
 const Router = EmberRouter.extend(RouterScroll, {
   location: config.locationType,
@@ -8,20 +9,22 @@ const Router = EmberRouter.extend(RouterScroll, {
 });
 
 Router.map(function() {
-  this.route('index', { path: '/'});
-
   this.route('work', function() {
     this.route('stories', function() {
-      this.route('story');
+      this.route('story', { path: ':story_id' });
     });
   });
   this.route('blog', function() {
-    this.route('post');
+    this.route('post', { path: ':article_id' });
   });
   this.route('about');
-  this.route('consulting');
-  this.route('development');
-  this.route('support');
+  this.route('consulting', function() {
+    this.route('web');
+  });
+  this.route('development', function() {
+  });
+  this.route('support', function() {
+  });
   this.route('pricing');
   this.route('contact');
 

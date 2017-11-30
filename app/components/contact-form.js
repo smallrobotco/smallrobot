@@ -1,5 +1,5 @@
 import Component from '@ember/component';
-import ContactValidations from 'dummy/validations/contact';
+import ContactValidations from '../validations/contact';
 import { task } from 'ember-concurrency';
 
 export default Component.extend({
