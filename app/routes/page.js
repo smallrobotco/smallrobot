@@ -8,7 +8,7 @@ export default Route.extend({
 		}
   },
 
-  model(params) {
+  model() {
     let slugPath = window.location.pathname;
     // console.log(slugPath);
     return this.store.query('page', {

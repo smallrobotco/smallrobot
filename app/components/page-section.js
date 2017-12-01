@@ -4,12 +4,10 @@ export default Component.extend({
   tagName: 'section',
   classNames: ['page-section'],
   breakpoints: {
-    // when window width is <= 320px
     320: {
       slidesPerView: 2,
       spaceBetween: 10
     },
-    // when window width is <= 640px
     640: {
       slidesPerView: 3,
       spaceBetween: 30

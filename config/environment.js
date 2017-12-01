@@ -66,6 +66,9 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
+    ENV.googleAnalytics = {
+      webPropertyId: 'UA-110529542-1'
+    };
     ENV.rootURL = '/';
     ENV.locationType = 'auto';
   }
