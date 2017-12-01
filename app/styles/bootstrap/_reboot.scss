@@ -188,12 +188,15 @@ sup { top: -.5em; }
 a {
   color: $link-color;
   text-decoration: $link-decoration;
+  border-bottom: 1px solid $link-underline;
   background-color: transparent; // Remove the gray background on active links in IE 10.
   -webkit-text-decoration-skip: objects; // Remove gaps in links underline in iOS 8+ and Safari 8+.
 
   @include hover {
     color: $link-hover-color;
     text-decoration: $link-hover-decoration;
+
+    border-color: $link-hover-underline;
   }
 }
 

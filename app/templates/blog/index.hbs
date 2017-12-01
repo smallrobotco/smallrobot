@@ -7,24 +7,10 @@
 
   {{#if articles}}
     {{#each (sort-by "created" articles) as |article|}}
-      <div class="article teaser">
-        <div class="outer" style="{{article.heroBackground.inlineBackground}}">
-          {{angled-divider}}
-          <div class="content-wrapper">
-            <div class="container-fluid">
-              <div class='row'>
-                {{#link-to "blog.post" article.id}}
-                  <h3 class="col-6 text-center">{{article.title}}</h3>
-                {{/link-to}}
-                <div class='intro col-6'>
-                  {{html-safe article.intro.value}}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      {{article-teaser article=article}}
     {{/each}}
+  {{else}}
+    {{loading-spinner}}
   {{/if}}
 
 {{else}}

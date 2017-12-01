@@ -108,11 +108,13 @@ $theme-colors: (
   warning: $yellow,
   danger: $red,
   light: $gray-100,
+  gray: $gray-600,
   dark: $gray-700,
   green: $green,
   blue: $blue,
   bluedark: $blue-dark,
-  pink: $pink
+  pink: $pink,
+  red: $red,
 ) !default;
 
 // Set a specific jump point for requesting color jumps
@@ -167,11 +169,12 @@ $body-color:    $gray-700 !default;
 //
 // Style anchor elements.
 
-$link-color:            theme-color("primary") !default;
-$link-decoration:       none !default;
-$link-hover-color:      darken($link-color, 15%) !default;
-$link-hover-decoration: underline !default;
-
+$link-color:            $green;
+$link-decoration:       none;
+$link-hover-color:      darken($green, 5%);
+$link-hover-decoration: none;
+$link-underline:        rgba($gray-600, .3);
+$link-hover-underline:  $gray-600;
 
 // Grid breakpoints
 //
@@ -342,7 +345,7 @@ $input-btn-padding-y-lg:    .5rem !default;
 $input-btn-padding-x-lg:    1rem !default;
 $input-btn-line-height-lg:  1.5 !default;
 
-$btn-font-weight:                200 !default;
+$btn-font-weight:                400 !default;
 $btn-box-shadow:                 inset 0 1px 0 rgba($white,.15), 0 1px 1px rgba($black,.075) !default;
 $btn-focus-box-shadow:           0 0 0 3px rgba(theme-color("primary"), .25) !default;
 $btn-active-box-shadow:          inset 0 3px 5px rgba($black,.125) !default;

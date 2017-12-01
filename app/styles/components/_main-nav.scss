@@ -27,6 +27,9 @@
       padding: 0;
       font-weight: 300;
       display: flex;
+      text-decoration: none;
+      border-bottom: 0;
+
       @extend .align-items-end;
 
       @include media-breakpoint-up(sm) {
@@ -79,7 +82,7 @@
         list-style: none;
         display: inline-flex;
         margin: 0;
-        padding: 0 0 0 15px;
+        padding: 0 0 0 10px;
 
         @include media-breakpoint-up(lg) {
           padding: 0 0 0 25px;
@@ -89,19 +92,20 @@
           color: $gray-800;
           padding: 5px 5px;
           display: block;
-          border-bottom: 1px dotted transparent;
+          border-bottom: 1px solid transparent;
+          text-decoration: none;
 
           &:hover,
           &:focus {
             text-decoration: none;
             color: $black;
-            border-color: $black;
+            border-color: rgba($black, .2);
           }
 
           &.active {
             text-decoration: none;
             color: $black;
-            border-bottom: 1px solid $black;
+            border-color: $black;
           }
         }
       }
@@ -141,9 +145,14 @@
             color: $gray-900;
 
             &:hover,
-            &:focus,
+            &:focus {
+              color: $black;
+              border-color: rgba($black, .2);
+            }
+
             &.active {
               color: $black;
+              border-color: $black;
             }
           }
         }
@@ -178,7 +187,11 @@
               color: $white;
 
               &:hover,
-              &:focus,
+              &:focus {
+                color: $white;
+                border-color: rgba($white, .5);
+              }
+
               &.active {
                 color: $white;
                 border-color: $white;
@@ -216,7 +229,11 @@
               color: $white;
 
               &:hover,
-              &:focus,
+              &:focus {
+                color: $white;
+                border-color: rgba($white, .5);
+              }
+
               &.active {
                 color: $white;
                 border-color: $white;
@@ -231,7 +248,7 @@
         a {
           svg {
             .a620be6a-c613-4032-81cc-7dcf5de97f84{
-              fill: $gray-900;
+              fill: $white;
             }
           }
         }
@@ -277,10 +294,14 @@
               color: $white;
 
               &:hover,
-              &:focus,
-              &.active {
-                border-color: $white;
+              &:focus {
                 color: $white;
+                border-color: rgba($white, .5);
+              }
+
+              &.active {
+                color: $white;
+                border-color: $white;
               }
             }
           }
@@ -306,6 +327,7 @@
   transition: background-color .4s;
   color: $gray-900 !important;
   background-color: rgba($gray-200, .6);
+  z-index: 9999;
 
   @include media-breakpoint-up(md) {
     display: none;

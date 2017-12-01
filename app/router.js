@@ -14,7 +14,7 @@ Router.map(function() {
       this.route('story', { path: ':story_id' });
     });
   });
-  this.route('blog', function() {
+  this.route('blog', { path: 'ideas' }, function() {
     this.route('post', { path: ':article_id' });
   });
   this.route('about');

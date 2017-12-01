@@ -23,11 +23,10 @@ footer {
 
   a {
     color: $green;
-    text-decoration: underline;
+
 
     &:hover,
     &.active {
-      text-decoration: underline;
       color: $white;
     }
   }
@@ -54,6 +53,7 @@ footer {
         display: block;
         text-decoration: none;
         padding: 3px 0;
+        border-bottom: 0;
 
         &:hover,
         &.active {
@@ -69,6 +69,10 @@ footer {
   }
   .contact {
     text-align: center;
+
+    a {
+      border-bottom: 0;
+    }
     // margin-top: 2rem;
 
   // @include media-breakpoint-up(xs) { ... }

@@ -1,0 +1,22 @@
+<div class="article teaser">
+  <div class="outer" style="{{article.heroBackground.inlineBackground}}">
+    {{angled-divider}}
+    <div class="content-wrapper">
+      <div class="container-fluid">
+        <div class='row'>
+          <div class="article-title col text-center">
+            {{#link-to "blog.post" article.id class="h1"}}
+              {{article.title}}
+            {{/link-to}}
+          </div>
+          <div class='intro col-12 text-center'>
+            {{html-safe article.intro.value}}
+          </div>
+          <div class='readmore col-12 text-center'>
+            {{#link-to "blog.post" article.id class="btn btn-light"}}Read More{{/link-to}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

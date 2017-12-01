@@ -26,13 +26,16 @@
           {{#menu.item}}
             {{#link-to "about"}}About{{/link-to}}
           {{/menu.item}}
+          {{#menu.item}}
+            {{#link-to "contact"}}Contact Us{{/link-to}}
+          {{/menu.item}}
         </ul>
       {{/burger.menu}}
 
       {{#burger.outlet}}
         <a class="hamburger right" {{action burger.state.actions.toggle}}><i aria-hidden="true" class="fa fa-bars"></i> Menu</a>
 
-        {{outlet}}
+        {{liquid-outlet}}
         <footer>
           <div class='container-fluid'>
             {{footer-nav}}

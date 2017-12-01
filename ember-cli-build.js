@@ -32,6 +32,7 @@ module.exports = function(defaults) {
         '/support',
         '/work',
         '/about',
+        '/ideas',
         '/contact',
       ]
     },

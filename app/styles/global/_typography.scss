@@ -27,8 +27,16 @@ h5 {
   display: block;
   width: 100%;
 
+  &.text-align-left {
+    text-align: left;
+  }
+
   &.text-align-center {
     text-align: center;
+  }
+
+  &.text-align-right {
+    text-align: right;
   }
 }
 
@@ -64,3 +72,21 @@ span {
     color: $blue !important;
   }
 }
+
+
+.article-title {
+  a {
+    display: inline-block;
+    color: $black;
+    padding: 4px 8px;
+    border-bottom: 1px solid rgba($gray-600, .3);
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      color: $pink;
+      border-color: $gray-600;
+    }
+  }
+}
+
