@@ -20,23 +20,84 @@ module.exports = function(environment) {
         Date: false
       }
     },
-    'ember-validated-form': {
-      label: {
-        submit: 'Go for it!',
-      },
-      css: {
-        // bootstrap classes
-        group: 'form-group',
-        control: 'form-control',
-        label: 'form-label',
-        checkbox: 'checkbox',
-        radio: 'radio',
-        help: 'help-block',
-        hint: 'help-block',
-        button: 'btn btn-default',
-        submit: 'btn btn-primary'
-      }
-    },
+    // 'ember-validated-form': {
+    //   label: {
+    //     submit: 'Go for it!',
+    //   },
+    //   css: {
+    //     // bootstrap classes
+    //     group: 'form-group',
+    //     control: 'form-control',
+    //     label: 'form-label',
+    //     checkbox: 'checkbox',
+    //     radio: 'radio',
+    //     help: 'help-block',
+    //     hint: 'help-block',
+    //     button: 'btn btn-default',
+    //     submit: 'btn btn-primary'
+    //   }
+    // },
+    metricsAdapters: [
+      {
+        name: 'GoogleAnalytics',
+        environments: ['all'],
+        config: {
+          id: 'UA-110529542-1',
+          // Use `analytics_debug.js` in development
+          debug: environment === 'development',
+          // Use verbose tracing of GA events
+          trace: environment === 'development',
+          // Ensure development env hits aren't sent to GA
+          sendHitTask: environment !== 'development',
+          // Specify Google Analytics plugins
+          require: ['ecommerce']
+        }
+      }//,
+      // {
+      //   name: 'Mixpanel',
+      //   environments: ['production'],
+      //   config: {
+      //     token: '0f76c037-4d76-4fce-8a0f-a9a8f89d1453'
+      //   }
+      // },
+      // {
+      //   name: 'Segment',
+      //   environments: ['production'],
+      //   config: {
+      //     key: '4fce-8a0f-a9a8f89d1453'
+      //   }
+      // },
+      // {
+      //   name: 'Piwik',
+      //   environments: ['production'],
+      //   config: {
+      //     piwikUrl: 'http://piwik.my.com',
+      //     siteId: 42
+      //   }
+      // },
+      // {
+      //   name: 'Intercom',
+      //   environments: ['production'],
+      //   config: {
+      //     appId: 'def1abc2'
+      //   }
+      // },
+      // {
+      //   name: 'FacebookPixel',
+      //   environments: ['production'],
+      //   config: {
+      //     id: '1234567890'
+      //   }
+      // },
+
+      // {
+      //   name: 'LocalAdapter',
+      //   environments: ['all'], // default
+      //   config: {
+      //     foo: 'bar'
+      //   }
+      // }
+    ],
 
     APP: {
       // Here you can pass flags/options to your application instance
@@ -66,9 +127,6 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.googleAnalytics = {
-      webPropertyId: 'UA-110529542-1'
-    };
     ENV.rootURL = '/';
     ENV.locationType = 'auto';
   }

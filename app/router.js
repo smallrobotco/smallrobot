@@ -1,11 +1,25 @@
 import EmberRouter from '@ember/routing/router';
 import RouterScroll from 'ember-router-scroll';
 import config from './config/environment';
-import googlePageview from './mixins/google-pageview';
 
-const Router = EmberRouter.extend(RouterScroll, googlePageview, {
+const Router = EmberRouter.extend(RouterScroll, {
   location: config.locationType,
-  rootURL: config.rootURL
+  rootURL: config.rootURL,
+  metrics: Ember.inject.service(),
+
+  didTransition() {
+    this._super(...arguments);
+    this._trackPage();
+  },
+
+  _trackPage() {
+    Ember.run.scheduleOnce('afterRender', this, () => {
+      const page = this.get('url');
+      const title = this.getWithDefault('currentRouteName', 'unknown');
+
+      Ember.get(this, 'metrics').trackPage({ page, title });
+    });
+  }
 });
 
 Router.map(function() {

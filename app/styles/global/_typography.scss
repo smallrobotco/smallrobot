@@ -40,6 +40,7 @@ h5 {
   }
 }
 
+a,
 p,
 h1,
 h2,
@@ -58,6 +59,9 @@ span {
   }
   &.graylight {
     color: $gray-200 !important;
+  }
+  &.white {
+    color: $white !important;
   }
   &.green {
     color: $green !important;
@@ -89,4 +93,3 @@ span {
     }
   }
 }
-
