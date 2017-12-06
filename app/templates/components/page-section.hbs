@@ -4,7 +4,7 @@
   {{/if}}
   <div class="content-wrapper {{section.layout}}">
     <div class="container-fluid">
-      <div class='row'>
+      <div class='row {{if section.reverse 'flex-sm-row-reverse'}}'>
 
       {{#each section.column as |column|}}
         <div class='section-column {{column.alignment}}'>

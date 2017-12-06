@@ -44,13 +44,13 @@ module.exports = function(environment) {
         config: {
           id: 'UA-110529542-1',
           // Use `analytics_debug.js` in development
-          debug: environment === 'development',
+          debug: environment === 'test',
           // Use verbose tracing of GA events
-          trace: environment === 'development',
+          trace: environment === 'test',
           // Ensure development env hits aren't sent to GA
-          sendHitTask: environment !== 'development',
+          sendHitTask: environment !== 'test',
           // Specify Google Analytics plugins
-          require: ['ecommerce']
+          require: ['']
         }
       }//,
       // {

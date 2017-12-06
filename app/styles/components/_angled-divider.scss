@@ -5,25 +5,25 @@
   right: 0;
   width: 100%;
   z-index: 100;
-  height: 2vw;
-  transform: translateY(-1.875vw) scaleX(-1);
+  height: 1.75vw;
+  transform: translateY(-1.65vw) scaleX(-1);
 
   @include media-breakpoint-up(sm) {
-    height: 2vw;
-    transform: translateY(-1.875vw) scaleX(-1);
+    height: 1.5vw;
+    transform: translateY(-1.45vw) scaleX(-1);
   }
   @include media-breakpoint-up(md) {
-    height: 1.5vw;
-    transform: translateY(-1.49vw) scaleX(-1);
-  }
-  @include media-breakpoint-up(lg) {
     height: 1vw;
-    transform: translateY(-0.925vw) scaleX(-1);
+    transform: translateY(-0.94vw) scaleX(-1);
   }
-  @include media-breakpoint-up(xl) {
-    height: 1vw;
-    transform: translateY(-0.95vw) scaleX(-1);
-  }
+  // @include media-breakpoint-up(lg) {
+  //   height: 1vw;
+  //   transform: translateY(-1.495vw) scaleX(-1);
+  // }
+  // @include media-breakpoint-up(xl) {
+  //   height: 1.5vw;
+  //   transform: translateY(-1.5vw) scaleX(-1);
+  // }
 }
 
 
@@ -33,24 +33,24 @@
   -webkit-filter: FlipH;
   filter: FlipH;
   height: 2vw;
-  transform: translateY(-1.875vw);
+  transform: translateY(-1.8vw);
 
   @include media-breakpoint-up(sm) {
     height: 2vw;
-    transform: translateY(-1.875vw);
+    transform: translateY(-1.94vw);
   }
   @include media-breakpoint-up(md) {
     height: 1.5vw;
-    transform: translateY(-1.48vw);
+    transform: translateY(-1.4vw);
   }
-  @include media-breakpoint-up(lg) {
-    height: 1vw;
-    transform: translateY(-0.925vw);
-  }
-  @include media-breakpoint-up(xl) {
-    height: 1vw;
-    transform: translateY(-0.95vw);
-  }
+  // @include media-breakpoint-up(lg) {
+  //   height: 1vw;
+  //   transform: translateY(-0.925vw);
+  // }
+  // @include media-breakpoint-up(xl) {
+  //   height: 1.5vw;
+  //   transform: translateY(-1.5vw);
+  // }
 }
 
 .angled-divider__top {
