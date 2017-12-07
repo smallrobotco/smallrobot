@@ -10,7 +10,7 @@
 
   @include media-breakpoint-up(lg) {
     font-size: 18px;
-  line-height: 18px;
+    line-height: 18px;
   }
 
   .site-info {
@@ -21,21 +21,26 @@
     color: $black;
 
     a {
-      color: $black;
-      font-size: 20px;
-      line-height: 20px;
-      padding: 0;
-      font-weight: 300;
-      display: flex;
-      text-decoration: none;
       border-bottom: 0;
-
       @extend .align-items-end;
 
-      @include media-breakpoint-up(sm) {
-        padding: 2px 0;
-        font-size: 26px;
-        line-height: 26px;
+      .logo {
+        padding-bottom: 2px;
+      }
+      .name {
+        color: $black;
+        font-size: 20px;
+        line-height: 20px;
+        padding: 0;
+        font-weight: 300;
+        display: flex;
+        text-decoration: none;
+
+
+        @include media-breakpoint-up(sm) {
+          font-size: 26px;
+          line-height: 26px;
+        }
       }
 
       svg {

@@ -5,6 +5,10 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
+    autoprefixer: {
+      browsers: ['last 2 major version'],
+      cascade: false
+    },
     'ember-cli-image-transformer': {
       images: [
         {
@@ -23,7 +27,9 @@ module.exports = function(defaults) {
         }
       ]
     },
-
+    'ember-service-worker': {
+      versionStrategy: 'every-build'
+    },
     'asset-cache': {
       exclude: [
         'img/**/*',
@@ -40,9 +46,12 @@ module.exports = function(defaults) {
     },
 
     'esw-cache-fallback': {
-      patterns: [ '/' ],
-      version: '1' // Changing the version will bust the cache
+      patterns: [
+        '/api/(.+)'
+      ],
     },
+
+
 
     'prember': {
       urls: [
@@ -50,10 +59,7 @@ module.exports = function(defaults) {
         '/consulting',
         '/development',
         '/support',
-        '/work',
-        '/about',
-        '/ideas',
-        '/contact',
+        '/contact'
       ]
     },
 

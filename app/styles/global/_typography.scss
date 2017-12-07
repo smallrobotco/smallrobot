@@ -75,6 +75,9 @@ span {
   &.blue {
     color: $blue !important;
   }
+  &.bluedark {
+    color: $blue-dark !important;
+  }
 }
 
 
@@ -125,5 +128,5 @@ span {
 
 .dev-logos {
   text-align: center;
-  font-size: calc(2rem + 2.5vw);
+  font-size: calc(2rem + 2.25vw);
 }
