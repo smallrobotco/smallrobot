@@ -128,11 +128,21 @@
 
   &.section-background-blue {
     background-color: $blue;
-    color: $gray-200;
+    color: $gray-100;
 
     >.ember-view .angled-divider .angled-divider__bottom,
     >.ember-view .angled-divider .angled-divider__bottom {
       fill: $blue;
+    }
+  }
+
+  &.section-background-purple {
+    background-color: $purple;
+    color: $gray-100;
+
+    >.ember-view .angled-divider .angled-divider__bottom,
+    >.ember-view .angled-divider .angled-divider__bottom {
+      fill: $purple;
     }
   }
 

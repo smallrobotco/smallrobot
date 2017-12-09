@@ -22,6 +22,8 @@ module.exports = function(deployTarget) {
 
   if (deployTarget === 'staging') {
     ENV.build.environment = 'staging';
+    ENV.rootURL = '/smallrobot';
+    ENV.locationType = 'auto';
     ENV.git = {
       repo: 'git@github.com:bmx269/smallrobot.git',
       branch: 'gh-pages',

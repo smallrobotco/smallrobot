@@ -111,8 +111,6 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
-    // ENV.rootURL = '/smallrobot';
-    // ENV.locationType = 'auto';
   }
 
   if (environment === 'test') {
@@ -125,17 +123,6 @@ module.exports = function(environment) {
 
     ENV.APP.rootElement = '#ember-testing';
   }
-
-  // if (environment === 'github') {
-  //   ENV.rootURL = '/smallrobot';
-  //   ENV.locationType = 'auto';
-  //   ENV.git = {
-  //     repo: 'git@github.com:bmx269/smallrobot.git',
-  //     branch: 'gh-pages',
-  //     worktreePath: '../deploy-gh-pages',
-  //     commitMessage: 'Deployed %@'
-  //   };
-  // }
 
   if (environment === 'production') {
     ENV.rootURL = '/';
