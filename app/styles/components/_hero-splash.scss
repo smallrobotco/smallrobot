@@ -38,6 +38,10 @@
       background-color: $blue;
       color: $white;
     }
+    &.background-purple {
+      background-color: $purple;
+      color: $white;
+    }
 
     .overlay {
       background-color: transparent;
@@ -68,6 +72,9 @@
       }
       &.overlay-blue {
         background-color: rgba($blue, 0.4);
+      }
+      &.overlay-purple {
+        background-color: rgba($purple, 0.7);
       }
     }
 

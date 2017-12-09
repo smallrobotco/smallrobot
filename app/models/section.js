@@ -5,6 +5,7 @@ export default DS.Model.extend({
   divider: DS.attr('boolean'),
   parallax: DS.attr('boolean'),
   reverse: DS.attr('boolean'),
+  show: DS.attr('boolean'),
   background: DS.attr('string'),
   backgroundImage: DS.belongsTo('file'),
   layout: DS.attr('string'),

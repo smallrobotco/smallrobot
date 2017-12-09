@@ -4,8 +4,13 @@
 module.exports = function(deployTarget) {
   let ENV = {
     build: {
+
+    },
+    git: {
       repo: 'git@github.com:bmx269/smallrobot.git',
-      commitMessage: 'Deployed %@'
+      branch: 'deploys',
+      worktreePath: '../deploy-smallrobotco',
+      commitMessage: 'App Deployed %@'
     }
     // include other plugin configuration that applies to all deploy targets here
   };
@@ -17,11 +22,23 @@ module.exports = function(deployTarget) {
 
   if (deployTarget === 'staging') {
     ENV.build.environment = 'staging';
+    ENV.git = {
+      repo: 'git@github.com:bmx269/smallrobot.git',
+      branch: 'gh-pages',
+      worktreePath: '../deploy-gh-smallrobotco',
+      commitMessage: 'App Deployed %@'
+    };
     // configure other plugins for staging deploy target here
   }
 
   if (deployTarget === 'production') {
     ENV.build.environment = 'production';
+    ENV.git = {
+      repo: 'git@github.com:bmx269/smallrobot.git',
+      branch: 'deploys',
+      worktreePath: '../deploy-smallrobotco',
+      commitMessage: 'App Deployed %@'
+    };
     // configure other plugins for production deploy target here
   }
 
