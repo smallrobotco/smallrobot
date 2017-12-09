@@ -50,9 +50,6 @@ module.exports = function(defaults) {
         '/api/(.+)'
       ],
     },
-
-
-
     'prember': {
       urls: [
         '/',

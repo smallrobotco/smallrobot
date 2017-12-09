@@ -4,7 +4,7 @@
 module.exports = function(deployTarget) {
   let ENV = {
     build: {
-
+      environment: 'production' // the default
     },
     git: {
       repo: 'git@github.com:bmx269/smallrobot.git',
@@ -21,9 +21,6 @@ module.exports = function(deployTarget) {
   }
 
   if (deployTarget === 'staging') {
-    ENV.build.environment = 'staging';
-    ENV.rootURL = '/smallrobot';
-    ENV.locationType = 'auto';
     ENV.git = {
       repo: 'git@github.com:bmx269/smallrobot.git',
       branch: 'gh-pages',
@@ -34,7 +31,6 @@ module.exports = function(deployTarget) {
   }
 
   if (deployTarget === 'production') {
-    ENV.build.environment = 'production';
     ENV.git = {
       repo: 'git@github.com:bmx269/smallrobot.git',
       branch: 'deploys',

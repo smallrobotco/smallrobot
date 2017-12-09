@@ -2,6 +2,7 @@
 'use strict';
 
 module.exports = function(environment) {
+  var deployTarget = process.env.DEPLOY_TARGET;
   let ENV = {
     modulePrefix: 'smallrobotco',
     environment,
@@ -125,8 +126,17 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.rootURL = '/';
+
+    // ENV.locationType = 'auto';
+  }
+
+  if (deployTarget === 'staging') {
+    ENV.rootURL = '/smallrobot/';
     ENV.locationType = 'auto';
+  }
+
+  if (deployTarget === 'production') {
+    ENV.rootURL = '/';
   }
 
   return ENV;
