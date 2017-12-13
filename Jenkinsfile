@@ -8,7 +8,7 @@ pipeline {
         HOST = 'server.smallrobot.org'
       }
       steps {
-        sh 'ssh USERNAME@HOST'
+        sh 'ssh {environment:USERNAME}@{environment:HOST}'
         sh 'shell/./deploy.sh'
       }
     }
