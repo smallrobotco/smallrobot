@@ -1,11 +1,11 @@
 pipeline {
   agent any
   stages {
-    stage('Deploy') {
+    stage('Production Deploy') {
       agent any
       steps {
-        sh 'shell/./deploy.sh'
-        emailext(subject: 'Deployed', body: 'Small Robot Prod Deployed', attachLog: true, from: 'trent@smallrobot.co', to: 'trent@smallrobot.co', replyTo: 'noreply@smallrobot.co')
+        sh 'ssh root@server.smallrobot.org'
+        sh 'cd /home/smallrobot.co/public_html; git pull;'
       }
     }
   }
