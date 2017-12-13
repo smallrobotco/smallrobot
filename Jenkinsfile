@@ -4,7 +4,7 @@ pipeline {
     stage('Deploy') {
       agent any
       steps {
-        sh './deploy.sh'
+        sh '/shell/./deploy.sh'
       }
     }
   }
