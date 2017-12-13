@@ -1,13 +1,7 @@
 #!/bin/bash
 USERNAME=root
 HOSTS="server.smallrobot.org"
-SCRIPT="
-su smallrobot.co;
-cd ~/public_html;
-git pull;
-exit;
-logout;
-"
+SCRIPT="cd /home/smallrobot.co/public_html; git pull; logout;"
 
 for HOSTNAME in ${HOSTS} ; do
     ssh -l ${USERNAME} ${HOSTNAME} "${SCRIPT}"
