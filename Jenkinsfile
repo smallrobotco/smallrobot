@@ -4,8 +4,7 @@ pipeline {
     stage('Deploy') {
       agent any
       steps {
-        sh 'ssh root@server.smallrobot.org'
-        sh ' su smallrobot.co; cd ~/public_html; git pull; exit; logout;'
+        sh './deploy.sh'
       }
     }
   }
