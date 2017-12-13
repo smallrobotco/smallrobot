@@ -126,13 +126,11 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
-    // ENV.locationType = 'auto';
+    // anything here will be deployed to staging and production
   }
 
   if (deployTarget === 'staging') {
     ENV.rootURL = '/smallrobot/';
-    ENV.locationType = 'auto';
   }
 
   if (deployTarget === 'production') {

@@ -5,13 +5,13 @@
     {{page-section section=section}}
   {{/each}}
 
-  {{#if articles}}
-    {{#each (sort-by "created" articles) as |article|}}
-      {{article-teaser article=article}}
-    {{/each}}
-  {{else}}
+  {{! #if articles}}
+    {{! #each (sort-by "created" articles) as |article|}}
+      {{! article-teaser article=article}}
+    {{! /each}}
+  {{! else}}
 
-  {{/if}}
+  {{! /if}}
 
 {{else}}
   {{loading-spinner}}

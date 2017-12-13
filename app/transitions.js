@@ -3,5 +3,5 @@ export default function(){
     this.toRoute(['*']),
     this.use('toLeft'),
     this.reverse('toRight')
-  )
+  );
 }
