@@ -8,7 +8,7 @@ pipeline {
         DEPLOY_HOST = 'server.smallrobot.org'
       }
       steps {
-        sh 'ssh $USER_NAME@$DEPLOY_HOST > shell/./deploy.sh'
+        sh 'shell/./deploy.sh'
       }
     }
   }
