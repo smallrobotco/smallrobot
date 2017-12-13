@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Production Deploy') {
       when {
-        branch 'deploys'
+        branch 'dev'
       }
       agent any
       steps {
