@@ -7,9 +7,7 @@ pipeline {
                 branch 'deploys'
             }
             steps {
-                sh 'ssh smallrobot.co@smallrobot.co'
-                sh 'cd ~/public_html'
-                sh 'git pull'
+                sh 'ssh root@smallrobot.co > ./deploy.sh'
                 sh 'logout'
             }
         }
