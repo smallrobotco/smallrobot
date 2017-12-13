@@ -4,11 +4,11 @@ pipeline {
     stage('Production Deploy') {
       agent any
       environment {
-        USERNAME = 'smallrobot.co'
-        HOST = 'server.smallrobot.org'
+        USER_NAME = 'smallrobot.co'
+        DEPLOY_HOST = 'server.smallrobot.org'
       }
       steps {
-        sh 'ssh {environment:USERNAME}@{environment:HOST}'
+        sh 'ssh \'USER_NAME\'@\'DEPLOY_HOST\''
         sh 'shell/./deploy.sh'
       }
     }
