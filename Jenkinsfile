@@ -2,11 +2,10 @@ pipeline {
   agent any
   stages {
     stage('Production Deploy') {
-      agent any
-      environment {
-        USER_NAME = 'smallrobot.co'
-        DEPLOY_HOST = 'server.smallrobot.org'
+      when {
+        branch 'deploys'
       }
+      agent any
       steps {
         sh 'shell/./deploy.sh'
       }
