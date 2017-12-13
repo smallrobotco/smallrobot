@@ -1,10 +1,10 @@
 pipeline {
   agent any
-
   stages {
     stage('Deploy') {
+      agent any
       when {
-          branch 'deploys'
+        branch 'deploys'
       }
       steps {
         sh 'ssh root@smallrobot.co;'
