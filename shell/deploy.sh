@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 USERNAME=root
 HOSTS="server.smallrobot.org"
 SCRIPT="
