@@ -1,6 +1,6 @@
 #!/bin/zsh
 USERNAME=root
-HOSTS="smallrobot.co"
+HOSTS="server.smallrobot.org"
 SCRIPT="
 su smallrobot.co;
 cd ~/public_html;
