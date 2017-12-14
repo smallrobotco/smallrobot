@@ -7,8 +7,8 @@ pipeline {
         branch 'dev'
       }
       steps {
-        sh '''rm -rf node_modules dist tmp;
- npm install; bower install; ember deploy staging;'''
+        sh 'rm -rf node_modules dist tmp;
+ npm install; bower install; ember deploy staging;'
       }
     }
     stage('Production Deploy') {
