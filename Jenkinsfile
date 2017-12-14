@@ -2,19 +2,19 @@ pipeline {
   agent any
   stages {
     stage('Dev Deploy') {
+      agent any
       when {
         branch 'dev'
       }
-      agent any
       steps {
-        sh 'shell/./deploy.sh'
+        sh 'npm i; ember deploy staging;'
       }
     }
     stage('Production Deploy') {
+      agent any
       when {
         branch 'master'
       }
-      agent any
       steps {
         sh 'shell/./deploy.sh'
       }
