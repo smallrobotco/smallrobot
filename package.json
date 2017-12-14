@@ -21,7 +21,7 @@
     "ember-burger-menu": "^3.0.0",
     "ember-changeset": "^1.4.1",
     "ember-changeset-validations": "^1.2.9",
-    "ember-cli": "^2.17.0",
+    "ember-cli": "~2.17.1",
     "ember-cli-app-version": "^3.0.0",
     "ember-cli-autoprefixer": "^0.8.1",
     "ember-cli-babel": "^6.6.0",
