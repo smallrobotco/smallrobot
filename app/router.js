@@ -7,8 +7,13 @@ import { get } from '@ember/object';
 
 const Router = EmberRouter.extend(RouterScroll, {
   location: config.locationType,
+  headData: inject(),
   rootURL: config.rootURL,
   metrics: inject(),
+
+  // setTitle(title) {
+  //   this.get('headData').set('title', title);
+  // },
 
   didTransition() {
     this._super(...arguments);

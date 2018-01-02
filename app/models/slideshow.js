@@ -4,6 +4,6 @@ export default DS.Model.extend({
   created: DS.attr('string'),
   style: DS.attr('string'),
   count: DS.attr('number'),
-  slide: DS.hasMany('slide'),
-  element: DS.belongsTo('element')
+  slide: DS.hasMany('slide', { async: false }),
+  element: DS.belongsTo('element', { async: false })
 });

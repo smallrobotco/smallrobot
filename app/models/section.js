@@ -7,8 +7,8 @@ export default DS.Model.extend({
   reverse: DS.attr('boolean'),
   show: DS.attr('boolean'),
   background: DS.attr('string'),
-  backgroundImage: DS.belongsTo('file'),
   layout: DS.attr('string'),
-  column: DS.hasMany('column'),
-  page: DS.belongsTo('page'),
+  backgroundImage: DS.belongsTo('file', { async: false }),
+  column: DS.hasMany('column', { async: false }),
+  page: DS.belongsTo('page', { async: false }),
 });

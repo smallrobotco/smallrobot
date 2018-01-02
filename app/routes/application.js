@@ -12,6 +12,8 @@ export default Route.extend({
       files: this.store.findAll('file'),
       images: this.store.findAll('image'),
       contacts: this.store.findAll('contact'),
+      slideshows: this.store.findAll('slideshow'),
+      slides: this.store.findAll('slide'),
     });
   },
 
@@ -23,5 +25,7 @@ export default Route.extend({
     controller.set('files', models.files);
     controller.set('images', models.images);
     controller.set('contacts', models.contacts);
+    controller.set('slideshows', models.slideshows);
+    controller.set('slides', models.slides);
   }
 });
