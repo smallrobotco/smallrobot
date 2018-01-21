@@ -34,7 +34,7 @@
                 registerAs=itemSwiper
                 breakpoints=breakpoints
                 }}
-                {{#each element.slide as |slide|}}
+                {{#each (shuffle element.slide) as |slide|}}
                   {{#swiper-slide class="d-flex justify-content-center align-items-center text-center"}}
                     <div class="slide-inner">
                       {{#if slide.image}}

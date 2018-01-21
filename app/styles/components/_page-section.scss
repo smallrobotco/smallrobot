@@ -250,8 +250,9 @@
       @extend .col-12;
 
       .element-text {
+        @extend .mx-auto;
+        max-width: 960px;
         // text-align: justify;
-        max-width: none;
         margin: 0;
       }
     }
