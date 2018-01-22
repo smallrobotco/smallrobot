@@ -13,7 +13,7 @@
   "scripts": {
     "build": "ember build",
     "start": "ember serve",
-    "test": "ember test"
+    "test": "ember exam"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
@@ -50,6 +50,7 @@
     "ember-composable-helpers": "^2.0.1",
     "ember-concurrency": "^0.8.12",
     "ember-data": "~2.17.0",
+    "ember-exam": "^1.0.0",
     "ember-export-application-global": "^2.0.0",
     "ember-fastboot-form-rehydration": "^0.1.0",
     "ember-href-to": "^1.15.0",
