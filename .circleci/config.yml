@@ -8,13 +8,12 @@ jobs:
     docker:
       # specify the version you desire here
       - image: circleci/node:8.0.0
-        environment:
-            CHROME_BIN: "/usr/bin/google-chrome"
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
       # documented at https://circleci.com/docs/2.0/circleci-images/
       # - image: circleci/mongo:3.4.4
+      - image: selenium/standalone-chrome:3.1.0
 
     working_directory: ~/repo
 
@@ -37,7 +36,8 @@ jobs:
 
       # run tests!
       - run:
-          name: Run unit tests with karma
-          command: yarn test-single-headless
-      - store_test_results:
-          path: test-results.xml
+          name: Run Tests
+          shell: /bin/bash --login
+          command: xvfb-run ember test --silent -r xunit > /tmp/reports/ember-test.xml
+
+
