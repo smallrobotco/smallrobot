@@ -1,18 +1,16 @@
 {{#if page}}
   {{hero-splash page=page}}
 
+  {{#if articles}}
+    {{#each (sort-by "created" articles) as |article|}}
+      {{article-teaser article=article}}
+    {{/each}}
+  {{else}}
+  {{/if}}
+
   {{#each page.section as |section|}}
     {{page-section section=section}}
   {{/each}}
-
-  {{! #if articles}}
-    {{! #each (sort-by "created" articles) as |article|}}
-      {{! article-teaser article=article}}
-    {{! /each}}
-  {{! else}}
-
-  {{! /if}}
-
 {{else}}
   {{loading-spinner}}
 {{/if}}

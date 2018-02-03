@@ -11,8 +11,8 @@ module.exports = function(/* environment, appConfig */) {
     description: "We are a Vancouver, BC based Web Consulting, Development, and Support company, specializing in Drupal, Ember.js, and web apps.",
     start_url: "/",
     display: "standalone",
-    background_color: "#fff",
-    theme_color: "#fff",
+    background_color: "#000",
+    theme_color: "#000",
     icons: [
       {
         src: '/assets/icons/appicon-32.png',

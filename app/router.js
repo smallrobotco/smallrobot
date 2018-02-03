@@ -31,22 +31,13 @@ const Router = EmberRouter.extend(RouterScroll, {
 });
 
 Router.map(function() {
-  this.route('work', function() {
-    this.route('stories', function() {
-      this.route('story', { path: ':story_id' });
-    });
-  });
   this.route('blog', { path: 'ideas' }, function() {
     this.route('post', { path: ':article_id' });
   });
   this.route('about');
-  this.route('consulting', function() {
-    this.route('web');
-  });
-  this.route('development', function() {
-  });
-  this.route('support', function() {
-  });
+  this.route('consulting');
+  this.route('development');
+  this.route('support');
   this.route('pricing');
   this.route('contact');
 
