@@ -1,6 +1,5 @@
 # See https://help.github.com/ignore-files/ for more about ignoring files.
 
-
 # compiled output
 /dist
 /tmp
@@ -10,6 +9,8 @@
 /bower_components
 
 # misc
+.idea
+/.idea
 /.sass-cache
 /connect.lock
 /coverage/*
@@ -24,3 +25,4 @@ testem.log
 bower.json.ember-try
 package.json.ember-try
 .DS_Store
+
