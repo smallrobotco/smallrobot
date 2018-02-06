@@ -11,8 +11,7 @@
   },
   "repository": "",
   "scripts": {
-    "build": "ember build -e production",
-    "postbuild": "node -e \"require('./node_modules/sitemap-autogenerator/blueprints/sitemap-autogenerator/index').triggerSitemapBuilder('https://smallrobot.co')\"",
+    "build": "ember build",
     "start": "ember serve",
     "test": "ember exam"
   },
@@ -74,7 +73,7 @@
     "loader.js": "^4.2.3",
     "prember": "^0.2.2",
     "prember-middleware": "^0.1.0",
-    "sitemap-autogenerator": "rwwagner90/SitemapAutogenerator"
+    "prember-sitemap-generator": "^0.0.2"
   },
   "engines": {
     "node": "^4.5 || 6.* || >= 7.*"

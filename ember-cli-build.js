@@ -5,7 +5,7 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
-    autoprefixer: {
+    'autoprefixer': {
       browsers: ['last 2 major version'],
       cascade: false
     },
@@ -37,20 +37,19 @@ module.exports = function(defaults) {
       ],
       requestMode: 'cors'
     },
-
     'esw-cache-first': {
       patterns: [
         '/img/(.+)',
         '/assets/(.+)'
       ]
     },
-
     'esw-cache-fallback': {
       patterns: [
         '/api/(.+)'
       ],
     },
     'prember': {
+      baseRoot: 'https://smallrobot.co',
       urls: [
         '/',
         '/consulting',
@@ -59,10 +58,9 @@ module.exports = function(defaults) {
         '/contact'
       ]
     },
-
     gzip: {
       // options
-      extensions: '\*\*/\*.{js,css,json,ico,map,xml,txt,svg,eot,ttf,woff,woff2}'
+      extensions: '\*\*/\*.{js,css,json,ico,map,txt,svg,eot,ttf,woff,woff2}'
     }
   });
   return app.toTree();
