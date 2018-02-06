@@ -55,6 +55,7 @@
     "ember-fastboot-form-rehydration": "^0.1.0",
     "ember-hbs-minifier": "^0.1.0",
     "ember-href-to": "^1.15.0",
+    "ember-in-viewport": "^2.1.1",
     "ember-load-initializers": "^1.0.0",
     "ember-metrics": "^0.12.1",
     "ember-rapid-forms": "^1.2.4",
