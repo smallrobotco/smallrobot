@@ -30,7 +30,7 @@ module.exports = function(/* environment, appConfig */) {
     },
 
     ms: {
-      tileColor: '#ffffff'
+      tileColor: '#000000'
     }
   };
 }

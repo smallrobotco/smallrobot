@@ -69,6 +69,7 @@
     "ember-validated-form": "^0.6.0",
     "ember-web-app": "^2.2.0",
     "eslint-plugin-ember": "^5.0.1",
+    "iltorb": "^2.0.3",
     "liquid-fire": "^0.29.1",
     "loader.js": "^4.2.3",
     "prember": "^0.2.2",

@@ -58,7 +58,7 @@ module.exports = function(defaults) {
         '/contact'
       ]
     },
-    gzip: {
+    'gzip': {
       // options
       extensions: '\*\*/\*.{js,css,json,ico,map,txt,svg,eot,ttf,woff,woff2}'
     }
