@@ -55,12 +55,13 @@ module.exports = function(defaults) {
         '/consulting',
         '/development',
         '/support',
-        '/contact'
+        '/contact',
+        '/about'
       ]
     },
     'gzip': {
       // options
-      extensions: '\*\*/\*.{js,css,json,ico,map,txt,svg,eot,ttf,woff,woff2}'
+      extensions: '\*\*/\*.{js,css,json,ico,map,xml,txt,svg,eot,ttf,woff,woff2}'
     }
   });
   return app.toTree();
