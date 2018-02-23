@@ -5,7 +5,17 @@ export default Route.extend({
 
   model() {
     return RSVP.hash({
-      page: this.store.findRecord('page', 'b495e845-2242-4fb2-ab6b-9beccdce8a81'),
+      page: this.store.query('page', {
+        filter:
+          {
+            'slug':{
+              'value': '/404'
+            },
+          },
+      })
+      .then(pages => {
+        return pages.get('firstObject');
+      }),
     });
   },
 
