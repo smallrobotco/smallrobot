@@ -1,4 +1,3 @@
-{{#if page}}
   {{hero-splash page=page}}
 
   {{#each page.section as |section|}}
@@ -7,6 +6,4 @@
 
   {{!contact-form changeset=(changeset contact) }}
 
-{{else}}
-  {{loading-spinner}}
-{{/if}}
+  {{global-footer}}
