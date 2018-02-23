@@ -1,9 +1,9 @@
 import Component from '@ember/component';
 // import { setProperties } from '@ember/object';
 // import { on } from '@ember/object/evented';
-import InViewportMixin from 'ember-in-viewport';
+// import InViewportMixin from 'ember-in-viewport';
 
-export default Component.extend(InViewportMixin, {
+export default Component.extend({
   init() {
     this._super(...arguments);
     this.tagName = 'section';
