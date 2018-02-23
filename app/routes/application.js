@@ -8,12 +8,12 @@ export default Route.extend({
       pages: this.store.findAll('page'),
       sections: this.store.findAll('section'),
       columns: this.store.findAll('column'),
-      texts: this.store.findAll('text'),
-      files: this.store.findAll('file'),
-      images: this.store.findAll('image'),
-      contacts: this.store.findAll('contact'),
-      slideshows: this.store.findAll('slideshow'),
-      slides: this.store.findAll('slide'),
+      // texts: this.store.findAll('text'),
+      // files: this.store.findAll('file'),
+      // images: this.store.findAll('image'),
+      // contacts: this.store.findAll('contact'),
+      // slideshows: this.store.findAll('slideshow'),
+      // slides: this.store.findAll('slide'),
     });
   },
 
@@ -21,11 +21,11 @@ export default Route.extend({
     controller.set('pages', models.pages);
     controller.set('sections', models.sections);
     controller.set('columns', models.columns);
-    controller.set('texts', models.texts);
-    controller.set('files', models.files);
-    controller.set('images', models.images);
-    controller.set('contacts', models.contacts);
-    controller.set('slideshows', models.slideshows);
-    controller.set('slides', models.slides);
+    // controller.set('texts', models.texts);
+    // controller.set('files', models.files);
+    // controller.set('images', models.images);
+    // controller.set('contacts', models.contacts);
+    // controller.set('slideshows', models.slideshows);
+    // controller.set('slides', models.slides);
   }
 });

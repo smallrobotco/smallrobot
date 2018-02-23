@@ -12,6 +12,6 @@ export default DS.Model.extend({
   heroColor: DS.attr('string'),
   heroOverlay: DS.attr('string'),
   heroLayout: DS.attr('string'),
-  heroBackground: DS.belongsTo('file', { async: false }),
-  section: DS.hasMany('section', { async: false }),
+  heroBackground: DS.belongsTo('file', { async: true }),
+  section: DS.hasMany('section', { async: true }),
 });
