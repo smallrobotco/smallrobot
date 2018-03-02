@@ -44,6 +44,7 @@
     "ember-cli-spinjs": "^1.3.0",
     "ember-cli-sri": "^2.1.0",
     "ember-cli-string-helpers": "^1.5.0",
+    "ember-cli-surge": "https://github.com/kiwiupover/ember-cli-surge#e86ff81a79720f6915dc2bf37c74616ab5a0d66c",
     "ember-cli-swiper": "^0.7.4",
     "ember-cli-uglify": "^2.0.0",
     "ember-cli-update": "^0.14.0",
