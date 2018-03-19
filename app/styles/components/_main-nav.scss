@@ -165,8 +165,7 @@
         }
       }
     }
-    .hero-background-graydark,
-    .hero-background-black {
+    .nav-light {
       .site-info {
         color: $white;
 
@@ -184,114 +183,6 @@
               fill: $white;
             }
           }
-          }
-        }
-      }
-      nav {
-        ul {
-          li {
-            a {
-              color: $white;
-
-              &:hover,
-              &:focus {
-                color: $white;
-                border-color: rgba($white, .5);
-              }
-
-              &.active {
-                color: $white;
-                border-color: $white;
-              }
-            }
-          }
-        }
-      }
-    }
-    .hero-background-gray,
-    .hero-background-green {
-      .site-info {
-        color: $white;
-        a {
-          color: $white;
-          svg {
-            .a620be6a-c613-4032-81cc-7dcf5de97f84{
-              fill: $white;
-            }
-          }
-          &:hover {
-            color: $white;
-            svg {
-              .a620be6a-c613-4032-81cc-7dcf5de97f84{
-                fill: $white;
-              }
-            }
-          }
-        }
-      }
-      nav {
-        ul {
-          li {
-            a {
-              color: $white;
-
-              &:hover,
-              &:focus {
-                color: $white;
-                border-color: rgba($white, .5);
-              }
-
-              &.active {
-                color: $white;
-                border-color: $white;
-              }
-            }
-          }
-        }
-      }
-    }
-    .hero-background-green {
-      .site-info {
-        a {
-          svg {
-            .a620be6a-c613-4032-81cc-7dcf5de97f84{
-              fill: $white;
-            }
-          }
-        }
-      }
-      &.hero-overlay-green {
-        .site-info {
-          a {
-            svg {
-              .a620be6a-c613-4032-81cc-7dcf5de97f84{
-                fill: $white;
-              }
-            }
-          }
-        }
-      }
-    }
-    .hero-background-pink,
-    .hero-background-red,
-    .hero-background-blue,
-    .hero-background-purple {
-      .site-info {
-        color: $white;
-        a {
-          color: $white;
-          svg {
-            .a620be6a-c613-4032-81cc-7dcf5de97f84{
-              fill: $white;
-            }
-          }
-          &:hover {
-            color: $white;
-            svg {
-              .a620be6a-c613-4032-81cc-7dcf5de97f84{
-                fill: $white;
-              }
-            }
           }
         }
       }

@@ -22,7 +22,7 @@ module.exports = function(deployTarget) {
 
   if (deployTarget === 'staging') {
     ENV.git = {
-      repo: 'git@github.com:bmx269/smallrobot.git',
+      repo: 'git@github.com:smallrobotco/smallrobot.git',
       branch: 'gh-pages',
       worktreePath: '../deploy-gh-smallrobotco',
       commitMessage: 'App Deployed %@'
@@ -32,7 +32,7 @@ module.exports = function(deployTarget) {
 
   if (deployTarget === 'production') {
     ENV.git = {
-      repo: 'git@github.com:bmx269/smallrobot.git',
+      repo: 'git@github.com:smallrobotco/smallrobot.git',
       branch: 'deploys',
       worktreePath: '../deploy-smallrobotco',
       commitMessage: 'App Deployed %@'

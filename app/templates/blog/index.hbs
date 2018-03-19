@@ -1,14 +1,14 @@
   {{hero-splash page=page}}
 
-  {{#if articles}}
+  {{!-- {{#if articles}}
     {{#each (sort-by "created" articles) as |article|}}
       {{article-teaser article=article}}
     {{/each}}
   {{else}}
-  {{/if}}
+  {{/if}} --}}
 
   {{#each page.section as |section|}}
-    {{page-section section=section}}
+    {{page-section section=section articles=articles}}
   {{/each}}
 
   {{global-footer}}

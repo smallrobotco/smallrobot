@@ -1,5 +1,33 @@
 {{#if post}}
-  {{hero-splash page=post}}
+  {{#if post.heroActive}}
+    {{ main-nav class="hero" navColor=page.navColor heroColor=post.heroColor heroOverlay=post.heroOverlay }}
+    <section class="hero-splash">
+      <div class="hero-wrapper {{post.heroColor}} {{post.heroLayout}}" style="{{post.heroBackground.inlineBackground}}">
+        <div class='overlay {{post.heroOverlay}}'>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="hero-col">
+                <div class="hero-block">
+                  <div class="hero-text">
+                    {{#if post.heroBlurb}}
+                      <p class="blurb">
+                        {{{post.heroBlurb.value}}}
+                      </p>
+                    {{/if}}
+                    {{#if post.heroByline}}
+                      <p class="byline">{{post.heroByline}}</p>
+                    {{/if}}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  {{else}}
+    {{main-nav}}
+  {{/if}}
 
   {{#each post.section as |section|}}
     {{page-section section=section}}
