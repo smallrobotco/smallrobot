@@ -491,6 +491,7 @@
   .section-column {
 
       .element-text,
+      .element-listing,
       .element-image,
       .slideshow  {
         @extend .d-flex;
@@ -501,10 +502,16 @@
           @extend .w-100;
         }
       }
+      .element-text {
+        .inner {
+          max-width: 960px;
+        }
+      }
 
     &.top {
       display: flex;
       .element-text,
+      .element-listing,
       .element-image,
       .slideshow  {
         @extend .align-items-start;
@@ -514,6 +521,7 @@
     &.middle {
       display: flex;
       .element-text,
+      .element-listing,
       .element-image,
       .slideshow  {
         @extend .align-items-center;
@@ -523,6 +531,7 @@
     &.bottom {
       display: flex;
       .element-text,
+      .element-listing,
       .element-image,
       .slideshow  {
         @extend .align-items-end;
