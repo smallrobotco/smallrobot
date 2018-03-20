@@ -502,11 +502,6 @@
           @extend .w-100;
         }
       }
-      .element-text {
-        .inner {
-          max-width: 960px;
-        }
-      }
 
     &.top {
       display: flex;
@@ -547,6 +542,13 @@
     .element-image {
       // text-align: justify;
       margin: 0 auto;
+    }
+  }
+  .justify-content-center {
+    .section-column {
+      &.col {
+        max-width: 960px;
+      }
     }
   }
 

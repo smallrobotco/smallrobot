@@ -8,7 +8,6 @@ export default DS.Model.extend({
   show: DS.attr('boolean'),
   isHero: DS.attr('boolean'),
   background: DS.attr('string'),
-  layout: DS.attr('string'),
   columnAlignment: DS.attr('string'),
   heroSize: DS.attr('string'),
   overlay: DS.attr('string'),
