@@ -7,10 +7,10 @@
       {{/if}}
       <div class="content-wrapper">
         <div class="container-fluid">
-          <div class='row {{section.columnAlignment}} {{if section.reverse 'flex-sm-row-reverse'}}'>
+          <div class='row {{section.colHorizontalAlignment}} {{section.colVerticalAlignment}} {{if section.reverse 'flex-sm-row-reverse'}}'>
 
           {{#each section.column as |column|}}
-            <div class='section-column {{column.columnWidthXs}} {{column.columnWidthSm}} {{column.columnWidthMd}} {{column.columnWidthLg}} {{column.columnWidthXl}} {{column.alignment}}'>
+            <div class='section-column {{column.columnWidthXs}} {{column.columnWidthSm}} {{column.columnWidthMd}} {{column.columnWidthLg}} {{column.columnWidthXl}}'>
 
             {{#each column.element as |element|}}
               {{#if element.body }}

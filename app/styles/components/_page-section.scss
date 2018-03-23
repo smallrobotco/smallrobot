@@ -503,42 +503,6 @@
         }
       }
 
-    &.top {
-      display: flex;
-      .element-text,
-      .element-listing,
-      .element-image,
-      .slideshow  {
-        @extend .align-items-start;
-        @extend .align-items-md-start;
-      }
-    }
-    &.middle {
-      display: flex;
-      .element-text,
-      .element-listing,
-      .element-image,
-      .slideshow  {
-        @extend .align-items-center;
-        @extend .align-items-md-center;
-      }
-    }
-    &.bottom {
-      display: flex;
-      .element-text,
-      .element-listing,
-      .element-image,
-      .slideshow  {
-        @extend .align-items-end;
-        @extend .align-items-md-end;
-      }
-    }
-
-    // .element-text {
-    //   // text-align: justify;
-    //   max-width: 32em;
-    //   margin: 0 auto;
-    // }
     .element-image {
       // text-align: justify;
       margin: 0 auto;
