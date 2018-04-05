@@ -9,10 +9,10 @@ module.exports = function(/* environment, appConfig */) {
     name: "Small Robot Co - Consulting | Development | Support",
     short_name: "Small Robot",
     description: "We are a Vancouver, BC based Web Consulting, Development, and Support company, specializing in Drupal, Ember.js, and web apps.",
-    start_url: "/",
+    start_url: "./?utm_source=web_app_manifest",
     display: "standalone",
-    background_color: "#000",
-    theme_color: "#000",
+    background_color: "#000000",
+    theme_color: "#000000",
     icons: [
       {
         src: '/assets/icons/appicon-32.png',
@@ -26,7 +26,7 @@ module.exports = function(/* environment, appConfig */) {
     ],
 
     apple: {
-      statusBarStyle: 'black-translucent'
+      statusBarStyle: 'black'
     },
 
     ms: {
