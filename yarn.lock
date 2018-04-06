@@ -1305,7 +1305,18 @@ breakable@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/breakable/-/breakable-1.0.0.tgz#784a797915a38ead27bad456b5572cb4bbaa78c1"
 
-broccoli-asset-rev@^2.5.0, "broccoli-asset-rev@https://github.com/ef4/broccoli-asset-rev#838f1b7186fde566d3e8010196c1f974423a4946":
+broccoli-asset-rev@^2.4.5:
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/broccoli-asset-rev/-/broccoli-asset-rev-2.7.0.tgz#c73da1d97c4180366fa442a87624ca1b7fb99161"
+  dependencies:
+    broccoli-asset-rewrite "^1.1.0"
+    broccoli-filter "^1.2.2"
+    broccoli-persistent-filter "^1.4.3"
+    json-stable-stringify "^1.0.0"
+    minimatch "^3.0.4"
+    rsvp "^3.0.6"
+
+broccoli-asset-rev@^2.5.0:
   version "2.6.0"
   resolved "https://github.com/ef4/broccoli-asset-rev#838f1b7186fde566d3e8010196c1f974423a4946"
   dependencies:
@@ -2246,7 +2257,7 @@ continuable-cache@^0.3.1:
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/continuable-cache/-/continuable-cache-0.3.1.tgz#bd727a7faed77e71ff3985ac93351a912733ad0f"
 
-convert-source-map@^1.1.0, convert-source-map@^1.5.0:
+convert-source-map@^1.1.0, convert-source-map@^1.5.0, convert-source-map@^1.5.1:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/convert-source-map/-/convert-source-map-1.5.1.tgz#b8278097b9bc229365de5c62cf5fcaed8b5599e5"
 
@@ -2744,9 +2755,9 @@ ember-cli-eslint@^4.2.1:
     rsvp "^4.6.1"
     walk-sync "^0.3.0"
 
-"ember-cli-fastboot@https://github.com/ef4/ember-cli-fastboot#48b94151e373bc33bcc3ad737a1e3e2a7e4ed8da":
-  version "1.1.0"
-  resolved "https://github.com/ef4/ember-cli-fastboot#48b94151e373bc33bcc3ad737a1e3e2a7e4ed8da"
+ember-cli-fastboot@1.1.4-beta.1:
+  version "1.1.4-beta.1"
+  resolved "https://registry.yarnpkg.com/ember-cli-fastboot/-/ember-cli-fastboot-1.1.4-beta.1.tgz#7063df36e62b92fd0f60c9a23dd03b5b57aec3fe"
   dependencies:
     broccoli-concat "^3.2.2"
     broccoli-funnel "^2.0.0"
@@ -2754,12 +2765,14 @@ ember-cli-eslint@^4.2.1:
     broccoli-plugin "^1.2.1"
     chalk "^2.0.1"
     ember-cli-babel "^6.7.2"
-    ember-cli-version-checker "^2.0.0"
-    fastboot "https://github.com/ember-fastboot/fastboot#20bbbc357b8183d0b2ca4463c5cb1dca5f7fdf8f"
+    ember-cli-lodash-subset "2.0.1"
+    ember-cli-preprocess-registry "^3.1.0"
+    ember-cli-version-checker "^2.1.0"
+    fastboot "^1.1.4-beta.1"
     fastboot-express-middleware "^1.1.0"
-    fs-extra "^4.0.0"
+    fastboot-transform "^0.1.2"
+    fs-extra "^4.0.2"
     json-stable-stringify "^1.0.1"
-    lodash.uniq "^4.2.0"
     md5-hex "^2.0.0"
     silent-error "^1.0.0"
 
@@ -2841,13 +2854,13 @@ ember-cli-is-package-missing@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/ember-cli-is-package-missing/-/ember-cli-is-package-missing-1.0.0.tgz#6e6184cafb92635dd93ca6c946b104292d4e3390"
 
+ember-cli-lodash-subset@2.0.1, ember-cli-lodash-subset@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/ember-cli-lodash-subset/-/ember-cli-lodash-subset-2.0.1.tgz#20cb68a790fe0fde2488ddfd8efbb7df6fe766f2"
+
 ember-cli-lodash-subset@^1.0.7:
   version "1.0.12"
   resolved "https://registry.yarnpkg.com/ember-cli-lodash-subset/-/ember-cli-lodash-subset-1.0.12.tgz#af2e77eba5dcb0d77f3308d3a6fd7d3450f6e537"
-
-ember-cli-lodash-subset@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/ember-cli-lodash-subset/-/ember-cli-lodash-subset-2.0.1.tgz#20cb68a790fe0fde2488ddfd8efbb7df6fe766f2"
 
 ember-cli-node-assets@0.2.2:
   version "0.2.2"
@@ -3959,6 +3972,13 @@ fastboot-express-middleware@^1.1.0:
     fastboot "^1.1.2"
     request "^2.81.0"
 
+fastboot-transform@^0.1.2:
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/fastboot-transform/-/fastboot-transform-0.1.3.tgz#7dea0b117594afd8772baa6c9b0919644e7f7dcd"
+  dependencies:
+    broccoli-stew "^1.5.0"
+    convert-source-map "^1.5.1"
+
 fastboot@^1.1.0, fastboot@^1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/fastboot/-/fastboot-1.1.2.tgz#1cb4b6423aacc4339fbf003cc7b6ecabd3083dfa"
@@ -3985,9 +4005,9 @@ fastboot@^1.1.3:
     simple-dom "^1.0.0"
     source-map-support "^0.5.0"
 
-"fastboot@https://github.com/ember-fastboot/fastboot#20bbbc357b8183d0b2ca4463c5cb1dca5f7fdf8f":
-  version "1.1.0"
-  resolved "https://github.com/ember-fastboot/fastboot#20bbbc357b8183d0b2ca4463c5cb1dca5f7fdf8f"
+fastboot@^1.1.4-beta.1:
+  version "1.1.4-beta.1"
+  resolved "https://registry.yarnpkg.com/fastboot/-/fastboot-1.1.4-beta.1.tgz#860f8af2bd032b3a7477fdf6e1a64b034a02829f"
   dependencies:
     chalk "^2.0.1"
     cookie "^0.3.1"
@@ -6525,9 +6545,9 @@ prember@*:
     fastboot "^1.1.0"
     mkdirp "^0.5.1"
 
-prember@^0.3.0-alpha.3:
-  version "0.3.0-alpha.3"
-  resolved "https://registry.yarnpkg.com/prember/-/prember-0.3.0-alpha.3.tgz#89466c9b26f2629b777d4439b04cc5c9d6dd27e2"
+prember@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/prember/-/prember-0.3.0.tgz#cc32a6a7f71535ebe7bee2351f8224cb4c1b2dd6"
   dependencies:
     broccoli-debug "^0.6.3"
     broccoli-merge-trees "^2.0.0"
