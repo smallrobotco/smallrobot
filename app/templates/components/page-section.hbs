@@ -24,7 +24,7 @@
                   <div class='inner'>
                     {{#if (eq element.listingType "articles")}}
                       {{#if articles}}
-                        {{#each (sort-by "created" articles) as |article|}}
+                        {{#each (sort-by "created:desc" articles) as |article|}}
                           {{article-teaser article=article}}
                         {{/each}}
                       {{else}}

@@ -56,7 +56,8 @@ module.exports = function(defaults) {
         '/development',
         '/support',
         '/contact',
-        '/about'
+        '/about',
+        '/ideas',
       ]
     },
     'gzip': {

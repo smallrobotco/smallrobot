@@ -1,6 +1,7 @@
 .article.teaser {
-  position: relative;
+  // position: relative;
   padding: 3vw 0;
+  border-bottom: 1px dotted $gray-200;
 
   @include media-breakpoint-up(md) {
     padding: 3vw 0;
@@ -9,6 +10,10 @@
   @include media-breakpoint-up(xl) {
     padding: 2vw 0;
   }
+  // &:last-child {
+  //   border-bottom: 0;
+  // }
+
 
   .page-section .outer {
     font-size: .875rem;
