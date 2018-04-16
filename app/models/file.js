@@ -12,10 +12,10 @@ export default DS.Model.extend({
 
   fullUrl: computed('uri', function() {
     const host = ENV.host;
-    let url = this.get('uri');
+    let url = this.uri;
     return `${host}`+`${url}`;
   }),
   inlineBackground: computed('url', function () {
-    return new htmlSafe( "background-image: url('" + this.get('url') + "')" );
+    return new htmlSafe( "background-image: url('" + this.url + "')" );
   })
 });
