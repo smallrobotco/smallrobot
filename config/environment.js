@@ -7,10 +7,11 @@ module.exports = function(environment) {
     modulePrefix: 'smallrobotco',
     environment,
     rootURL: '/',
-    host: 'https://api.smallrobot.co', //drupal
+    host: 'http://api.smallrobot.local', //drupal
     namespace: 'api',
     locationType: 'router-scroll',
     historySupportMiddleware: true,
+
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -107,6 +108,7 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
+    ENV.APP.FASTBOOT_DISABLED = true;
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
@@ -128,6 +130,7 @@ module.exports = function(environment) {
 
   if (environment === 'production') {
     // anything here will be deployed to staging and production
+    ENV.APP.host = 'https://api.smallrobot.co'//drupal
   }
 
   if (deployTarget === 'staging') {
