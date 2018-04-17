@@ -31,16 +31,16 @@ module.exports = function(defaults) {
       versionStrategy: 'every-build'
     },
     'asset-cache': {
-      exclude: [
-        'img/**/*',
-        'assets/**/*'
+      include: [
+        'assets/**/*',
+        'img/**/*'
+
       ],
       requestMode: 'cors'
     },
     'esw-cache-first': {
       patterns: [
-        '/img/(.+)',
-        '/assets/(.+)'
+        '/assets/(.+)',
       ]
     },
     'esw-cache-fallback': {
@@ -59,10 +59,6 @@ module.exports = function(defaults) {
         '/about',
         '/ideas',
       ]
-    },
-    'gzip': {
-      // options
-      extensions: '\*\*/\*.{js,css,json,ico,map,xml,txt,svg,eot,ttf,woff,woff2}'
     }
   });
   return app.toTree();

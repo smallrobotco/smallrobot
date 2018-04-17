@@ -1,20 +1,19 @@
 @import 'ember-burger-menu';
+@import 'fontawesome/fontawesome';
+@import 'fontawesome/fa-light';
+@import 'fontawesome/fa-brands';
+@import 'fontawesome/fa-regular';
+@import 'fontawesome/fa-solid';
+@import 'bootstrap/bootstrap';
 
-@import "fontawesome/fontawesome";
-@import "fontawesome/fa-light";
-@import "fontawesome/fa-brands";
-@import "fontawesome/fa-regular";
-@import "fontawesome/fa-solid";
-@import "bootstrap/bootstrap";
+@import 'global/animate';
+@import 'global/base';
+@import 'global/typography';
 
-@import "global/animate";
-@import "global/base";
-@import "global/typography";
-
-@import "components/angled-divider";
-@import "components/hero-splash";
-@import "components/main-nav";
-@import "components/footer-nav";
-@import "components/page-section";
+@import 'components/angled-divider';
+@import 'components/hero-splash';
+@import 'components/main-nav';
+@import 'components/footer-nav';
+@import 'components/page-section';
 
 
