@@ -97,35 +97,6 @@ span {
   }
 }
 
-
-.btn {
-
-  &:before {
-    @extend .fas;
-    margin-right: .5rem;
-  }
-
-
-  &[href="/consulting"] {
-    &:before {
-      @extend .fa-comments;
-    }
-  }
-
-  &[href="/development"] {
-    &:before {
-      @extend .fa-code;
-    }
-  }
-
-  &[href="/support"] {
-    &:before {
-      @extend .fa-shield-check;
-    }
-  }
-}
-
-
 .dev-logos {
   text-align: center;
   font-size: calc(2rem + 2.25vw);

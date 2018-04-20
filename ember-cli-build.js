@@ -34,13 +34,13 @@ module.exports = function(defaults) {
       include: [
         'assets/**/*',
         'img/**/*'
-
       ],
       requestMode: 'cors'
     },
     'esw-cache-first': {
       patterns: [
         '/assets/(.+)',
+        '/img/(.+)'
       ]
     },
     'esw-cache-fallback': {

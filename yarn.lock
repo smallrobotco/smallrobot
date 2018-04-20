@@ -1376,7 +1376,7 @@ breakable@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/breakable/-/breakable-1.0.0.tgz#784a797915a38ead27bad456b5572cb4bbaa78c1"
 
-broccoli-asset-rev@^2.5.0, broccoli-asset-rev@^2.7.0:
+broccoli-asset-rev@^2.4.5, broccoli-asset-rev@^2.5.0:
   version "2.7.0"
   resolved "https://registry.yarnpkg.com/broccoli-asset-rev/-/broccoli-asset-rev-2.7.0.tgz#c73da1d97c4180366fa442a87624ca1b7fb99161"
   dependencies:
@@ -1970,8 +1970,8 @@ chalk@^1.0.0, chalk@^1.1.1, chalk@^1.1.3:
     supports-color "^2.0.0"
 
 chalk@^2.0.0, chalk@^2.0.1, chalk@^2.1.0, chalk@^2.3.0, chalk@^2.3.1, chalk@^2.3.2:
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/chalk/-/chalk-2.3.2.tgz#250dc96b07491bfd601e648d66ddf5f60c7a5c65"
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/chalk/-/chalk-2.4.0.tgz#a060a297a6b57e15b61ca63ce84995daa0fe6e52"
   dependencies:
     ansi-styles "^3.2.1"
     escape-string-regexp "^1.0.5"
@@ -2690,7 +2690,7 @@ ember-cli-babel@6.12.0, ember-cli-babel@^6.0.0, ember-cli-babel@^6.0.0-beta.4, e
     ember-cli-version-checker "^2.1.0"
     semver "^5.4.1"
 
-ember-cli-babel@^5.1.6:
+ember-cli-babel@^5.1.6, ember-cli-babel@^5.1.7:
   version "5.2.8"
   resolved "https://registry.yarnpkg.com/ember-cli-babel/-/ember-cli-babel-5.2.8.tgz#0356b03cc3fdff5d0f2ecaa46a0e1cfaebffd876"
   dependencies:
@@ -2740,9 +2740,9 @@ ember-cli-eslint@^4.2.1:
     rsvp "^4.6.1"
     walk-sync "^0.3.0"
 
-ember-cli-fastboot@ember-fastboot/ember-cli-fastboot#158af9ec00edf58db71524bea04d224705ef5d19:
+ember-cli-fastboot@1.1.4-beta.1:
   version "1.1.4-beta.1"
-  resolved "https://codeload.github.com/ember-fastboot/ember-cli-fastboot/tar.gz/158af9ec00edf58db71524bea04d224705ef5d19"
+  resolved "https://registry.yarnpkg.com/ember-cli-fastboot/-/ember-cli-fastboot-1.1.4-beta.1.tgz#7063df36e62b92fd0f60c9a23dd03b5b57aec3fe"
   dependencies:
     broccoli-concat "^3.2.2"
     broccoli-funnel "^2.0.0"
@@ -3176,11 +3176,11 @@ ember-hash-helper-polyfill@^0.2.0:
     ember-cli-babel "^6.8.2"
     ember-cli-version-checker "^2.1.0"
 
-ember-hbs-minifier@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/ember-hbs-minifier/-/ember-hbs-minifier-0.3.0.tgz#867cad92389cadb12c403bc6b6d30703dea0305a"
+ember-hbs-minifier@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/ember-hbs-minifier/-/ember-hbs-minifier-0.1.0.tgz#18ceeb2dc693204970c042c2afdab91c799e8ba4"
   dependencies:
-    object-hash "1.2.0"
+    ember-cli-babel "^5.1.7"
 
 ember-href-to@^1.15.0:
   version "1.15.1"
@@ -6346,10 +6346,6 @@ object-copy@^0.1.0:
     define-property "^0.2.5"
     kind-of "^3.0.3"
 
-object-hash@1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/object-hash/-/object-hash-1.2.0.tgz#e96af0e96981996a1d47f88ead8f74f1ebc4422b"
-
 object-visit@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/object-visit/-/object-visit-1.0.1.tgz#f79c4493af0c5377b59fe39d395e41042dd045bb"
@@ -6689,23 +6685,9 @@ prember-sitemap-generator@^0.0.2:
     broccoli-funnel "^2.0.1"
     chalk "^2.3.0"
 
-prember@*:
+prember@*, prember@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/prember/-/prember-0.3.0.tgz#cc32a6a7f71535ebe7bee2351f8224cb4c1b2dd6"
-  dependencies:
-    broccoli-debug "^0.6.3"
-    broccoli-merge-trees "^2.0.0"
-    broccoli-plugin "^1.3.0"
-    chalk "^2.3.0"
-    denodeify "^1.2.1"
-    ember-cli-babel "^6.6.0"
-    express "^4.16.2"
-    fastboot "^1.1.3"
-    mkdirp "^0.5.1"
-
-prember@^0.4.0-alpha.0:
-  version "0.4.0-alpha.0"
-  resolved "https://registry.yarnpkg.com/prember/-/prember-0.4.0-alpha.0.tgz#6ddc166b3494eb40ded454b32d2f0aa2e04075de"
   dependencies:
     broccoli-debug "^0.6.3"
     broccoli-merge-trees "^2.0.0"
@@ -7964,8 +7946,8 @@ supports-color@^2.0.0:
   resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-2.0.0.tgz#535d045ce6b6363fa40117084629995e9df324c7"
 
 supports-color@^5.3.0:
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-5.3.0.tgz#5b24ac15db80fa927cf5227a4a33fd3c4c7676c0"
+  version "5.4.0"
+  resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-5.4.0.tgz#1c6b337402c2137605efe19f10fec390f6faab54"
   dependencies:
     has-flag "^3.0.0"
 
