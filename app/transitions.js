@@ -5,7 +5,7 @@
 //   //   this.reverse('toRight')
 //   // );
 //   // this.transition(
-//   //   this.toRoute(['home','about','consulting','development','support', 'pricing','contact','blog','blog.post','notfound']),
+//   //   this.toRoute(['index','about','consulting','development','support', 'pricing','contact','blog','blog.post','notfound']),
 //   //   this.use('fade', { duration: 500 })
 //   // );
 //   const duration = 1500;
