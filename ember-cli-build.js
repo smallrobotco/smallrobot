@@ -5,6 +5,10 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
+    brotli: {
+      extensions: ['js', 'css', 'svg'],
+      appendSuffix: false
+    },
     'autoprefixer': {
       browsers: ['last 2 major version'],
       cascade: false
