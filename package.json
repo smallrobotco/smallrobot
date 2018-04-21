@@ -39,7 +39,6 @@
     "ember-cli-spinjs": "^1.4.2",
     "ember-cli-sri": "^2.1.0",
     "ember-cli-string-helpers": "^1.8.0",
-    "ember-cli-stylelint": "^2.1.0",
     "ember-cli-surge": "^1.2.0",
     "ember-cli-swiper": "^1.0.0",
     "ember-cli-template-lint": "0.7.5",
