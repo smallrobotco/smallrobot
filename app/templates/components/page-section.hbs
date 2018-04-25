@@ -14,13 +14,13 @@
 
             {{#each column.element as |element|}}
               {{#if element.body }}
-                <div class='element-text col'>
+                <div class='element-text'>
                   <div class='inner'>
                     {{html-safe element.body.value}}
                   </div>
                 </div>
               {{else if element.listingType}}
-                <div class='element-listing col'>
+                <div class='element-listing'>
                   <div class='inner'>
                     {{#if (eq element.listingType "articles")}}
                       {{#if articles}}
@@ -36,11 +36,11 @@
                   </div>
                 </div>
               {{else if element.image }}
-                <div class='image col'>
+                <div class='image'>
                   <img src='{{element.image.fullUrl}}' alt='' srcset=''>
                 </div>
               {{else if element.slide}}
-              <div class='slideshow col'>
+              <div class='slideshow'>
                 <div class='inner'>
                   {{#swiper-container
                     class="item-carousel"
