@@ -3139,12 +3139,6 @@ ember-factory-for-polyfill@^1.3.1:
   dependencies:
     ember-cli-version-checker "^2.1.0"
 
-ember-fastboot-form-rehydration@^0.1.3:
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/ember-fastboot-form-rehydration/-/ember-fastboot-form-rehydration-0.1.3.tgz#340ab248ffa5b4830078dc6538eacc940eb6a059"
-  dependencies:
-    ember-cli-babel "^6.6.0"
-
 ember-get-config@^0.2.4:
   version "0.2.4"
   resolved "https://registry.yarnpkg.com/ember-get-config/-/ember-get-config-0.2.4.tgz#118492a2a03d73e46004ed777928942021fe1ecd"
@@ -3334,8 +3328,8 @@ ember-service-worker@^0.6.12:
     rollup-plugin-replace "^1.1.1"
 
 ember-source@~3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/ember-source/-/ember-source-3.1.0.tgz#21902747801c747b615f60168712968db3b433fc"
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/ember-source/-/ember-source-3.1.1.tgz#9cf95e8a6d7568d60b8eda2aeda17ac8944e654b"
   dependencies:
     broccoli-funnel "^2.0.1"
     broccoli-merge-trees "^2.0.0"
@@ -5454,7 +5448,7 @@ load-json-file@^1.0.0:
     pinkie-promise "^2.0.0"
     strip-bom "^2.0.0"
 
-loader.js@^4.2.3:
+loader.js@^4.7.0:
   version "4.7.0"
   resolved "https://registry.yarnpkg.com/loader.js/-/loader.js-4.7.0.tgz#a1a52902001c83631efde9688b8ab3799325ef1f"
 
