@@ -1,7 +1,10 @@
 import Route from '@ember/routing/route';
+import { setProperties } from '@ember/object';
+import { inject as service } from '@ember/service';
 import RSVP from 'rsvp';
 
 export default Route.extend({
+  headData: service(),
 
   model() {
     return RSVP.hash({
@@ -17,6 +20,16 @@ export default Route.extend({
       // .then(pages => {
       //   return pages.get('firstObject');
       // }),
+    });
+  },
+
+  afterModel() {
+    return setProperties(this.headData, {
+      title: 'Small Robot Co. | Development - Ember.js, Drupal, ContentaCMS, Decoupled, Web Apps',
+      description:
+      'We are a Vancouver, BC based Web Design, Technical Consulting, Web Development, and Support company, specializing in Drupal, Ember.js, websites and web apps.',
+      type: 'website',
+      url: 'https://smallrobot.co/development'
     });
   },
 
