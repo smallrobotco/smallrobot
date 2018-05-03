@@ -51,7 +51,7 @@ export default Route.extend({
   actions: {
     sendContactRequest(contact) {
       if (get(contact, 'validations.isValid')) {
-        const data = contact.getProperties('firstName', 'lastName', 'phone', 'email', 'subject', 'message');
+        const data = contact.getProperties('fullName', 'organization', 'phone', 'email', 'message');
         data['form-name'] = 'contact';
         const body = this._encode(data);
 
@@ -71,6 +71,7 @@ export default Route.extend({
   },
   setupController(controller, models) {
     controller.set('page', models.page);
+    controller.set('contactForm', models.contactForm);
   },
 
   _successMessage() {
