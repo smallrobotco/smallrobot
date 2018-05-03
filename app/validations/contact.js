@@ -1,16 +1,14 @@
-// import { validatePresence, validateLength } from 'ember-changeset-validations/validators';
+import { validator, buildValidations } from 'ember-cp-validations';
 
-// export default {
-//   firstName: [validatePresence(true), validateLength({ min: 3, max: 40 })],
-//   lastName: [validatePresence(true), validateLength({ min: 3, max: 40 })],
-//   aboutMe: [validateLength({ allowBlank: true, max: 200 })]
-  // country: [validatePresence(true)],
-  // gender: [validatePresence(true)],
-  // terms: [
-  //   validateInclusion({
-  //     list: [true],
-  //     message: 'Please accept the terms and conditions!'
-  //   })
-  // ],
-  // color: [validatePresence(true)]
-// };
+export default buildValidations({
+  fullName: validator('presence', true),
+  email: [
+    validator('presence', true),
+    validator('format', { type: 'email' })
+  ],
+  phone: [
+    validator('presence', true),
+    validator('format', { type: 'phone' })
+  ],
+  message: validator('presence', true)
+});
