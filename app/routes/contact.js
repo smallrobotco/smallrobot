@@ -11,17 +11,6 @@ export default Route.extend({
   headData: service(),
 
   model() {
-    // return EmberObject.extend(contactValidations).create(
-    //   getOwner(this).ownerInjection(),
-    //   {
-    //     fullName: null,
-    //     organization: null,
-    //     phone: null,
-    //     email: null,
-    //     message: null
-    //   }
-    // );
-
     return RSVP.hash({
       page: this.store.findRecord('page', '3e3126a1-7ae1-495a-96c0-2ede1e8b4ca5'),
       contactForm: EmberObject.extend(contactValidations).create(
