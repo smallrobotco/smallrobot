@@ -7,7 +7,7 @@ module.exports = function(/* environment, appConfig */) {
 
   return {
     name: "Small Robot Co - Consulting | Development | Support",
-    short_name: "Small Robot",
+    short_name: "SmallRobot",
     description: "We are a Vancouver, BC based Web Consulting, Development, and Support company, specializing in Drupal, Ember.js, and web apps.",
     start_url: "./?utm_source=web_app_manifest",
     display: "standalone",
