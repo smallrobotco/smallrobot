@@ -22,6 +22,9 @@ module.exports = function(defaults) {
       ],
       cascade: false
     },
+    'ember-cli-babel': {
+      includePolyfill: true
+    },
     'ember-cli-image-transformer': {
       images: [
         {
