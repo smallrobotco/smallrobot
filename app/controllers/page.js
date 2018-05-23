@@ -2,5 +2,5 @@ import Controller from '@ember/controller';
 
 export default Controller.extend({
   queryParams: ['filter'],
-  filter: window.location.pathname,
+  // filter: window.location.pathname,
 });

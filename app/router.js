@@ -38,9 +38,7 @@ Router.map(function() {
   this.route('index', { path: '/' });
   this.route('about');
   this.route('consulting');
-  this.route('development', function() {
-    this.route('approach');
-  });
+  this.route('development');
   this.route('support');
   this.route('pricing');
   this.route('contact');

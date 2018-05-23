@@ -1,4 +1,4 @@
-import { validator, buildValidations } from 'ember-cp-validations';
+import { buildValidations, validator } from 'ember-cp-validations';
 
 export default buildValidations({
   fullName: validator('presence', true),

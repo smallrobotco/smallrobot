@@ -1,5 +1,8 @@
+import { setProperties } from '@ember/object';
 import Route from '@ember/routing/route';
 import { inject as service } from '@ember/service';
+
+
 
 export default Route.extend({
   headData: service(),
@@ -11,8 +14,10 @@ export default Route.extend({
   },
 
   model() {
+
     let slugPath = window.location.pathname;
     // console.log(slugPath);
+
     return this.store.query('page', {
       filter:
         {
