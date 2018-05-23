@@ -1,7 +1,10 @@
+import { setProperties } from '@ember/object';
 import Route from '@ember/routing/route';
+import { inject as service } from '@ember/service';
 import RSVP from 'rsvp';
 
 export default Route.extend({
+  headData: service(),
 
   model() {
     return RSVP.hash({
@@ -18,6 +21,16 @@ export default Route.extend({
       //   return pages.get('firstObject');
       // }),
       articles: this.store.findAll('article'),
+    });
+  },
+
+  afterModel() {
+    return setProperties(this.headData, {
+      title: 'Small Robot Co. | Our Ideas Written Down',
+      description:
+      'We are a Vancouver, BC based Web Design, Technical Consulting, Web Development, and Support company, specializing in Drupal, Ember.js, websites and web apps.',
+      type: 'website',
+      url: 'https://smallrobot.co/ideas'
     });
   },
 
