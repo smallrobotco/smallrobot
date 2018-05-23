@@ -1,11 +1,11 @@
 import Route from '@ember/routing/route';
-import RSVP from 'rsvp';
+import { inject as service } from '@ember/service';
 
 export default Route.extend({
+  headData: service(),
 
   model() {
-    return RSVP.hash({
-      page: this.store.query('page', {
+    return this.store.query('page', {
         filter:
           {
             'slug':{
@@ -15,11 +15,10 @@ export default Route.extend({
       })
       .then(pages => {
         return pages.get('firstObject');
-      }),
-    });
+      });
   },
 
-  setupController(controller, models) {
-    controller.set('page', models.page);
-  }
+  // setupController(controller, models) {
+  //   controller.set('page', models.page);
+  // }
 });

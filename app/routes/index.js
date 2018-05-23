@@ -1,26 +1,12 @@
-import Route from '@ember/routing/route';
 import { setProperties } from '@ember/object';
+import Route from '@ember/routing/route';
 import { inject as service } from '@ember/service';
-import RSVP from 'rsvp';
 
 export default Route.extend({
   headData: service(),
 
   model() {
-    return RSVP.hash({
-      page: this.store.findRecord('page', '93aec22a-3710-4fe0-ae09-663f6790bb79'),
-      // page: this.store.query('page', {
-      //   filter:
-      //     {
-      //       'slug':{
-      //         'value': '/'
-      //       },
-      //     },
-      // })
-      // .then(pages => {
-      //   return pages.get('firstObject');
-      // }),
-    });
+    return this.store.findRecord('page', '93aec22a-3710-4fe0-ae09-663f6790bb79');
   },
 
   afterModel() {
@@ -32,9 +18,4 @@ export default Route.extend({
       url: 'https://smallrobot.co/'
     });
   },
-
-  setupController(controller, models) {
-    controller.set('page', models.page);
-    controller.set('texts', models.texts);
-  }
 });

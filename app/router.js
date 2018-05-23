@@ -1,8 +1,8 @@
 import EmberRouter from '@ember/routing/router';
+import { scheduleOnce } from '@ember/runloop';
+import { inject } from '@ember/service';
 import RouterScroll from 'ember-router-scroll';
 import config from './config/environment';
-import { inject } from '@ember/service';
-import { scheduleOnce } from '@ember/runloop';
 
 const Router = EmberRouter.extend(RouterScroll, {
   location: config.locationType,
@@ -21,10 +21,15 @@ const Router = EmberRouter.extend(RouterScroll, {
 
   _trackPage() {
     scheduleOnce('afterRender', this, () => {
-      const page = this.url;
-      const title = this.getWithDefault('currentRouteName', 'unknown');
+      // const page = this.url;
+      // const title = this.getWithDefault('currentRouteName', 'unknown');
 
-      this.metrics.trackPage({ page, title });
+      // this.metrics.trackPage({ page, title });
+      if (typeof FastBoot === 'undefined') {
+        const page = this.url;
+        const title = this.getWithDefault('currentRouteName', 'unknown');
+        this.metrics.trackPage({ page, title });
+     }
     });
   }
 });

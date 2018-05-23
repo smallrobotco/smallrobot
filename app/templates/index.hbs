@@ -1,8 +1,12 @@
-{{global-header page=page}}
+{{#if model}}
+  {{global-header page=model}}
 
-{{#each page.section as |section|}}
-  {{page-section section=section}}
-{{/each}}
+  {{#each model.section as |section|}}
+    {{page-section section=section}}
+  {{/each}}
 
-{{global-footer}}
+  {{global-footer}}
 
+{{else}}
+  {{loading-spinner}}
+{{/if}}
