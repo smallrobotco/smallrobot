@@ -87,6 +87,10 @@ abbrev@1, abbrev@~1.1.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
 
+abortcontroller-polyfill@^1.1.9:
+  version "1.1.9"
+  resolved "https://registry.yarnpkg.com/abortcontroller-polyfill/-/abortcontroller-polyfill-1.1.9.tgz#9fefe359fda2e9e0932dc85e6106453ac393b2da"
+
 accepts@~1.3.4, accepts@~1.3.5:
   version "1.3.5"
   resolved "https://registry.yarnpkg.com/accepts/-/accepts-1.3.5.tgz#eb777df6011723a3b14e8a72c0805c8e86746bd2"
@@ -2978,13 +2982,13 @@ ember-cli-uglify@^2.1.0:
     broccoli-uglify-sourcemap "^2.1.1"
     lodash.defaultsdeep "^4.6.0"
 
-ember-cli-update@^0.21.3:
-  version "0.21.3"
-  resolved "https://registry.yarnpkg.com/ember-cli-update/-/ember-cli-update-0.21.3.tgz#4c5487a8b7bfad03552901379b20a4b6b0f0beeb"
+ember-cli-update@^0.21.4:
+  version "0.21.4"
+  resolved "https://registry.yarnpkg.com/ember-cli-update/-/ember-cli-update-0.21.4.tgz#c09618ef51176dc3c7bb4931ee7c61584b335c6c"
   dependencies:
     debug "^3.0.0"
     execa "^0.10.0"
-    git-diff-apply "^0.8.3"
+    git-diff-apply "^0.8.4"
     merge-package.json "^1.1.1"
     npx "^10.0.1"
     opn "^5.3.0"
@@ -3182,16 +3186,18 @@ ember-factory-for-polyfill@^1.3.1:
   dependencies:
     ember-cli-version-checker "^2.1.0"
 
-ember-fetch@^3.4.5:
-  version "3.4.5"
-  resolved "https://registry.yarnpkg.com/ember-fetch/-/ember-fetch-3.4.5.tgz#2967df9cbdbe0993402588216332580be3950b92"
+ember-fetch@^4.0.2:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/ember-fetch/-/ember-fetch-4.0.2.tgz#865ca90d8aa63b9ebe5bce709aeaa44b35668b5a"
   dependencies:
-    broccoli-funnel "^1.2.0"
+    abortcontroller-polyfill "^1.1.9"
+    broccoli-concat "^3.2.2"
+    broccoli-merge-trees "^2.0.0"
     broccoli-stew "^1.4.2"
     broccoli-templater "^1.0.0"
     ember-cli-babel "^6.8.2"
     node-fetch "^2.0.0-alpha.9"
-    whatwg-fetch "^2.0.3"
+    yetch "^0.0.1"
 
 ember-get-config@^0.2.4:
   version "0.2.4"
@@ -3303,13 +3309,17 @@ ember-resolver@^4.5.5:
     ember-cli-version-checker "^2.0.0"
     resolve "^1.3.3"
 
-ember-rfc176-data@^0.2.0, ember-rfc176-data@^0.2.7:
+ember-rfc176-data@^0.2.0:
   version "0.2.7"
   resolved "https://registry.yarnpkg.com/ember-rfc176-data/-/ember-rfc176-data-0.2.7.tgz#bd355bc9b473e08096b518784170a23388bc973b"
 
 ember-rfc176-data@^0.3.0, ember-rfc176-data@^0.3.1:
   version "0.3.2"
   resolved "https://registry.yarnpkg.com/ember-rfc176-data/-/ember-rfc176-data-0.3.2.tgz#bde5538939529b263c142b53a47402f8127f8dce"
+
+ember-rfc176-data@^0.3.3:
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/ember-rfc176-data/-/ember-rfc176-data-0.3.3.tgz#27fba08d540a7463a4366c48eaa19c5a44971a39"
 
 ember-route-action-helper@2.0.6:
   version "2.0.6"
@@ -3608,12 +3618,11 @@ escape-string-regexp@1.0.5, escape-string-regexp@^1.0.0, escape-string-regexp@^1
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
 
-eslint-plugin-ember@^5.1.0:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-ember/-/eslint-plugin-ember-5.1.0.tgz#fb96abd2d8bf105678a0aa81dadd99d7ca441ba1"
+eslint-plugin-ember@^5.2.0:
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-ember/-/eslint-plugin-ember-5.2.0.tgz#fa436e0497dfc01d1d38608229cd616e7c5b6067"
   dependencies:
-    ember-rfc176-data "^0.2.7"
-    require-folder-tree "^1.4.5"
+    ember-rfc176-data "^0.3.3"
     snake-case "^2.1.0"
 
 eslint-scope@^3.7.1:
@@ -4390,9 +4399,9 @@ getpass@^0.1.1:
   dependencies:
     assert-plus "^1.0.0"
 
-git-diff-apply@^0.8.3:
-  version "0.8.3"
-  resolved "https://registry.yarnpkg.com/git-diff-apply/-/git-diff-apply-0.8.3.tgz#5561ea4f887c9770b8b3a3ce310d0d0febd5644e"
+git-diff-apply@^0.8.4:
+  version "0.8.4"
+  resolved "https://registry.yarnpkg.com/git-diff-apply/-/git-diff-apply-0.8.4.tgz#05a5bdf0cc9a11ff086b93038e7033bae4070d5c"
   dependencies:
     debug "^3.0.0"
     denodeify "^1.2.1"
@@ -5931,10 +5940,6 @@ lodash.values@~2.3.0:
 lodash.without@~4.4.0:
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/lodash.without/-/lodash.without-4.4.0.tgz#3cd4574a00b67bae373a94b748772640507b7aac"
-
-lodash@3.8.0:
-  version "3.8.0"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.8.0.tgz#376eb98bdcd9382a9365c33c4cb8250de1325b91"
 
 lodash@^3.10.0, lodash@^3.9.3:
   version "3.10.1"
@@ -7703,12 +7708,6 @@ require-directory@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/require-directory/-/require-directory-2.1.1.tgz#8c64ad5fd30dab1c976e2344ffe7f792a6a6df42"
 
-require-folder-tree@^1.4.5:
-  version "1.4.5"
-  resolved "https://registry.yarnpkg.com/require-folder-tree/-/require-folder-tree-1.4.5.tgz#dfe553cbab98cc88e1c56a3f2f358f06ef85bcb0"
-  dependencies:
-    lodash "3.8.0"
-
 require-main-filename@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/require-main-filename/-/require-main-filename-1.0.1.tgz#97f717b69d48784f5f526a6c5aa8ffdda055a4d1"
@@ -9133,10 +9132,6 @@ websocket-extensions@>=0.1.1:
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/websocket-extensions/-/websocket-extensions-0.1.3.tgz#5d2ff22977003ec687a4b87073dfbbac146ccf29"
 
-whatwg-fetch@^2.0.3:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-2.0.4.tgz#dde6a5df315f9d39991aa17621853d720b85566f"
-
 which-module@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/which-module/-/which-module-1.0.0.tgz#bba63ca861948994ff307736089e3b96026c2a4f"
@@ -9360,3 +9355,7 @@ yargs@~3.27.0:
 yeast@0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/yeast/-/yeast-0.1.2.tgz#008e06d8094320c372dbc2f8ed76a0ca6c8ac419"
+
+yetch@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/yetch/-/yetch-0.0.1.tgz#76f1729b2c2c667e23c3c2da90472a4897eca004"
