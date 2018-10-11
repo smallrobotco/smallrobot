@@ -5,11 +5,6 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
-    gzip: {
-      enabled: true,
-      extensions: ['js', 'css', 'svg'],
-      keepUncompressed: true
-    },
     'autoprefixer': {
       browsers: [
         'ie 11',
@@ -21,9 +16,6 @@ module.exports = function(defaults) {
         'last 2 ChromeAndroid versions'
       ],
       cascade: false
-    },
-    'ember-cli-babel': {
-      includePolyfill: true
     },
     'ember-cli-image-transformer': {
       images: [
@@ -44,6 +36,7 @@ module.exports = function(defaults) {
       ]
     },
     'ember-service-worker': {
+      enabled: true,
       versionStrategy: 'every-build'
     },
     'asset-cache': {
@@ -51,37 +44,47 @@ module.exports = function(defaults) {
         'assets/**/*',
         'favicons/**/*',
         'fonts/**/*',
-        'img/**/*'
+        'img/**/*',
+        'https\://api\.smallrobot\.co/api/(.+)'
       ],
-      version: '5',
-      requestMode: 'cors'
-    },
-    'esw-cache-first': {
-      patterns: [
-        '/assets/(.+)',
-        '/img/(.+)'
-      ]
+      requestMode: 'cors',
+      lenientErrors: true,
+      version: '24'
     },
     'esw-cache-fallback': {
       patterns: [
-        '/api/(.+)'
+        'https\://api\.smallrobot\.co/api/(.+)',
+        'https\://api\.smallrobot\.co/api/sites/default/files/(.+)'
       ],
+      // changing this version number will bust the cache
+      version: '24'
     },
     'esw-prember': {
-      version: '5'
+      version: '24'
     },
     'prember': {
       baseRoot: 'https://smallrobot.co',
-      urls: [
-        '/',
-        '/consulting',
-        '/development',
-        '/support',
-        '/contact',
-        '/about',
-        '/ideas',
-      ]
+      enabled: true,
+      urls: buildPremberUrls()
+    },
+    SRI: {
+      enabled: false
     }
   });
   return app.toTree();
 };
+
+function buildPremberUrls() {
+  // Build prember urls
+  const urls = [
+    '/',
+    '/consulting',
+    '/development',
+    '/support',
+    '/contact',
+    '/about',
+    '/ideas'
+  ];
+
+  return urls;
+}
