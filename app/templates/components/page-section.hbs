@@ -25,7 +25,7 @@
                     {{element.image.fullUrl}}
                 {{/image-block}}
               {{else if element.slide}}
-                {{slideshow-block model=element.slide}}
+                {{slideshow-block model=element.slide breakpoints=breakpoints}}
               {{else}}
                 {{ember-spinner}}
               {{/if}}
