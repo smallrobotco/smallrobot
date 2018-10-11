@@ -4288,10 +4288,12 @@ ember-cli-image-transformer@^1.4.0:
     rsvp "^4.7.0"
     sharp "^0.20.0"
 
-ember-cli-inject-live-reload@^1.7.0:
-  version "1.7.0"
-  resolved "https://registry.yarnpkg.com/ember-cli-inject-live-reload/-/ember-cli-inject-live-reload-1.7.0.tgz#af94336e015336127dfb98080ad442bb233e37ed"
-  integrity sha512-+0zOwJlf4iR5NcvyeU7E7xU1qDfniP/+mXfNTfAEhHO2eE9sjQvasKV84O1sIIyLk2LMIjFPbGt7uv5fQcIGwg==
+ember-cli-inject-live-reload@^1.8.2:
+  version "1.8.2"
+  resolved "https://registry.yarnpkg.com/ember-cli-inject-live-reload/-/ember-cli-inject-live-reload-1.8.2.tgz#29f875ad921e9a1dec65d2d75018891972d240bc"
+  integrity sha512-1d0TEtPFDcHcp8Y9ftkY7x8WlchKlC/TevVm5StTSWPhXkCUjumh723pukUa6hP7zeWuzxsVlpCEdZwjgstPAw==
+  dependencies:
+    clean-base-url "^1.0.0"
 
 ember-cli-is-package-missing@^1.0.0:
   version "1.0.0"
@@ -4923,10 +4925,10 @@ ember-service-worker@^0.7.0:
     hash-for-dep "^1.2.3"
     rollup-plugin-replace "^1.1.1"
 
-ember-source@~3.4.5:
-  version "3.4.5"
-  resolved "https://registry.yarnpkg.com/ember-source/-/ember-source-3.4.5.tgz#f4a5975affd393c29a69afaa58c2ca9de8bba6c0"
-  integrity sha512-fm2JyUzIBhYZhMgLerjYMb0sAuv5kTPradWnsdIZbitk+O00ViF7zKb2nTEAb1MtxsUpqRCaxQZsv06LljDvtg==
+ember-source@~3.5.0:
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/ember-source/-/ember-source-3.5.0.tgz#2322e393125684e1e043d0eedad8fd79c6de78a8"
+  integrity sha512-q7GAQZI1NAxMdgqxJGKsOgmwFAmvSet33Ub5C/Cn5bkQYWlAgjR7oKiP0DlHTFSbiwmGnZZF9a/sHB7W/XIjPg==
   dependencies:
     broccoli-funnel "^2.0.1"
     broccoli-merge-trees "^2.0.0"
