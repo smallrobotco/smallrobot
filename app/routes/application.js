@@ -1,7 +1,9 @@
 import Route from '@ember/routing/route';
 import RSVP from 'rsvp';
+import { inject as service } from '@ember/service';
 
 export default Route.extend({
+  fastboot: service(),
 
   model() {
     return RSVP.hash({
@@ -12,7 +14,6 @@ export default Route.extend({
       listings: this.store.findAll('listing'),
       files: this.store.findAll('file'),
       images: this.store.findAll('image'),
-      // contacts: this.store.findAll('contact'),
       slideshows: this.store.findAll('slideshow'),
       slides: this.store.findAll('slide'),
       articles: this.store.findAll('article')
@@ -27,7 +28,6 @@ export default Route.extend({
     controller.set('listings', models.listings);
     controller.set('files', models.files);
     controller.set('images', models.images);
-    // controller.set('contacts', models.contacts);
     controller.set('slideshows', models.slideshows);
     controller.set('slides', models.slides);
     controller.set('articles', models.articles);

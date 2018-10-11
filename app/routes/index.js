@@ -17,5 +17,5 @@ export default Route.extend({
       type: 'website',
       url: 'https://smallrobot.co/'
     });
-  },
+  }
 });
