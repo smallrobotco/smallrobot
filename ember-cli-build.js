@@ -45,8 +45,7 @@ module.exports = function(defaults) {
         'favicons/**/*',
         'fonts/**/*',
         'img/**/*',
-        'https\://api\.smallrobot\.co/api/(.+)',
-        'https\://api\.smallrobot\.co/api/sites/default/files/(.+)'
+        'https\://api\.smallrobot\.co/api/(.+)'
       ],
       requestMode: 'cors',
       lenientErrors: true,
