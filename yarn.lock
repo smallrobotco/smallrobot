@@ -3738,6 +3738,13 @@ debug@3.1.0, debug@=3.1.0, debug@^3.0.0, debug@^3.1.0, debug@~3.1.0:
   dependencies:
     ms "2.0.0"
 
+debug@^4.0.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/debug/-/debug-4.1.0.tgz#373687bffa678b38b1cd91f861b63850035ddc87"
+  integrity sha512-heNPJUJIqC+xB6ayLAMHaIrmN9HKa7aQO8MGqKpvCA+uJYVcvR6l5kgdrhRuwPFHU7P5/A1w0BjByPHwpfTDKg==
+  dependencies:
+    ms "^2.1.1"
+
 debuglog@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/debuglog/-/debuglog-1.0.1.tgz#aa24ffb9ac3df9a2351837cfb2d279360cd78492"
@@ -4436,13 +4443,13 @@ ember-cli-uglify@^2.1.0:
     broccoli-uglify-sourcemap "^2.1.1"
     lodash.defaultsdeep "^4.6.0"
 
-ember-cli-update@^0.27.0:
-  version "0.27.0"
-  resolved "https://registry.yarnpkg.com/ember-cli-update/-/ember-cli-update-0.27.0.tgz#b159bf7d3a05e4e23bf08079dfba36688d30cd49"
-  integrity sha512-EdPOpl5M3cm+8loKjUrDZRLewGmOuPMw0z8XdO7LeDICkrzG0ELBoJA80d5Vp0XNRnXNc0wXfIjnl7tm2rXqeQ==
+ember-cli-update@^0.27.1:
+  version "0.27.1"
+  resolved "https://registry.yarnpkg.com/ember-cli-update/-/ember-cli-update-0.27.1.tgz#90e8d4c53278f4c27cdf8170b80d38d891d1b5b5"
+  integrity sha512-qybwksef4IO+hDeKmTYzA+9ogMd/EA1v261wU9yuIS2yCVm8ySq7XVZQ4/0KLs0LlgicRrHL+0ONxHGHvqMdTA==
   dependencies:
     cpr "^3.0.1"
-    debug "^3.0.0"
+    debug "^4.0.0"
     denodeify "^1.2.1"
     execa "^1.0.0"
     git-diff-apply "^0.10.0"
@@ -8559,7 +8566,7 @@ ms@2.0.0:
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
   integrity sha1-VgiurfwAvmwpAd9fmGF4jeDVl8g=
 
-ms@^2.0.0:
+ms@^2.0.0, ms@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.1.tgz#30a5864eb3ebb0a66f2ebe6d727af06a09d86e0a"
   integrity sha512-tgp+dl5cGk28utYktBsrFqA7HKgrhgPsg6Z/EfhWI4gl1Hwq8B/GmY/0oXZ6nF8hDVesS/FpnYaD/kOWhYQvyg==
