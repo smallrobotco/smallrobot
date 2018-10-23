@@ -45,7 +45,9 @@ module.exports = function(defaults) {
         'favicons/**/*',
         'fonts/**/*',
         'img/**/*',
-        'https\://api\.smallrobot\.co/api/(.+)'
+        'https\://api\.smallrobot\.co/api/(.+)',
+        'https\://api\.smallrobot\.co/sites/default/files/(**/*.jpg)'
+
       ],
       requestMode: 'cors',
       lenientErrors: true,
@@ -54,7 +56,7 @@ module.exports = function(defaults) {
     'esw-cache-fallback': {
       patterns: [
         'https\://api\.smallrobot\.co/api/(.+)',
-        'https\://api\.smallrobot\.co/api/sites/default/files/(.+)'
+        'https\://api\.smallrobot\.co/sites/default/files/(**/*.jpg)'
       ],
       // changing this version number will bust the cache
       version: '32'
@@ -64,7 +66,7 @@ module.exports = function(defaults) {
     },
     'prember': {
       baseRoot: 'https://smallrobot.co',
-      enabled: true,
+      // enabled: false,
       urls: buildPremberUrls()
     },
     SRI: {

@@ -7,7 +7,9 @@ strong {
   font-weight: $font-weight-bold;
 }
 
-h1 {
+h1.hero-title {
+  // font-family: $font-family-serif;
+  font-size: 3.6rem;
 }
 
 h2 {
