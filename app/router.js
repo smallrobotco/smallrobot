@@ -42,7 +42,7 @@ Router.map(function() {
   this.route('support');
   this.route('contact');
   this.route('blog', { path: 'ideas' }, function() {
-    this.route('post', { path: ':article_id' });
+    this.route('post', { path: '/*path:article_slug' });
   });
   this.route('loading');
   this.route('notfound', { path: '/*path' });

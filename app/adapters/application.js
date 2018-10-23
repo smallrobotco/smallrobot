@@ -15,7 +15,7 @@ export default  DS.JSONAPIAdapter.extend(CachedShoe, AdapterFetch, {
   ajaxOptions() {
     const options = this._super(...arguments) || {};
     options.beforeSend = (xhr) => {
-      xhr.setRequestHeader('Cache-Control',  'no-cache');
+      xhr.setRequestHeader('Cache-Control',  'max-age=86400');
     };
     options.headers = options.headers || {};
     options.headers['Content-Type'] = 'application/vnd.api+json';

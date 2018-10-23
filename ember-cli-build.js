@@ -45,8 +45,8 @@ module.exports = function(defaults) {
         'favicons/**/*',
         'fonts/**/*',
         'img/**/*',
-        'https\://api\.smallrobot\.co/api/(.+)'
-
+        'https://api.smallrobot.co/api/(.+)',
+        'https://api.smallrobot.co/sites/default/files/*\.(?:jpg|gif|png)'
       ],
       requestMode: 'cors',
       lenientErrors: true,
@@ -54,7 +54,8 @@ module.exports = function(defaults) {
     },
     'esw-cache-fallback': {
       patterns: [
-        'https\://api\.smallrobot\.co/api/(.+)'
+        'https://api.smallrobot.co/api/(.+)',
+        'https://api.smallrobot.co/sites/default/files/*\.(?:jpg|gif|png)'
       ],
       // changing this version number will bust the cache
       version: '35'
