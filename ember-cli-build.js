@@ -45,24 +45,22 @@ module.exports = function(defaults) {
         'favicons/**/*',
         'fonts/**/*',
         'img/**/*',
-        'https\://api\.smallrobot\.co/api/(.+)',
-        'https\://api\.smallrobot\.co/sites/default/files/(**/*.jpg)'
+        'https\://api\.smallrobot\.co/api/(.+)'
 
       ],
       requestMode: 'cors',
       lenientErrors: true,
-      version: '34'
+      version: '35'
     },
     'esw-cache-fallback': {
       patterns: [
-        'https\://api\.smallrobot\.co/api/(.+)',
-        'https\://api\.smallrobot\.co/sites/default/files/(**/*.jpg)'
+        'https\://api\.smallrobot\.co/api/(.+)'
       ],
       // changing this version number will bust the cache
-      version: '34'
+      version: '35'
     },
     'esw-prember': {
-      version: '34'
+      version: '35'
     },
     'prember': {
       baseRoot: 'https://smallrobot.co',
