@@ -10,7 +10,7 @@ export default DS.Model.extend({
   image: DS.hasMany('image', {inverse: 'image'}),
   thumbnail: DS.hasMany('image', {inverse: 'thumbnail'}),
 
-  fullUrl: computed('uri', function() {
+  fullUrl: computed('url', function() {
     const host = ENV.host;
     let url = this.url;
     return `${host}`+`${url}`;
