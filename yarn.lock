@@ -2172,7 +2172,7 @@ broccoli-amd-funnel@^2.0.1:
     broccoli-plugin "^1.3.0"
     symlink-or-copy "^1.2.0"
 
-broccoli-asset-rev@^2.5.0:
+broccoli-asset-rev@^2.5.0, broccoli-asset-rev@^2.7.0:
   version "2.7.0"
   resolved "https://registry.yarnpkg.com/broccoli-asset-rev/-/broccoli-asset-rev-2.7.0.tgz#c73da1d97c4180366fa442a87624ca1b7fb99161"
   integrity sha512-GZ7gU3Qo6HMAUqDeh1q+4UVCQPJPjCyGcpIY5s9Qp58a244FT4nZSiy8qYkVC4LLIWTZt59G7jFFsUcj/13IPQ==
@@ -2184,29 +2184,10 @@ broccoli-asset-rev@^2.5.0:
     minimatch "^3.0.4"
     rsvp "^3.0.6"
 
-broccoli-asset-rev@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/broccoli-asset-rev/-/broccoli-asset-rev-3.0.0.tgz#65a28c8a062d6ee2cffd91ed2a8309e0f8253ac6"
-  integrity sha512-gAHQZnwvtl74tGevUqGuWoyOdJUdMMv0TjGSMzbdyGImr9fZcnM6xmggDA8bUawrMto9NFi00ZtNUgA4dQiUBw==
-  dependencies:
-    broccoli-asset-rewrite "^2.0.0"
-    broccoli-filter "^1.2.2"
-    broccoli-persistent-filter "^1.4.3"
-    json-stable-stringify "^1.0.0"
-    minimatch "^3.0.4"
-    rsvp "^3.0.6"
-
 broccoli-asset-rewrite@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/broccoli-asset-rewrite/-/broccoli-asset-rewrite-1.1.0.tgz#77a5da56157aa318c59113245e8bafb4617f8830"
   integrity sha1-d6XaVhV6oxjFkRMkXouvtGF/iDA=
-  dependencies:
-    broccoli-filter "^1.2.3"
-
-broccoli-asset-rewrite@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/broccoli-asset-rewrite/-/broccoli-asset-rewrite-2.0.0.tgz#603c4a52d4c8987a2f681254436923ac0a9c94ab"
-  integrity sha512-dqhxdQpooNi7LHe8J9Jdxp6o3YPFWl4vQmint6zrsn2sVbOo+wpyiX3erUSt0IBtjNkAxqJjuvS375o2cLBHTA==
   dependencies:
     broccoli-filter "^1.2.3"
 
@@ -9712,10 +9693,25 @@ prember-sitemap-generator@^0.1.1:
     broccoli-funnel "^2.0.1"
     chalk "^2.3.0"
 
-prember@*, prember@^0.4.0:
+prember@*:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/prember/-/prember-0.4.0.tgz#55607d74babe74958e0c08d78da66e002dc02bea"
   integrity sha512-gqnPdeOQcFa/F1ydOqKXTLgIWUoCqQqsII9crCEO4KDDazcRkaKBeBSmLPdBWZat93h60Sa7SBXhSPRMGZWfBA==
+  dependencies:
+    broccoli-debug "^0.6.3"
+    broccoli-merge-trees "^2.0.0"
+    broccoli-plugin "^1.3.0"
+    chalk "^2.3.0"
+    denodeify "^1.2.1"
+    ember-cli-babel "^6.6.0"
+    express "^4.16.2"
+    fastboot "^1.1.3"
+    mkdirp "^0.5.1"
+
+prember@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/prember/-/prember-1.0.0.tgz#56817e8880fdb8d339d6882676852e2b5febb403"
+  integrity sha512-Y980q2bBCnT94YRD63QnfcOWqZTlwtLS9h1GYTHXPoiwIpU1P1SXly36rJcL/zrXplG5ELNhNNEqf/3SuuIQTg==
   dependencies:
     broccoli-debug "^0.6.3"
     broccoli-merge-trees "^2.0.0"
