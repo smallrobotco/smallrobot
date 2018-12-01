@@ -334,15 +334,15 @@
         }
       }
     }
-    .swiper-next,
-    .swiper-prev {
-      svg {
-        path,
-        rect {
-          fill: $gray-900;
-        }
-      }
-    }
+    // .swiper-button-next,
+    // .swiper-button-prev {
+    //   svg {
+    //     path,
+    //     rect {
+    //       fill: $gray-900;
+    //     }
+    //   }
+    // }
   }
 } //.page-section .outer
 
@@ -400,17 +400,17 @@
       }
     }
   }
-  .swiper-next,
-  .swiper-prev {
+  .swiper-button-next,
+  .swiper-button-prev {
     z-index: 99;
-    position: absolute;
-    top: 0px;
+    // position: absolute;
+    // top: 0px;
     left: -30px;
-    width: 30px;
-    height: 115px;
-    border: none;
-    border-radius: 0;
-    background: none;
+    // width: 30px;
+    // height: 115px;
+    // border: none;
+    // border-radius: 0;
+    // background: none;
     cursor: pointer;
     -webkit-transform: none;
     transform: none;
@@ -441,7 +441,7 @@
     }
   }
 
-  .swiper-next {
+  .swiper-button-next {
     left: auto;
     right: -30px;
 
