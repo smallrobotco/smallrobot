@@ -16,7 +16,7 @@ export default Route.extend({
     return RSVP.hash({
       post: this.store.query('article', {
         filter: {
-          slug: params.article_slug
+          slug: params.article_slug_path
         }
       })
       .then(posts => {
