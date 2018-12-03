@@ -17,6 +17,9 @@ module.exports = function(defaults) {
       ],
       cascade: false
     },
+    'ember-cli-template-lint': {
+      testGenerator: 'qunit' // or 'mocha', etc.
+    },
     'ember-cli-image-transformer': {
       images: [
         {
