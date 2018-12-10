@@ -55,7 +55,7 @@
     "ember-href-to": "^2.0.1",
     "ember-load-initializers": "^2.0.0",
     "ember-maybe-import-regenerator": "^0.1.6",
-    "ember-metrics": "^0.12.1",
+    "ember-metrics": "^0.13.0",
     "ember-qunit": "^4.1.2",
     "ember-resolver": "^5.0.1",
     "ember-route-action-helper": "2.0.6",
