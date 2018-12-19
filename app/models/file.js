@@ -5,13 +5,13 @@ import ENV from '../config/environment';
 
 export default DS.Model.extend({
   filename: DS.attr('string'),
-  url: DS.attr('string'),
+  uri: DS.attr('string'),
   image: DS.hasMany('image', {inverse: 'image'}),
   thumbnail: DS.hasMany('image', {inverse: 'thumbnail'}),
 
-  fullUrl: computed('url', function() {
+  fullUrl: computed('uri', function() {
     const host = ENV.host;
-    let url = this.url;
+    let url = this.uri;
     return `${host}`+`${url}`;
   }),
   inlineBackground: computed('fullUrl', function () {
