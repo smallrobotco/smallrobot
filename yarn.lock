@@ -2369,16 +2369,6 @@ broccoli-babel-transpiler@^7.1.0:
     rsvp "^4.8.3"
     workerpool "^2.3.1"
 
-broccoli-brotli@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/broccoli-brotli/-/broccoli-brotli-1.0.2.tgz#ad67bba2f1b454864f3481b38e9d8a3a1f30537c"
-  integrity sha512-c78Osgx8zvd/vjbJjjvwGWB2rpAl2Bnbf9JxaQdwd3j6e4TIekThBl2O6a0gthZvVm5eyL60FixXC17o6lfb9w==
-  dependencies:
-    broccoli-filter "^1.2.4"
-    broccoli-kitchen-sink-helpers "^0.3.1"
-    iltorb "^2.0.2"
-    rsvp "^4.7.0"
-
 broccoli-builder@^0.18.14:
   version "0.18.14"
   resolved "https://registry.yarnpkg.com/broccoli-builder/-/broccoli-builder-0.18.14.tgz#4b79e2f844de11a4e1b816c3f49c6df4776c312d"
@@ -2561,6 +2551,15 @@ broccoli-funnel@^2.0.0, broccoli-funnel@^2.0.1:
     rimraf "^2.4.3"
     symlink-or-copy "^1.0.0"
     walk-sync "^0.3.1"
+
+broccoli-gzip@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/broccoli-gzip/-/broccoli-gzip-0.3.0.tgz#6e154613d063f62847b3ec1a276d88574e043e09"
+  integrity sha1-bhVGE9Bj9ihHs+waJ22IV04EPgk=
+  dependencies:
+    broccoli-filter "^1.2.4"
+    broccoli-kitchen-sink-helpers "^0.3.1"
+    rsvp "^3.3.3"
 
 broccoli-kitchen-sink-helpers@^0.2.5, broccoli-kitchen-sink-helpers@^0.2.6:
   version "0.2.9"
@@ -4361,13 +4360,6 @@ ember-cli-broccoli-sane-watcher@^2.1.1:
     rsvp "^3.0.18"
     sane "^2.4.1"
 
-ember-cli-brotli@^0.1.3:
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/ember-cli-brotli/-/ember-cli-brotli-0.1.3.tgz#cda6db0653ef0d409da74123e7b56245c241bb7f"
-  integrity sha512-uY8awcWXaXfN/vMyXD1hdg0IzjYFDTk94iM2fj7Mr5+9Si9796jyWob4/ZovQkvI6+hRnDPOtmoi4eODwi3e8A==
-  dependencies:
-    broccoli-brotli "^1.0.2"
-
 ember-cli-dependency-checker@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/ember-cli-dependency-checker/-/ember-cli-dependency-checker-3.0.0.tgz#61245f5f79f881dece043303111d5f41efb8621f"
@@ -4431,6 +4423,13 @@ ember-cli-get-component-path-option@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/ember-cli-get-component-path-option/-/ember-cli-get-component-path-option-1.0.0.tgz#0d7b595559e2f9050abed804f1d8eff1b08bc771"
   integrity sha1-DXtZVVni+QUKvtgE8djv8bCLx3E=
+
+ember-cli-gzip@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-gzip/-/ember-cli-gzip-1.2.0.tgz#4647dcfb539129ddf85cd08e14c9c995c22cce57"
+  integrity sha512-/yraJ+Fso1ghUNw+JawzJi5pCE5bOEi7bzs6lXCI3Aj7jQCiLdFkJzZCyY0Ius1jtQwmtt5eJ8X6wjVgXcXdfA==
+  dependencies:
+    broccoli-gzip "^0.3.0"
 
 ember-cli-head@^0.4.1:
   version "0.4.1"
@@ -5606,11 +5605,6 @@ expand-template@^1.0.2:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/expand-template/-/expand-template-1.1.1.tgz#981f188c0c3a87d2e28f559bc541426ff94f21dd"
   integrity sha512-cebqLtV8KOZfw0UI8TEFWxtczxxC1jvyUvx6H4fyp1K1FN7A4Q+uggVUlOsI1K8AGU0rwOGqP8nCapdrw8CYQg==
-
-expand-template@^2.0.3:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/expand-template/-/expand-template-2.0.3.tgz#6e14b3fcee0f3a6340ecb57d2e8918692052a47c"
-  integrity sha512-XYfuKMvj4O35f/pOXLObndIRvyQ+/+6AhODh+OKWj9S9498pHHn/IMszH+gt0fBCRWMNfk1ZSp5x3AifmnI2vg==
 
 expand-tilde@^2.0.0, expand-tilde@^2.0.2:
   version "2.0.2"
@@ -6835,16 +6829,6 @@ ignore@^4.0.6:
   version "4.0.6"
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-4.0.6.tgz#750e3db5862087b4737ebac8207ffd1ef27b25fc"
   integrity sha512-cyFDKrqc/YdcWFniJhzI42+AzS+gNwmUzOSFcRCQYwySuBBBy/KjuxWLZ/FHEH6Moq1NizMOBWyTcv8O4OZIMg==
-
-iltorb@^2.0.2:
-  version "2.4.1"
-  resolved "https://registry.yarnpkg.com/iltorb/-/iltorb-2.4.1.tgz#3ae14f0a76ba880503884a2fe630b1f748eb4c17"
-  integrity sha512-huyAN7dSNe2b7VAl5AyvaeZ8XTcDTSF1b8JVYDggl+SBfHsORq3qMZeesZW7zoEy21s15SiERAITWT5cwxu1Uw==
-  dependencies:
-    detect-libc "^1.0.3"
-    npmlog "^4.1.2"
-    prebuild-install "^5.2.1"
-    which-pm-runs "^1.0.0"
 
 import-lazy@^2.1.0:
   version "2.1.0"
@@ -8762,11 +8746,6 @@ nanomatch@^1.2.9:
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
 
-napi-build-utils@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/napi-build-utils/-/napi-build-utils-1.0.1.tgz#1381a0f92c39d66bf19852e7873432fc2123e508"
-  integrity sha512-boQj1WFgQH3v4clhu3mTNfP+vOBxorDlE8EKiMjUlLG3C4qAESnn9AxIOkFgTR2c9LtzNjPrjS60cT27ZKBhaA==
-
 natural-compare@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
@@ -9806,28 +9785,6 @@ prebuild-install@^4.0.0:
     os-homedir "^1.0.1"
     pump "^2.0.1"
     rc "^1.1.6"
-    simple-get "^2.7.0"
-    tar-fs "^1.13.0"
-    tunnel-agent "^0.6.0"
-    which-pm-runs "^1.0.0"
-
-prebuild-install@^5.2.1:
-  version "5.2.2"
-  resolved "https://registry.yarnpkg.com/prebuild-install/-/prebuild-install-5.2.2.tgz#237888f21bfda441d0ee5f5612484390bccd4046"
-  integrity sha512-4e8VJnP3zJdZv/uP0eNWmr2r9urp4NECw7Mt1OSAi3rcLrbBRxGiAkfUFtre2MhQ5wfREAjRV+K1gubvs/GPsA==
-  dependencies:
-    detect-libc "^1.0.3"
-    expand-template "^2.0.3"
-    github-from-package "0.0.0"
-    minimist "^1.2.0"
-    mkdirp "^0.5.1"
-    napi-build-utils "^1.0.1"
-    node-abi "^2.2.0"
-    noop-logger "^0.1.1"
-    npmlog "^4.0.1"
-    os-homedir "^1.0.1"
-    pump "^2.0.1"
-    rc "^1.2.7"
     simple-get "^2.7.0"
     tar-fs "^1.13.0"
     tunnel-agent "^0.6.0"
