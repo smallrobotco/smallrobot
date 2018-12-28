@@ -17,11 +17,6 @@ module.exports = function(defaults) {
       ],
       cascade: false
     },
-    gzip: {
-      appendSuffix: true,
-      extensions: ['js', 'css', 'svg'],
-      keepUncompressed: false
-    },
     'ember-cli-template-lint': {
       testGenerator: 'qunit' // or 'mocha', etc.
     },
