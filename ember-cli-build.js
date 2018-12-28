@@ -18,7 +18,7 @@ module.exports = function(defaults) {
       cascade: false
     },
     gzip: {
-      appendSuffix: false,
+      appendSuffix: true,
       extensions: ['js', 'css', 'svg'],
       keepUncompressed: false
     },
