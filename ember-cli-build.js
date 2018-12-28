@@ -20,7 +20,7 @@ module.exports = function(defaults) {
     brotli: {
       extensions: ['js', 'css', 'svg'],
       keepUncompressed: false,
-      appendSuffix: false
+      appendSuffix: true
     },
     'ember-cli-template-lint': {
       testGenerator: 'qunit' // or 'mocha', etc.
