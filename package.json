@@ -71,7 +71,7 @@
     "eslint-plugin-ember": "^6.1.0",
     "liquid-fire": "^0.29.5",
     "loader.js": "^4.7.0",
-    "prember": "^1.0.1",
+    "prember": "^1.0.2",
     "prember-middleware": "^0.1.0",
     "prember-sitemap-generator": "^0.1.1",
     "qunit-dom": "^0.8.3",
