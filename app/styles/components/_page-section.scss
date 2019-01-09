@@ -70,7 +70,7 @@
         @include media-breakpoint-up(md) {
           min-height: 320px;
           height: calc(100vh - 37px);
-          max-height: 370px;
+          max-height: 100vh;
         }
 
         @include media-breakpoint-up(lg) {
@@ -84,10 +84,9 @@
     &.tall {
 
       .container-fluid .row {
-        height: 400px;
+        min-height: 400px;
 
         @include media-breakpoint-up(md) {
-          min-height: 400px;
           height: calc(100vh - 37px);
           max-height: 550px;
         }
