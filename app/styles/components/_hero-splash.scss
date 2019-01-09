@@ -83,18 +83,19 @@
     &.hero-right {
 
       .container-fluid .row {
-        height: 300px;
+        min-height: 350px;
+        height: calc(100vh - 37px);
 
         @include media-breakpoint-up(md) {
           min-height: 450px;
           height: calc(100vh - 37px);
-          max-height: 500px;
+          max-height: 650px;
         }
 
         @include media-breakpoint-up(lg) {
           min-height: 450px;
           height: calc(100vh - 37px);
-          max-height: 500px;
+          max-height: 800px;
         }
       }
     }
@@ -104,7 +105,7 @@
     &.hero-right-tall {
 
       .container-fluid .row {
-        height: 500px;
+        min-height: 500px;
 
         @include media-breakpoint-up(md) {
           min-height: 450px;
