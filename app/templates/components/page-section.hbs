@@ -22,7 +22,7 @@
                 {{listing-block model=element.listingType articles=articles}}
               {{else if element.image }}
                 {{#image-block}}
-                    {{element.image.fullUrl}}
+                  <img src="{{element.image.fullUrl}}" alt="{{element.image.alt}}" srcset="">
                 {{/image-block}}
               {{else if element.slide}}
                 {{slideshow-block model=element.slide breakpoints=breakpoints}}
