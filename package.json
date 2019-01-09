@@ -19,7 +19,7 @@
     "@ember/jquery": "^0.5.2",
     "@ember/optional-features": "^0.7.0",
     "broccoli-asset-rev": "^2.7.0",
-    "ember-ajax": "^4.0.1",
+    "ember-ajax": "^4.0.2",
     "ember-burger-menu": "^3.3.3",
     "ember-cached-shoe": "^0.1.1",
     "ember-cli": "~3.6.0",
