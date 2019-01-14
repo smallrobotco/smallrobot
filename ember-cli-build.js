@@ -70,6 +70,9 @@ module.exports = function(defaults) {
       baseRoot: 'https://smallrobot.co',
       urls: buildPremberUrls()
     },
+    fingerprint: {
+      enabled: false
+    },
     SRI: {
       enabled: false
     }
