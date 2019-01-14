@@ -1,4 +1,6 @@
 import DS from 'ember-data';
+import { computed } from '@ember/object';
+import { htmlSafe } from '@ember/string';
 
 export default DS.Model.extend({
   created: DS.attr('string'),
@@ -9,6 +11,7 @@ export default DS.Model.extend({
   isHero: DS.attr('boolean'),
   animation: DS.attr('string'),
   background: DS.attr('string'),
+  backgroundImageUrl: DS.belongsTo('string'),
   colHorizontalAlignment: DS.attr('string'),
   colVerticalAlignment: DS.attr('string'),
   heroSize: DS.attr('string'),
@@ -16,4 +19,8 @@ export default DS.Model.extend({
   backgroundImage: DS.belongsTo('file'),
   column: DS.hasMany('column'),
   page: DS.belongsTo('page'),
+
+  inlineBackground: computed('backgroundImageUrl', function () {
+    return new htmlSafe( "background-image: url('" + this.backgroundImageUrl + "')" );
+  })
 });

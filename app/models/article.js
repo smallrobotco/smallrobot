@@ -16,10 +16,14 @@ export default DS.Model.extend({
   heroOverlay: DS.attr('string'),
   heroLayout: DS.attr('string'),
   heroBackground: DS.belongsTo('file'),
+  heroBackgroundUrl: DS.belongsTo('string'),
   section: DS.hasMany('section'),
   slugPath: computed('slug', function() {
     let slug = this.slug.replace(/^\/+/g,'');
     return slug;
+  }),
+  inlineBackground: computed('heroBackgroundUrl', function () {
+    return new htmlSafe( "background-image: url('" + this.heroBackgroundUrl + "')" );
   })
 });
 
