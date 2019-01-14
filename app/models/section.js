@@ -11,7 +11,7 @@ export default DS.Model.extend({
   isHero: DS.attr('boolean'),
   animation: DS.attr('string'),
   background: DS.attr('string'),
-  backgroundImageUrl: DS.belongsTo('string'),
+  backgroundImageUrl: DS.attr('string'),
   colHorizontalAlignment: DS.attr('string'),
   colVerticalAlignment: DS.attr('string'),
   heroSize: DS.attr('string'),
@@ -21,6 +21,6 @@ export default DS.Model.extend({
   page: DS.belongsTo('page'),
 
   inlineBackground: computed('backgroundImageUrl', function () {
-    return new htmlSafe( "background-image: url('" + this.backgroundImageUrl + "')" );
+    return new htmlSafe( "background-image: url('" + this.backgroundImageUrl + "');" );
   })
 });
