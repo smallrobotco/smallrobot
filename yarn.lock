@@ -4380,10 +4380,10 @@ ember-cli-broccoli-sane-watcher@^2.1.1:
     rsvp "^3.0.18"
     sane "^2.4.1"
 
-ember-cli-dependency-checker@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/ember-cli-dependency-checker/-/ember-cli-dependency-checker-3.0.0.tgz#61245f5f79f881dece043303111d5f41efb8621f"
-  integrity sha512-Fq9PXFaZfpSHssJwt20cpHMT0AKHMKMBMGiz+Y8BsIvvY1ILaM5bzpUP8V6czm0RU5y7VxM+z7zTN9Cn1iotOA==
+ember-cli-dependency-checker@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-dependency-checker/-/ember-cli-dependency-checker-3.1.0.tgz#b39c6b537a1457d77892edf5ddcfa025cd1401e2"
+  integrity sha512-Y/V2senOyIjQnZohYeZeXs59rWHI2m8KRF9IesMv1ypLRSc/h/QS6UX51wAyaZnxcgU6ljFXpqL5x38UxM3XzA==
   dependencies:
     chalk "^2.3.0"
     find-yarn-workspace-root "^1.1.0"
@@ -4518,10 +4518,10 @@ ember-cli-lodash-subset@^1.0.7:
   resolved "https://registry.yarnpkg.com/ember-cli-lodash-subset/-/ember-cli-lodash-subset-1.0.12.tgz#af2e77eba5dcb0d77f3308d3a6fd7d3450f6e537"
   integrity sha1-ry5366XcsNd/MwjTpv19NFD25Tc=
 
-ember-cli-netlify@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/ember-cli-netlify/-/ember-cli-netlify-0.0.1.tgz#a045dfee11e4760f792c0d7b17881e2bf2692e86"
-  integrity sha512-5W0j1AjyhQOySkWhmIArzgutZqIxutwGOi3gmc/i2nqZsqkT0VvTSc5mcG76+jthFi6neyVmpuVVj+1FNxar6Q==
+ember-cli-netlify@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-netlify/-/ember-cli-netlify-0.1.0.tgz#8255c63055975fc2f59b41f2075de05832938e97"
+  integrity sha512-SCmMvXI3WN9cCU7Zuz7mM0wCfXNeovBLA1dxPxdQeFS9UI4cuKaZqRgYS46ame/9/H6diBDDtaSASZR3IMcSng==
   dependencies:
     fs-extra "^5.0.0"
 
