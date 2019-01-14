@@ -21,6 +21,6 @@ export default DS.Model.extend({
   page: DS.belongsTo('page'),
 
   inlineBackground: computed('backgroundImageUrl', function () {
-    return new htmlSafe( "background-image: url('" + this.backgroundImageUrl + "');" );
+    return new htmlSafe( 'background-image: url("' + this.backgroundImageUrl + '");' );
   })
 });
