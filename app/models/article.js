@@ -7,6 +7,7 @@ export default DS.Model.extend({
   created: DS.attr('date'),
   status: DS.attr('boolean'),
   intro: DS.attr(''),
+  body: DS.attr(''),
   slug: DS.attr('string'),
   navColor: DS.attr('string'),
   heroActive: DS.attr('boolean'),
