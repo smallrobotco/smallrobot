@@ -5,8 +5,12 @@
   {{else}}
     {{main-nav}}
   {{/if}}
-  <div class="body">
-    {{html-safe post.body.value}}
+  <div class="container-fluid">
+    <div class="row">
+      <div class="body col-12 col-md-10 col-lg-8 py-3 py-md-5 mx-auto">
+        {{html-safe post.body.value}}
+      </div>
+    </div>
   </div>
 
   {{global-footer}}
