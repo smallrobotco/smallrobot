@@ -53,7 +53,7 @@ module.exports = function(defaults) {
       ],
       requestMode: 'cors',
       lenientErrors: true,
-      version: '40'
+      version: '41'
     },
     'esw-cache-fallback': {
       patterns: [
@@ -61,16 +61,16 @@ module.exports = function(defaults) {
         'https://api.smallrobot.co/sites/default/files/*\.(?:jpg|gif|png)'
       ],
       // changing this version number will bust the cache
-      version: '40'
+      version: '41'
     },
     'esw-prember': {
-      version: '40'
+      version: '41'
     },
-    // 'prember': {
-    //   enabled: 'false',
-    //   baseRoot: 'https://smallrobot.co',
-    //   urls: buildPremberUrls()
-    // },
+    'prember': {
+      enabled: 'false',
+      baseRoot: 'https://smallrobot.co',
+      urls: buildPremberUrls()
+    },
     fingerprint: {
       enabled: false
     },
