@@ -67,6 +67,7 @@ module.exports = function(defaults) {
       version: '40'
     },
     'prember': {
+      enabled: 'false',
       baseRoot: 'https://smallrobot.co',
       urls: buildPremberUrls()
     },
