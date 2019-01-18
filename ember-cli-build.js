@@ -66,11 +66,11 @@ module.exports = function(defaults) {
     'esw-prember': {
       version: '40'
     },
-    'prember': {
-      enabled: 'false',
-      baseRoot: 'https://smallrobot.co',
-      urls: buildPremberUrls()
-    },
+    // 'prember': {
+    //   enabled: 'false',
+    //   baseRoot: 'https://smallrobot.co',
+    //   urls: buildPremberUrls()
+    // },
     fingerprint: {
       enabled: false
     },
