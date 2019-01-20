@@ -16,9 +16,8 @@ export default DS.Model.extend({
   heroColor: DS.attr('string'),
   heroOverlay: DS.attr('string'),
   heroLayout: DS.attr('string'),
-  heroBackground: DS.belongsTo('file'),
   heroBackgroundUrl: DS.attr('string'),
-  section: DS.hasMany('section'),
+  bio: DS.belongsTo('bio'),
   slugPath: computed('slug', function() {
     let slug = this.slug.replace(/^\/+/g,'');
     return slug;

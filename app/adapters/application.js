@@ -1,9 +1,8 @@
 import DS from 'ember-data';
 import AdapterFetch from 'ember-fetch/mixins/adapter-fetch';
 import ENV from '../config/environment';
-import CachedShoe   from 'ember-cached-shoe'
 
-export default  DS.JSONAPIAdapter.extend(CachedShoe, AdapterFetch, {
+export default  DS.JSONAPIAdapter.extend(AdapterFetch, {
   host: ENV.host,
   namespace: ENV.namespace,
   // buildURL(record, suffix) {

@@ -1,0 +1,25 @@
+.author-bio {
+  border-top: 1px solid $gray-200;
+
+  .bio-photo {
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    border: 1px solid $gray-500;
+    border-radius: 50%;
+    font-size: .8rem;
+    color: #fff;
+  }
+  .name {
+    font-weight: 300;
+    font-size: 1.2rem;
+  }
+  .title {
+    font-size: .8rem;
+  }
+  .bio-body {
+    font-size: .8rem;
+    color: $gray-400;
+  }
+}
