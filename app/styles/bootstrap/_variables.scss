@@ -80,8 +80,8 @@ $pink:      #E40B59;
 $red:       #a40e1d;
 $orange:    #fd7e14 !default;
 $yellow:    #ffc107 !default;
-$green:     #88ae3d;
-$green-dark:#4D5F2B;
+$green:     #88ae3d; //#88ae3d;
+$green-dark:#729233;
 $teal:      #20c997 !default;
 $cyan:      #17a2b8 !default;
 
@@ -93,7 +93,7 @@ $colors: (
   red: $red,
   orange: $orange,
   yellow: $yellow,
-  green: $green,
+  green: $green-dark,
   teal: $teal,
   cyan: $cyan,
   white: $white,
@@ -102,7 +102,7 @@ $colors: (
 ) !default;
 
 $theme-colors: (
-  primary: $blue,
+  primary: $gray-800,
   secondary: $gray-600,
   success: $green,
   info: $cyan,
@@ -170,9 +170,9 @@ $body-color:    $gray-700 !default;
 //
 // Style anchor elements.
 
-$link-color:            $green;
+$link-color:            $green-dark;
 $link-decoration:       none;
-$link-hover-color:      darken($green, 5%);
+$link-hover-color:      $green;
 $link-hover-decoration: none;
 $link-underline:        rgba($gray-600, .3);
 $link-hover-underline:  $gray-600;
