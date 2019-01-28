@@ -4176,10 +4176,10 @@ ember-cli-autoprefixer@^0.8.1:
     broccoli-autoprefixer "^5.0.0"
     lodash "^4.0.0"
 
-ember-cli-babel-polyfills@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/ember-cli-babel-polyfills/-/ember-cli-babel-polyfills-1.0.1.tgz#a6829a5bf3320a2c5c8fe58e94edbd0059ae96bc"
-  integrity sha512-EAaawRjEJGGnyz3Ps3uOh0mcma+hyssWcyVfQ1z6MbqaNqvEDkeBnwpoWSLsgDPS7vNFmr/U1ksauEuyDGflKg==
+ember-cli-babel-polyfills@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/ember-cli-babel-polyfills/-/ember-cli-babel-polyfills-1.0.2.tgz#4a9990d46390e6410ba0b649181d43acfda99290"
+  integrity sha512-YdT8lysqX4xpbCOrn6LTFeXPckFdYJrli8XKECAoxotP7atJ9nI6SBBQXwnG0qZpgFsSQQauoq5o04+27UFIHA==
   dependencies:
     broccoli-file-creator "^2.1.1"
     broccoli-funnel "^2.0.1"
