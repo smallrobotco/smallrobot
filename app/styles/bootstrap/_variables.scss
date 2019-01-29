@@ -249,8 +249,11 @@ $font-size-base: 1.1rem !default; // Assumes the browser default, typically `16p
 $font-size-lg:   1.25rem !default;
 $font-size-sm:   .875rem !default;
 
+$font-weight-light: 300;
 $font-weight-normal: 400;
+$font-weight-semibold: 600;
 $font-weight-bold: 700;
+$font-weight-black: 800;
 
 $font-weight-base: $font-weight-normal !default;
 $line-height-base: 1.7 !default;
@@ -264,7 +267,7 @@ $h6-font-size: 1rem !default;
 
 $headings-margin-bottom: ($spacer / 2) !default;
 $headings-font-family:   $font-family-sans-serif-alt;
-$headings-font-weight:   200;
+$headings-font-weight:   $font-weight-light;
 $headings-line-height:   1.1 !default;
 $headings-color:         inherit !default;
 
