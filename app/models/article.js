@@ -10,8 +10,6 @@ export default DS.Model.extend({
   body: DS.attr(''),
   slug: DS.attr('string'),
   navColor: DS.attr('string'),
-  heroActive: DS.attr('boolean'),
-  heroBlurb: DS.attr(''),
   heroByline: DS.attr('string'),
   heroColor: DS.attr('string'),
   heroOverlay: DS.attr('string'),

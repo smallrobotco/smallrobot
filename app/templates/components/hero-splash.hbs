@@ -6,11 +6,9 @@
               <div class="hero-col">
                 <div class="hero-block">
                   <div class="hero-text">
-                    {{#if splash.heroBlurb}}
-                      <p class="blurb">
-                        {{{splash.heroBlurb.value}}}
-                      </p>
-                    {{/if}}
+                      <h1 class="text-center {{splash.heroColor}}">
+                        {{{splash.title}}}
+                      </h1>
                     {{#if splash.heroByline}}
                       <p class="byline">{{splash.heroByline}}</p>
                     {{/if}}
