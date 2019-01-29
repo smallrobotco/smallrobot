@@ -8,7 +8,7 @@ export default DS.Model.extend({
   status: DS.attr('boolean'),
   intro: DS.attr(''),
   body: DS.attr(''),
-  slug: DS.attr('string'),
+  dashedTitle: DS.attr('string'),
   navColor: DS.attr('string'),
   heroByline: DS.attr('string'),
   heroColor: DS.attr('string'),
@@ -16,10 +16,11 @@ export default DS.Model.extend({
   heroLayout: DS.attr('string'),
   heroBackgroundUrl: DS.attr('string'),
   bio: DS.belongsTo('bio'),
-  slugPath: computed('slug', function() {
-    let slug = this.slug.replace(/^\/+/g,'');
-    return slug;
-  }),
+  // slugPath: computed('slug', function() {
+  //   let slug = this.slug.replace(/^\/+/g,'');
+  //   return slug;
+  // }),
+
   inlineBackground: computed('heroBackgroundUrl', function () {
     return new htmlSafe( "background-image: url('" + this.heroBackgroundUrl + "')" );
   })

@@ -9,14 +9,14 @@ export default Route.extend({
   headData: service(),
   serialize(article) {
     return {
-      article_slug: article.get('slug')
+      article_dashedTitle: article.get('dashedTitle')
     }
   },
   model(params) {
     return RSVP.hash({
       post: this.store.query('article', {
         filter: {
-          slug: params.article_slug_path
+          dashedTitle: params.article_dashedTitle
         }
       })
       .then(posts => {

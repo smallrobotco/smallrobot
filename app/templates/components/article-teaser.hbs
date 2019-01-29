@@ -5,7 +5,7 @@
       <div class="container-fluid">
         <div class='row'>
           <div class="article-title col text-center">
-            {{#link-to "blog.post" article.slugPath class="h1"}}
+            {{#link-to "blog.post" article.dashedTitle class="h1"}}
               {{article.title}}
             {{/link-to}}
           </div>
@@ -13,7 +13,7 @@
             {{html-safe article.intro.value}}
           </div>
           <div class='readmore col-12 text-center'>
-            {{#link-to "blog.post" article.slugPath class="btn btn-light"}}Read More{{/link-to}}
+            {{#link-to "blog.post" article.dashedTitle class="btn btn-light"}}Read More{{/link-to}}
           </div>
         </div>
       </div>
