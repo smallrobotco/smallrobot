@@ -31,7 +31,7 @@ export default Route.extend({
       description:
       'We are a Vancouver, BC based Web Design, Technical Consulting, Web Development, and Support company, specializing in Drupal, Ember.js, websites and web apps.',
       type: 'website',
-      url: 'https://smallrobot.co/ideas' + models.post.slug
+      url: 'https://smallrobot.co/ideas/' + models.post.dashedTitle
     });
   },
 
