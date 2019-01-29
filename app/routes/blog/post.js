@@ -14,6 +14,7 @@ export default Route.extend({
   },
   model(params) {
     return RSVP.hash({
+      // post: this.store.findRecord('article', params.article_id)
       post: this.store.query('article', {
         filter: {
           dashedTitle: params.article_dashedTitle
