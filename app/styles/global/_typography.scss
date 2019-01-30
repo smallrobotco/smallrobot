@@ -98,17 +98,18 @@ span {
 
 
 .article-title {
+  border-bottom: 3px solid $gray-200;
+
   a {
     display: inline-block;
     color: $black;
     padding: 4px 8px;
-    border-bottom: 1px solid rgba($gray-600, .3);
+    border: 0;
 
     &:hover,
     &:focus {
       text-decoration: none;
-      color: $pink;
-      border-color: $gray-600;
+      color: $gray-600;
     }
   }
 }
