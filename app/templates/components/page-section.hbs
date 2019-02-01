@@ -15,18 +15,18 @@
 
             {{#each column.element as |element|}}
               {{#if element.body }}
-                {{#text-block}}
+                {{#text-block tagName=""}}
                   {{html-safe element.body.value}}
                 {{/text-block}}
               {{else if element.listingType}}
                 {{!-- Listings of content --}}
-                {{listing-block model=element.listingType articles=articles}}
+                {{listing-block model=element.listingType articles=articles tagName=""}}
               {{else if element.image }}
                 {{#image-block}}
                   <img src="{{element.image.fullUrl}}" alt="{{element.image.alt}}" srcset="">
                 {{/image-block}}
               {{else if element.slide}}
-                {{slideshow-block model=element.slide breakpoints=breakpoints}}
+                {{slideshow-block model=element.slide breakpoints=breakpoints tagName=""}}
               {{else}}
                 {{ember-spinner}}
               {{/if}}

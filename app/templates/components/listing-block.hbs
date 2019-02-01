@@ -3,7 +3,7 @@
     {{#if (eq model "articles")}}
       {{#if articles}}
         {{#each (sort-by "created:desc" articles) as |article|}}
-          {{article-teaser article=article}}
+          {{article-teaser article=article tagName=""}}
         {{/each}}
       {{else}}
         No Articles

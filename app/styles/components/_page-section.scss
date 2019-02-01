@@ -459,6 +459,7 @@
         @extend .d-flex;
         @extend .align-items-end;
         @extend .align-items-md-center;
+        width: 100%;
 
         .inner {
           @extend .w-100;
