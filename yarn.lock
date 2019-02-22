@@ -2194,10 +2194,10 @@ body@^5.1.0:
     raw-body "~1.1.0"
     safe-json-parse "~1.0.1"
 
-boilerplate-update@^0.16.0:
-  version "0.16.0"
-  resolved "https://registry.yarnpkg.com/boilerplate-update/-/boilerplate-update-0.16.0.tgz#99248c5d1cac77b73a382c892c5020b8fa3f0be1"
-  integrity sha512-3TkHj4Jg+jxUiSsTjLuW8NhrkbeRFYf1XppFddpttP8MRMPI5ANH+gWq+e6S0VgrpRrF+ETcIJ0huQIAPUNUPg==
+boilerplate-update@^0.18.0:
+  version "0.18.0"
+  resolved "https://registry.yarnpkg.com/boilerplate-update/-/boilerplate-update-0.18.0.tgz#242d191c0128fea9d9a0bf30941c5ae17d736ad4"
+  integrity sha512-87hBM0KsZY9AU6woi3nP57n+hnf9edqXGUt3QA0p7HH+PjsHurC81WUuxEptJor9nhgakbKKf9ayLX6nSYG+7A==
   dependencies:
     co "^4.6.0"
     cpr "^3.0.1"
@@ -2209,6 +2209,7 @@ boilerplate-update@^0.16.0:
     merge-package.json "^2.0.0"
     npx "^10.2.0"
     opn "^5.4.0"
+    p-reduce "^1.0.0"
     rimraf "^2.6.2"
     semver "^5.6.0"
     tmp "0.0.33"
@@ -4491,12 +4492,12 @@ ember-cli-uglify@^2.1.0:
     broccoli-uglify-sourcemap "^2.1.1"
     lodash.defaultsdeep "^4.6.0"
 
-ember-cli-update@^0.29.5:
-  version "0.29.5"
-  resolved "https://registry.yarnpkg.com/ember-cli-update/-/ember-cli-update-0.29.5.tgz#16599e7aa11f72415b732289d417b778ab57a272"
-  integrity sha512-b70savZ/33QFlIPAWADeZoyxInZb80a7B9Eky88x2qdVc8KSFJ6KslCtR0Fl+ck/yFlZiQRVRU3lAwODL/80RQ==
+ember-cli-update@^0.30.0:
+  version "0.30.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-update/-/ember-cli-update-0.30.0.tgz#6359a846671cf479b1f01bade84ffac744a163d3"
+  integrity sha512-67CufGL5JEz7opMpaFQbXWR2A++b+FkOKRXbGGeBw0fwqQVrLZe+QTKwLlaiRyZe58ivy+C1ATKWhU++HwRJXg==
   dependencies:
-    boilerplate-update "^0.16.0"
+    boilerplate-update "^0.18.0"
     co "^4.6.0"
     debug "^4.0.0"
     resolve "^1.8.1"
@@ -9145,6 +9146,11 @@ p-locate@^3.0.0:
   integrity sha512-x+12w/To+4GFfgJhBEpiDcLozRJGegY+Ei7/z0tSLkMmxGZNybVMSfWj9aJn8Z5Fc7dBUNJOOVgPv2H7IwulSQ==
   dependencies:
     p-limit "^2.0.0"
+
+p-reduce@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/p-reduce/-/p-reduce-1.0.0.tgz#18c2b0dd936a4690a529f8231f58a0fdb6a47dfa"
+  integrity sha1-GMKw3ZNqRpClKfgjH1ig/bakffo=
 
 p-try@^1.0.0:
   version "1.0.0"
