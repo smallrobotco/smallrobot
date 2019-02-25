@@ -19,7 +19,7 @@
     "@ember/optional-features": "^0.7.0",
     "broccoli-asset-rev": "^2.7.0",
     "ember-ajax": "^4.0.2",
-    "ember-auto-import": "^1.2.20",
+    "ember-auto-import": "^1.2.21",
     "ember-burger-menu": "^3.3.3",
     "ember-cli": "~3.7.1",
     "ember-cli-app-version": "^3.2.0",
