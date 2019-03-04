@@ -4648,10 +4648,10 @@ ember-cli-version-checker@^3.0.0, ember-cli-version-checker@^3.0.1:
     resolve "^1.9.0"
     semver "^5.6.0"
 
-ember-cli@~3.8.0:
-  version "3.8.0"
-  resolved "https://registry.yarnpkg.com/ember-cli/-/ember-cli-3.8.0.tgz#723a1281540421972c5da3296e70f463d805c22d"
-  integrity sha512-K2ds4uQ7nEjuNSovOnR8UykEO0tuojk6fUDRRhajpnsSiJqrfOE2TxZhOKH4xNUXlD4VnGsunnzS6SLlp7jPZQ==
+ember-cli@~3.8.1:
+  version "3.8.1"
+  resolved "https://registry.yarnpkg.com/ember-cli/-/ember-cli-3.8.1.tgz#2a4f66cf9da3c9665658690e615479af32749807"
+  integrity sha512-cg8Ug60lbNPQVGjHnO66cmrgFXxlFFdkDp+//e58Kgl9mz17cQIbU1TD1pMaW0dYi+2/XADeftHBULs3ejQBSA==
   dependencies:
     "@babel/core" "^7.0.0"
     "@babel/plugin-transform-modules-amd" "^7.2.0"
@@ -7368,14 +7368,6 @@ js-tokens@^3.0.2:
   integrity sha1-mGbfOVECEw449/mWvOtlRDIJwls=
 
 js-yaml@^3.12.0, js-yaml@^3.12.1, js-yaml@^3.2.5, js-yaml@^3.2.7:
-  version "3.12.2"
-  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.12.2.tgz#ef1d067c5a9d9cb65bd72f285b5d8105c77f14fc"
-  integrity sha512-QHn/Lh/7HhZ/Twc7vJYQTkjuCa0kaCcDcjK5Zlk2rvnUpy7DxMJ23+Jc2dcyvltwQVg1nygAVlB2oRDFHoRS5Q==
-  dependencies:
-    argparse "^1.0.7"
-    esprima "^4.0.0"
-
-js-yaml@^3.12.1:
   version "3.12.2"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.12.2.tgz#ef1d067c5a9d9cb65bd72f285b5d8105c77f14fc"
   integrity sha512-QHn/Lh/7HhZ/Twc7vJYQTkjuCa0kaCcDcjK5Zlk2rvnUpy7DxMJ23+Jc2dcyvltwQVg1nygAVlB2oRDFHoRS5Q==
