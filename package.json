@@ -18,7 +18,7 @@
   "devDependencies": {
     "@ember/optional-features": "^0.7.0",
     "broccoli-asset-rev": "^2.7.0",
-    "ember-ajax": "^4.0.2",
+    "ember-ajax": "^5.0.0",
     "ember-auto-import": "^1.2.21",
     "ember-burger-menu": "^3.3.3",
     "ember-cli": "~3.8.1",
