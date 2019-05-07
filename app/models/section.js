@@ -14,6 +14,7 @@ export default DS.Model.extend({
   backgroundImageUrl: DS.attr('string'),
   colHorizontalAlignment: DS.attr('string'),
   colVerticalAlignment: DS.attr('string'),
+  extraClasses: DS.attr('string'),
   heroSize: DS.attr('string'),
   overlay: DS.attr('string'),
   backgroundImage: DS.belongsTo('file'),

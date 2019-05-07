@@ -6,6 +6,7 @@ export default DS.Model.extend({
   columnWidthMd: DS.attr('string'),
   columnWidthLg: DS.attr('string'),
   columnWidthXl: DS.attr('string'),
+  extraClasses: DS.attr('string'),
   section: DS.belongsTo('section'),
   element: DS.hasMany('element')
 });

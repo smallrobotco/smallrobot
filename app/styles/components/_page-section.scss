@@ -44,6 +44,10 @@
   background-color: #fff;
   width: 100%;
 
+  &.multiply {
+    background-blend-mode: multiply;
+  }
+
   // position: relative;
 
   &.hero-active {
@@ -278,6 +282,30 @@
       >.ember-view .angled-divider .angled-divider__bottom,
       >.ember-view .angled-divider .angled-divider__bottom {
         fill: $pink;
+      }
+    }
+  }
+
+  &.section-background-yellow {
+    background-color: $yellow;
+    color: $black;
+
+    .overlay {
+      >.ember-view .angled-divider .angled-divider__bottom,
+      >.ember-view .angled-divider .angled-divider__bottom {
+        fill: $yellow;
+      }
+    }
+  }
+
+  &.section-background-teal{
+    background-color: $teal;
+    color: $black;
+
+    .overlay {
+      >.ember-view .angled-divider .angled-divider__bottom,
+      >.ember-view .angled-divider .angled-divider__bottom {
+        fill: $teal;
       }
     }
   }
