@@ -9876,10 +9876,10 @@ prember-sitemap-generator@^0.1.1:
     broccoli-funnel "^2.0.1"
     chalk "^2.3.0"
 
-prember@*, prember@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/prember/-/prember-1.0.2.tgz#a50a3f4fcd07fa1fc697d67a2d3c73b480e796cf"
-  integrity sha512-GMEzQOij2dJ7M+/86ZUD1D/bmLGe4vTxfPmEbhO2Ap6UfnqHqkUDSWaDlK4AaHSbx999DZFbArCnYaGEOb4WZw==
+prember@*, prember@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/prember/-/prember-1.0.3.tgz#417c1fd4419b6e028c87477915d255ef8c045030"
+  integrity sha512-N4HanZE+elLgHnXGA0ti6L+zrxdRuAzAawea8qptJJ8oKMHhPHCcURBE9hAHgTNY3rl0vx8zrlIIr/94GRIhXA==
   dependencies:
     broccoli-debug "^0.6.3"
     broccoli-merge-trees "^2.0.0"
