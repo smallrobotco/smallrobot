@@ -4614,10 +4614,10 @@ ember-cli-htmlbars@^3.0.1:
     json-stable-stringify "^1.0.0"
     strip-bom "^3.0.0"
 
-ember-cli-image-transformer@3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/ember-cli-image-transformer/-/ember-cli-image-transformer-3.0.0.tgz#ba9f6a265ca3c27510e7ff4ef788c9076cb8bfe3"
-  integrity sha512-cx9hi4LKbqhwYw/MRtoP3HishZy6oTeRVQcVVW6FM9PfFHVomz+jOsngZqhdHXUIhcuTAPyrrR38Q9vpg2z30Q==
+ember-cli-image-transformer@3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/ember-cli-image-transformer/-/ember-cli-image-transformer-3.0.1.tgz#99a29cc1ae35bb6aac3350db0ddbbc33177ba5fd"
+  integrity sha512-g2zbQmDG0rI1aNk/hxVnNQlTtGVnNMq4uwAl4AdDncxd8lqC66gdatfE6HF7qbvslh0xo65nduy8aNjglWlZ0w==
   dependencies:
     broccoli-caching-writer "^3.0.3"
     broccoli-funnel "^2.0.1"
