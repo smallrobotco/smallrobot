@@ -61,10 +61,10 @@ module.exports = function(defaults) {
         'https://api.smallrobot.co/sites/default/files/*.(?:jpg|gif|png)'
       ],
       // changing this version number will bust the cache
-      version: '44'
+      version: '45'
     },
     'esw-prember': {
-      version: '44'
+      version: '45'
     },
     'prember': {
       baseRoot: 'https://smallrobot.co',
