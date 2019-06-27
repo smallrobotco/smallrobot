@@ -5307,10 +5307,10 @@ ember-truth-helpers@^2.1.0:
   dependencies:
     ember-cli-babel "^6.6.0"
 
-ember-unused-components@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/ember-unused-components/-/ember-unused-components-1.0.2.tgz#bfb354e88d140bc32bd2712ba8756b16d7629896"
-  integrity sha512-AbTyCqqkI/dDWjMqrOYz7i5kA+7Pk6KIsCXvZ2w2yGIjGPqdR3g9Tx17E66y/8lUR53YAIlIBKeIJUU2Z9Iz5Q==
+ember-unused-components@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/ember-unused-components/-/ember-unused-components-1.0.3.tgz#01d43373ab3cb70018eb43eae172425e2349d5be"
+  integrity sha512-YgtJTXGYUT4tvL18Yvjt1POwbYDDInBVY/a5kc5WUvJ8t8bGzymbaqlozHrKmwcm9I4iJ+88xeCsXAE/jLcpIA==
   dependencies:
     colors "1.3.3"
     fs-extra "8.0.1"
@@ -12582,14 +12582,6 @@ yam@^1.0.0:
     fs-extra "^4.0.2"
     lodash.merge "^4.6.0"
 
-yargs-parser@^13.0.0:
-  version "13.0.0"
-  resolved "https://registry.yarnpkg.com/yargs-parser/-/yargs-parser-13.0.0.tgz#3fc44f3e76a8bdb1cc3602e860108602e5ccde8b"
-  integrity sha512-w2LXjoL8oRdRQN+hOyppuXs+V/fVAYtpcrRxZuF7Kt/Oc+Jr2uAcVntaUTNT6w5ihoWfFDpNY8CPx1QskxZ/pw==
-  dependencies:
-    camelcase "^5.0.0"
-    decamelize "^1.2.0"
-
 yargs-parser@^13.1.0:
   version "13.1.1"
   resolved "https://registry.yarnpkg.com/yargs-parser/-/yargs-parser-13.1.1.tgz#d26058532aa06d365fe091f6a1fc06b2f7e5eca0"
@@ -12623,24 +12615,7 @@ yargs@^11.0.0:
     y18n "^3.2.1"
     yargs-parser "^9.0.2"
 
-yargs@^13.0.0:
-  version "13.2.2"
-  resolved "https://registry.yarnpkg.com/yargs/-/yargs-13.2.2.tgz#0c101f580ae95cea7f39d927e7770e3fdc97f993"
-  integrity sha512-WyEoxgyTD3w5XRpAQNYUB9ycVH/PQrToaTXdYXRdOXvEy1l19br+VJsc0vcO8PTGg5ro/l/GY7F/JMEBmI0BxA==
-  dependencies:
-    cliui "^4.0.0"
-    find-up "^3.0.0"
-    get-caller-file "^2.0.1"
-    os-locale "^3.1.0"
-    require-directory "^2.1.1"
-    require-main-filename "^2.0.0"
-    set-blocking "^2.0.0"
-    string-width "^3.0.0"
-    which-module "^2.0.0"
-    y18n "^4.0.0"
-    yargs-parser "^13.0.0"
-
-yargs@^13.2.2:
+yargs@^13.0.0, yargs@^13.2.2:
   version "13.2.4"
   resolved "https://registry.yarnpkg.com/yargs/-/yargs-13.2.4.tgz#0b562b794016eb9651b98bd37acf364aa5d6dc83"
   integrity sha512-HG/DWAJa1PAnHT9JAhNa8AbAv3FPaiLzioSjCcmuXXhP8MlpHO5vwls4g4j6n30Z74GVQj8Xa62dWVx1QCGklg==
