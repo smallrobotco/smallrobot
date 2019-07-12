@@ -13,7 +13,7 @@ export default Route.extend({
     return setProperties(this.headData, {
       title: 'Small Robot Co. | Support - Ember.js, Drupal, ContentaCMS, Decoupled, Web Apps',
       description:
-      'We are a Vancouver, BC based Web Design, Technical Consulting, Web Development, and Support company, specializing in Drupal, Ember.js, websites and web apps.',
+      'We are a Vancouver, BC based Web Design, Technical Consulting, Web Development, and Support company, specializing in Drupal, WordPress, Ember.js, websites and web apps.',
       type: 'website',
       url: 'https://smallrobot.co/support'
     });

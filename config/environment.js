@@ -39,67 +39,67 @@ module.exports = function(environment) {
     //     submit: 'btn btn-primary'
     //   }
     // },
-    metricsAdapters: [
-      {
-        name: 'GoogleAnalytics',
-        environments: ['all'],
-        config: {
-          id: 'UA-110529542-1',
-          // Use `analytics_debug.js` in development
-          debug: environment === 'test',
-          // Use verbose tracing of GA events
-          trace: environment === 'test',
-          // Ensure development env hits aren't sent to GA
-          sendHitTask: environment !== 'test',
-          // Specify Google Analytics plugins
-          require: ['']
-        }
-      }//,
-      // {
-      //   name: 'Mixpanel',
-      //   environments: ['production'],
-      //   config: {
-      //     token: '0f76c037-4d76-4fce-8a0f-a9a8f89d1453'
-      //   }
-      // },
-      // {
-      //   name: 'Segment',
-      //   environments: ['production'],
-      //   config: {
-      //     key: '4fce-8a0f-a9a8f89d1453'
-      //   }
-      // },
-      // {
-      //   name: 'Piwik',
-      //   environments: ['production'],
-      //   config: {
-      //     piwikUrl: 'http://piwik.my.com',
-      //     siteId: 42
-      //   }
-      // },
-      // {
-      //   name: 'Intercom',
-      //   environments: ['production'],
-      //   config: {
-      //     appId: 'def1abc2'
-      //   }
-      // },
-      // {
-      //   name: 'FacebookPixel',
-      //   environments: ['production'],
-      //   config: {
-      //     id: '1234567890'
-      //   }
-      // },
+    // metricsAdapters: [
+    //   {
+    //     name: 'GoogleAnalytics',
+    //     environments: ['all'],
+    //     config: {
+    //       id: 'UA-110529542-1',
+    //       // Use `analytics_debug.js` in development
+    //       debug: environment === 'test',
+    //       // Use verbose tracing of GA events
+    //       trace: environment === 'test',
+    //       // Ensure development env hits aren't sent to GA
+    //       sendHitTask: environment !== 'test',
+    //       // Specify Google Analytics plugins
+    //       require: ['']
+    //     }
+    //   }//,
+    //   // {
+    //   //   name: 'Mixpanel',
+    //   //   environments: ['production'],
+    //   //   config: {
+    //   //     token: '0f76c037-4d76-4fce-8a0f-a9a8f89d1453'
+    //   //   }
+    //   // },
+    //   // {
+    //   //   name: 'Segment',
+    //   //   environments: ['production'],
+    //   //   config: {
+    //   //     key: '4fce-8a0f-a9a8f89d1453'
+    //   //   }
+    //   // },
+    //   // {
+    //   //   name: 'Piwik',
+    //   //   environments: ['production'],
+    //   //   config: {
+    //   //     piwikUrl: 'http://piwik.my.com',
+    //   //     siteId: 42
+    //   //   }
+    //   // },
+    //   // {
+    //   //   name: 'Intercom',
+    //   //   environments: ['production'],
+    //   //   config: {
+    //   //     appId: 'def1abc2'
+    //   //   }
+    //   // },
+    //   // {
+    //   //   name: 'FacebookPixel',
+    //   //   environments: ['production'],
+    //   //   config: {
+    //   //     id: '1234567890'
+    //   //   }
+    //   // },
 
-      // {
-      //   name: 'LocalAdapter',
-      //   environments: ['all'], // default
-      //   config: {
-      //     foo: 'bar'
-      //   }
-      // }
-    ],
+    //   // {
+    //   //   name: 'LocalAdapter',
+    //   //   environments: ['all'], // default
+    //   //   config: {
+    //   //     foo: 'bar'
+    //   //   }
+    //   // }
+    // ],
 
     APP: {
       // Here you can pass flags/options to your application instance
