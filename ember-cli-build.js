@@ -3,6 +3,8 @@
 
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
+const crawl = require('prember-crawler');
+
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
     'autoprefixer': {
@@ -68,7 +70,7 @@ module.exports = function(defaults) {
     },
     'prember': {
       baseRoot: 'https://smallrobot.co',
-      urls: buildPremberUrls()
+      urls: crawl
     },
     fingerprint: {
       enabled: false
@@ -79,10 +81,3 @@ module.exports = function(defaults) {
   });
   return app.toTree();
 };
-
-function buildPremberUrls() {
-  // Build prember urls
-  const urls = ['crawl'];
-
-  return urls;
-}
