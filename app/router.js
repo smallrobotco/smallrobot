@@ -8,7 +8,6 @@ const Router = EmberRouter.extend(RouterScroll, {
   location: config.locationType,
   headData: inject(),
   rootURL: config.rootURL,
-  metrics: inject(),
 
   // setTitle(title) {
   //   this.get('headData').set('title', title);
@@ -16,22 +15,8 @@ const Router = EmberRouter.extend(RouterScroll, {
 
   didTransition() {
     this._super(...arguments);
-    this._trackPage();
   },
 
-  // _trackPage() {
-  //   scheduleOnce('afterRender', this, () => {
-  //     // const page = this.url;
-  //     // const title = this.getWithDefault('currentRouteName', 'unknown');
-
-  //     // this.metrics.trackPage({ page, title });
-  //     if (typeof FastBoot === 'undefined') {
-  //       const page = this.url;
-  //       const title = this.getWithDefault('currentRouteName', 'unknown');
-  //       this.metrics.trackPage({ page, title });
-  //     }
-  //   });
-  // }
 });
 
 Router.map(function() {

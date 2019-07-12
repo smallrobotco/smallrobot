@@ -82,15 +82,7 @@ module.exports = function(defaults) {
 
 function buildPremberUrls() {
   // Build prember urls
-  const urls = [
-    '/',
-    '/consulting',
-    '/development',
-    '/support',
-    '/contact',
-    '/about',
-    '/ideas'
-  ];
+  const urls = ['crawl'];
 
   return urls;
 }
