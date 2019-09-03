@@ -9,12 +9,12 @@ module.exports = function(defaults) {
     'autoprefixer': {
       browsers: [
         'ie 11',
-        'last 2 Chrome versions',
-        'last 2 Firefox versions',
-        'last 2 Edge versions',
-        'last 2 Safari versions',
-        'last 2 ios versions',
-        'last 2 ChromeAndroid versions'
+        'last 1 Chrome versions',
+        'last 1 Firefox versions',
+        'last 1 Edge versions',
+        'last 1 Safari versions',
+        'last 1 ios versions',
+        'last 1 ChromeAndroid versions'
       ],
       cascade: false
     },
