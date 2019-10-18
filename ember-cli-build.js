@@ -54,7 +54,7 @@ module.exports = function(defaults) {
       ],
       requestMode: 'cors',
       lenientErrors: true,
-      version: '46'
+      version: '47'
     },
     'esw-cache-fallback': {
       patterns: [
@@ -62,10 +62,10 @@ module.exports = function(defaults) {
         'https://api.smallrobot.co/sites/default/files/*.(?:jpg|gif|png)'
       ],
       // changing this version number will bust the cache
-      version: '46'
+      version: '47'
     },
     'esw-prember': {
-      version: '46'
+      version: '47'
     },
     'prember': {
       baseRoot: 'https://smallrobot.co',
