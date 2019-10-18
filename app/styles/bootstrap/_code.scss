@@ -46,6 +46,8 @@ pre {
   margin-bottom: 1rem;
   font-size: $code-font-size;
   color: $pre-color;
+  background-color: $gray-100;
+  padding: 1.5rem;
 
   // Account for some code outputs that place code tags in pre tags
   code {
