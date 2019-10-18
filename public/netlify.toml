@@ -4,6 +4,21 @@
   status = 200
 
 [[redirects]]
+  from = "http://www.smallrobot.org/*"
+  to = "https://smallrobot.co/:splat"
+  status = 301!
+
+[[redirects]]
+  from = "http://smallrobot.org/*"
+  to = "https://smallrobot.co/:splat"
+  status = 301!
+
+[[redirects]]
+  from = "https://smallrobot.org/*"
+  to = "https://smallrobot.co/:splat"
+  status = 301!
+
+[[redirects]]
   from = "/api/*"
   to = "https://api.smallrobot.co/api/:splat"
   status = 200
