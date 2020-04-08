@@ -1,5 +1,5 @@
 {{#if page.heroActive}}
-  {{ main-nav class="hero" navColor=page.navColor }}
+  <MainNav @class="hero" @navColor={{page.navColor}} />
 {{else}}
-  {{main-nav}}
+  <MainNav />
 {{/if}}

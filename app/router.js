@@ -1,23 +1,19 @@
 import EmberRouter from '@ember/routing/router';
 // import { scheduleOnce } from '@ember/runloop';
 import { inject } from '@ember/service';
-import RouterScroll from 'ember-router-scroll';
+import EmberRouterScroll from 'ember-router-scroll';
 import config from './config/environment';
 
-const Router = EmberRouter.extend(RouterScroll, {
-  location: config.locationType,
-  headData: inject(),
-  rootURL: config.rootURL,
 
-  // setTitle(title) {
-  //   this.get('headData').set('title', title);
-  // },
+class Router extends EmberRouterScroll {
+  location = config.locationType;
+  headData = inject();
+  rootURL = config.rootURL;
 
-  didTransition() {
-    this._super(...arguments);
-  },
-
-});
+  // didTransition() {
+  //   this._super(...arguments);
+  // }
+}
 
 Router.map(function() {
   this.route('index', { path: '/' });

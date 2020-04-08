@@ -1,6 +1,6 @@
-import DS from 'ember-data';
+import Model, { attr } from '@ember-data/model';
 
-export default DS.Model.extend({
-  created: DS.attr('string')
+export default Model.extend({
+  created: attr('string')
   // element: DS.belongsTo('element', { async: false }),
 });

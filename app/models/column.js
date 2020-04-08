@@ -1,12 +1,12 @@
-import DS from 'ember-data';
+import Model, { attr, belongsTo, hasMany } from '@ember-data/model';
 
-export default DS.Model.extend({
-  columnWidthXs: DS.attr('string'),
-  columnWidthSm: DS.attr('string'),
-  columnWidthMd: DS.attr('string'),
-  columnWidthLg: DS.attr('string'),
-  columnWidthXl: DS.attr('string'),
-  extraClasses: DS.attr('string'),
-  section: DS.belongsTo('section'),
-  element: DS.hasMany('element')
+export default Model.extend({
+  columnWidthXs: attr('string'),
+  columnWidthSm: attr('string'),
+  columnWidthMd: attr('string'),
+  columnWidthLg: attr('string'),
+  columnWidthXl: attr('string'),
+  extraClasses: attr('string'),
+  element: hasMany('element'),
+  section: belongsTo('section'),
 });

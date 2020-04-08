@@ -1,10 +1,10 @@
-import DS from 'ember-data';
+import Model, { attr, belongsTo } from '@ember-data/model';
 
-export default DS.Model.extend({
-  title: DS.attr('string'),
-  body: DS.attr(''),
-  twitter: DS.attr('string'),
-  linkedin: DS.attr('string'),
-  professionalTitle: DS.attr('string'),
-  photo: DS.belongsTo('file')
+export default Model.extend({
+  title: attr('string'),
+  body: attr(''),
+  twitter: attr('string'),
+  linkedin: attr('string'),
+  professionalTitle: attr('string'),
+  photo: belongsTo('file')
 });

@@ -4,7 +4,7 @@
     <div class='overlay {{section.overlay}}'>
 
       {{#if section.divider}}
-        {{angled-divider}}
+        <AngledDivider />
       {{/if}}
       <div class="content-wrapper">
         <div class="container-fluid">
@@ -15,20 +15,20 @@
 
             {{#each column.element as |element|}}
               {{#if element.body }}
-                {{#text-block tagName=""}}
+                <TextBlock @tagName="">
                   {{html-safe element.body.value}}
-                {{/text-block}}
+                </TextBlock>
               {{else if element.listingType}}
                 {{!-- Listings of content --}}
-                {{listing-block model=element.listingType articles=articles tagName=""}}
+                <ListingBlock @model={{element.listingType}} @articles={{articles}} @tagName="" />
               {{else if element.image }}
-                {{#image-block}}
+                <ImageBlock>
                   <img src="{{element.image.fullUrl}}" alt="{{element.image.alt}}" srcset="">
-                {{/image-block}}
+                </ImageBlock>
               {{else if element.slide}}
-                {{slideshow-block model=element.slide breakpoints=breakpoints tagName=""}}
+                <SlideshowBlock @model={{element.slide}} @breakpoints={{breakpoints}} @tagName="" />
               {{else}}
-                {{ember-spinner}}
+                <LoadingSpinner />
               {{/if}}
             {{/each}}
             </div>

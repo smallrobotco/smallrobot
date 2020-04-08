@@ -1,12 +1,12 @@
 {{#if model}}
-  {{global-header page=model}}
+  <GlobalHeader @page={{model}} />
 
   {{#each model.section as |section|}}
-    {{page-section section=section}}
+    <PageSection @section={{section}} />
   {{/each}}
 
-  {{global-footer}}
+  <GlobalFooter />
 
 {{else}}
-  {{loading-spinner}}
+  <LoadingSpinner />
 {{/if}}

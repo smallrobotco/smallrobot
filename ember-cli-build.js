@@ -6,20 +6,9 @@ const crawl = require('prember-crawler');
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
-    'autoprefixer': {
-      browsers: [
-        'ie 11',
-        'last 1 Chrome versions',
-        'last 1 Firefox versions',
-        'last 1 Edge versions',
-        'last 1 Safari versions',
-        'last 1 ios versions',
-        'last 1 ChromeAndroid versions'
-      ],
-      cascade: false
-    },
-    'ember-cli-template-lint': {
-      testGenerator: 'qunit' // or 'mocha', etc.
+    'sassOptions': {
+      // This tells ember-cli-sass to avoid generating the sourcemap file (like vendor.css.map)
+      sourceMap: false
     },
     'ember-cli-image-transformer': {
       images: [

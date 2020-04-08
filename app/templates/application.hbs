@@ -1,44 +1,36 @@
 <div class="ember-view">
-  {{head-layout}}
-  {{#burger-menu
-    position="right"
-    animation="reveal"
-    itemAnimation="stack"
-    dismissOnItemClick="true"
-    as |burger|}}
-    {{#burger.menu
-      itemTagName="li"
-      dismissOnItemClick="true"
-      as |menu|}}
+  <HeadLayout />
+  <BurgerMenu @position="right" @animation="reveal" @itemAnimation="stack" @dismissOnItemClick="true" as |burger|>
+    <burger.menu @itemTagName="li" @dismissOnItemClick="true" as |menu|>
       <a class="menu-close" {{action burger.state.actions.close}}><i aria-hidden="true" class="fa fa-times"></i> Close</a>
       <ul>
-        {{#menu.item}}
-          {{#link-to "index"}}Home{{/link-to}}
-        {{/menu.item}}
-        {{#menu.item}}
-          {{#link-to "consulting"}}Consulting{{/link-to}}
-        {{/menu.item}}
-        {{#menu.item}}
-          {{#link-to "development"}}Development{{/link-to}}
-        {{/menu.item}}
-        {{#menu.item}}
-          {{#link-to "support"}}Support{{/link-to}}
-        {{/menu.item}}
-        {{#menu.item}}
-          {{#link-to "about"}}About{{/link-to}}
-        {{/menu.item}}
-        {{#menu.item}}
-          {{#link-to "blog"}}Inspiration &amp; Ideas{{/link-to}}
-        {{/menu.item}}
-        {{#menu.item}}
-          {{#link-to "contact"}}Contact Us{{/link-to}}
-        {{/menu.item}}
+        <menu.item>
+          <LinkTo @route="index">Home</LinkTo>
+        </menu.item>
+        <menu.item>
+          <LinkTo @route="consulting">Consulting</LinkTo>
+        </menu.item>
+        <menu.item>
+          <LinkTo @route="development">Development</LinkTo>
+        </menu.item>
+        <menu.item>
+          <LinkTo @route="support">Support</LinkTo>
+        </menu.item>
+        <menu.item>
+          <LinkTo @route="about">About</LinkTo>
+        </menu.item>
+        <menu.item>
+          <LinkTo @route="blog">Inspiration &amp; Ideas</LinkTo>
+        </menu.item>
+        <menu.item>
+          <LinkTo @route="contact">Contact Us</LinkTo>
+        </menu.item>
       </ul>
-    {{/burger.menu}}
+    </burger.menu>
 
-    {{#burger.outlet}}
+    <burger.outlet>
       <a class="hamburger right" {{action burger.state.actions.toggle}}><i aria-hidden="true" class="fa fa-bars"></i> Menu</a>
       {{outlet}}
-    {{/burger.outlet}}
-  {{/burger-menu}}
+    </burger.outlet>
+  </BurgerMenu>
 </div>

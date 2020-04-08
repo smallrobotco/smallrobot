@@ -1,0 +1,5 @@
+2020-04-07T23:57:03.747Z [warn] WARNING: {{html-safe}} was not converted as it has positional parameters which can't be automatically converted. Source: app/templates/blog/post.hbs
+2020-04-07T23:57:03.749Z [warn] WARNING: {{html-safe}} was not converted as it has positional parameters which can't be automatically converted. Source: app/templates/blog/post.hbs
+2020-04-07T23:57:05.098Z [warn] WARNING: {{html-safe}} was not converted as it has positional parameters which can't be automatically converted. Source: app/templates/components/slideshow-block.hbs
+2020-04-07T23:57:05.120Z [warn] WARNING: {{html-safe}} was not converted as it has positional parameters which can't be automatically converted. Source: app/templates/components/article-teaser.hbs
+2020-04-07T23:57:05.167Z [warn] WARNING: {{html-safe}} was not converted as it has positional parameters which can't be automatically converted. Source: app/templates/components/page-section.hbs

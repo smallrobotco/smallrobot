@@ -1,10 +1,9 @@
-import DS from 'ember-data';
+import Model, { belongsTo, hasMany } from '@ember-data/model';
 
-export default DS.Model.extend({
-  // column: DS.belongsTo('column'),
-  texts: DS.hasMany('text'),
-  images: DS.hasMany('image'),
-  listings: DS.hasMany('listing'),
+export default Model.extend({
+  texts: hasMany('text'),
+  images: hasMany('image'),
+  listings: hasMany('listing'),
   // video: DS.hasMany('video'),
-  slideshows: DS.hasMany('slideshow')
+  slideshows: hasMany('slideshow'),
 });

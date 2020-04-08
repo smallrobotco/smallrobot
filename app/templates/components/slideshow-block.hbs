@@ -1,17 +1,8 @@
 <div class='slideshow'>
   <div class='inner'>
-    {{#swiper-container
-      class="item-carousel"
-      loop=false
-      centered=false
-      navigation=false
-      slidesPerView=5
-      spaceBetween=80
-      registerAs=itemSwiper
-      breakpoints=breakpoints
-      }}
+    <SwiperContainer @class="item-carousel" @loop={{false}} @centered={{false}} @navigation={{false}} @slidesPerView={{5}} @spaceBetween={{80}} @registerAs={{itemSwiper}} @breakpoints={{breakpoints}}>
       {{#each (shuffle model) as |slide|}}
-        {{#swiper-slide class="d-flex justify-content-center align-items-center text-center"}}
+        <SwiperSlide @class="d-flex justify-content-center align-items-center text-center">
           <div class="slide-inner">
             {{#if slide.image}}
               <div class='image'>
@@ -24,9 +15,9 @@
               </div>
             {{/if}}
           </div>
-        {{/swiper-slide}}
+        </SwiperSlide>
       {{/each}}
-    {{/swiper-container}}
+    </SwiperContainer>
 
   </div>
 </div>

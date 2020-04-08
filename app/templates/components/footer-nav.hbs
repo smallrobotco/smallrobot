@@ -3,16 +3,16 @@
   <nav>
     <ul>
       <li>
-        {{#link-to "about"}}About Us{{/link-to}}
+        <LinkTo @route="about">About Us</LinkTo>
       </li>
       <li>
-        {{#link-to "contact"}}Contact Us{{/link-to}}
+        <LinkTo @route="contact">Contact Us</LinkTo>
       </li>
       {{!-- <li>
       {{#link-to "work"}}Our Work{{/link-to}}
     </li> --}}
       <li>
-        {{#link-to "blog"}}Inspiration & Ideas{{/link-to}}
+        <LinkTo @route="blog">Inspiration & Ideas</LinkTo>
       </li>
 
     </ul>
@@ -23,13 +23,13 @@
   <nav>
     <ul>
       <li>
-          {{#link-to "consulting"}}Consulting{{/link-to}}
+          <LinkTo @route="consulting">Consulting</LinkTo>
         </li>
         <li>
-          {{#link-to "development"}}Development{{/link-to}}
+          <LinkTo @route="development">Development</LinkTo>
         </li>
         <li>
-          {{#link-to "support"}}Support{{/link-to}}
+          <LinkTo @route="support">Support</LinkTo>
         </li>
         {{!-- <li>
           {{#link-to "pricing"}}Pricing{{/link-to}}

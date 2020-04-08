@@ -1,12 +1,12 @@
-import DS from 'ember-data';
+import Model, { attr, hasMany } from '@ember-data/model';
 
-export default DS.Model.extend({
-  title: DS.attr('string'),
-  created: DS.attr('string'),
-  updated: DS.attr('string'),
-  status: DS.attr('boolean'),
-  slug: DS.attr('string'),
-  heroActive: DS.attr('boolean'),
-  navColor: DS.attr('string'),
-  section: DS.hasMany('section')
+export default Model.extend({
+  title: attr('string'),
+  created: attr('string'),
+  updated: attr('string'),
+  status: attr('boolean'),
+  slug: attr('string'),
+  heroActive: attr('boolean'),
+  navColor: attr('string'),
+  section: hasMany('section')
 });

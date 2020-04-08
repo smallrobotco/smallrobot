@@ -1,25 +1,25 @@
-import DS from 'ember-data';
+import Model, { attr, belongsTo, hasMany } from '@ember-data/model';
 import { computed } from '@ember/object';
 import { htmlSafe } from '@ember/string';
 
-export default DS.Model.extend({
-  created: DS.attr('string'),
-  divider: DS.attr('boolean'),
-  animated: DS.attr('boolean'),
-  reverse: DS.attr('boolean'),
-  show: DS.attr('boolean'),
-  isHero: DS.attr('boolean'),
-  animation: DS.attr('string'),
-  background: DS.attr('string'),
-  backgroundImageUrl: DS.attr('string'),
-  colHorizontalAlignment: DS.attr('string'),
-  colVerticalAlignment: DS.attr('string'),
-  extraClasses: DS.attr('string'),
-  heroSize: DS.attr('string'),
-  overlay: DS.attr('string'),
-  backgroundImage: DS.belongsTo('file'),
-  column: DS.hasMany('column'),
-  page: DS.belongsTo('page'),
+export default Model.extend({
+  created: attr('string'),
+  divider: attr('boolean'),
+  animated: attr('boolean'),
+  reverse: attr('boolean'),
+  show: attr('boolean'),
+  isHero: attr('boolean'),
+  animation: attr('string'),
+  background: attr('string'),
+  backgroundImageUrl: attr('string'),
+  colHorizontalAlignment: attr('string'),
+  colVerticalAlignment: attr('string'),
+  extraClasses: attr('string'),
+  heroSize: attr('string'),
+  overlay: attr('string'),
+  backgroundImage: belongsTo('file'),
+  column: hasMany('column'),
+  page: belongsTo('page'),
 
   inlineBackground: computed('backgroundImageUrl', function () {
     return new htmlSafe( 'background-image: url("' + this.backgroundImageUrl + '");' );

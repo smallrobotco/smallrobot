@@ -1,5 +1,5 @@
 {{#if post}}
-  {{ main-nav class="hero" navColor=post.navColor heroColor=post.heroColor heroOverlay=post.heroOverlay }}
+  <MainNav @class="hero" @navColor={{post.navColor}} @heroColor={{post.heroColor}} @heroOverlay={{post.heroOverlay}} />
   <section class="hero-splash">
     <div class="hero-wrapper {{post.heroColor}} {{post.heroLayout}}" style="{{post.inlineBackground}}">
       <div class='overlay {{post.heroOverlay}}'>
@@ -46,7 +46,7 @@
     </div>
   </div>
 
-  {{global-footer}}
+  <GlobalFooter />
 {{else}}
-  {{loading-spinner}}
+  <LoadingSpinner />
 {{/if}}

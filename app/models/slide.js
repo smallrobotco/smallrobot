@@ -1,7 +1,7 @@
-import DS from 'ember-data';
+import Model, { attr, belongsTo } from '@ember-data/model';
 
-export default DS.Model.extend({
-  body: DS.attr(''),
-  image: DS.belongsTo('file'),
-  slideshow: DS.belongsTo('slideshow')
+export default Model.extend({
+  body: attr(''),
+  image: belongsTo('file'),
+  slideshow: belongsTo('slideshow')
 });

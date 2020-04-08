@@ -9,7 +9,7 @@ module.exports = function(environment) {
     rootURL: '/',
     host: 'https://api.smallrobot.co', //drupal
     namespace: 'api',
-    locationType: 'router-scroll',
+    locationType: 'auto',
     historySupportMiddleware: true,
 
     EmberENV: {

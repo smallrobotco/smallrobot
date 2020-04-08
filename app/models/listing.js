@@ -1,8 +1,8 @@
-import DS from 'ember-data';
+import Model, { attr, belongsTo } from '@ember-data/model';
 
-export default DS.Model.extend({
-  created: DS.attr('string'),
-  listingType: DS.attr('string'),
-  listingCount: DS.attr('number'),
-  element: DS.belongsTo('element')
+export default Model.extend({
+  created: attr('string'),
+  listingType: attr('string'),
+  listingCount: attr('number'),
+  element: belongsTo('element')
 });

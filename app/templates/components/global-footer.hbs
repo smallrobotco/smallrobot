@@ -1,12 +1,12 @@
 <footer>
   <div class='container-fluid'>
     <div class='row'>
-      {{footer-nav}}
+      <FooterNav />
       <div class="intro col-12 col-md-3 col-lg-5">
         <p>
           We are a Vancouver, BC based Web & Web Application Consulting, Development & Support company. We have helped companies, & individuals, with their web based challenges, and would love to help you.</p>
         <p>
-          To reach someone about a project please {{#link-to "contact"}}contact us{{/link-to}}.
+          To reach someone about a project please <LinkTo @route="contact">contact us</LinkTo>.
         </p>
 
       </div>
@@ -19,7 +19,7 @@
           </a>
         </p>
         <p>
-          [ {{#link-to "contact" title="Contact"}}<i class="fa fa-envelope" aria-hidden="true"></i>{{/link-to}} ] [ <a href="https://twitter.com/bmx269" title="Follow us on Twitter" target="_blank" rel="noopener"><i class="fab fa-twitter" aria-hidden="true"></i></a> ] [
+          [ <LinkTo @route="contact" @title="Contact"><i class="fa fa-envelope" aria-hidden="true"></i></LinkTo> ] [ <a href="https://twitter.com/bmx269" title="Follow us on Twitter" target="_blank" rel="noopener"><i class="fab fa-twitter" aria-hidden="true"></i></a> ] [
           <a href="https://github.com/bmx269" title="Visit our Github" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i></a> ]
         </p>
       </div>
