@@ -6356,10 +6356,10 @@ ember-cli-app-version@^3.2.0:
     ember-cli-babel "^6.12.0"
     git-repo-version "^1.0.2"
 
-ember-cli-autoprefixer@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/ember-cli-autoprefixer/-/ember-cli-autoprefixer-1.0.0.tgz#8832fb08ceda9d41b7ff83594a133ae4132dd831"
-  integrity sha512-i1rOYZA1u5ZUbeDJXEUI0toH0gsOeVUWfI7vo03a8cHvHFhiLX+68Lmtou2oCTVe/EtuTA+iFE6Lbt/YJ16e5g==
+ember-cli-autoprefixer@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/ember-cli-autoprefixer/-/ember-cli-autoprefixer-1.0.2.tgz#89cfd73a397752690077366ed6b53def215d9570"
+  integrity sha512-353yLfZbFDzMWglUA2G8aSU8NnBqNuovSCNLK0LjakeaOmkylecpl35iMVBUk75Wmxf+OcitSiFT6eKdbzl3rQ==
   dependencies:
     broccoli-autoprefixer "^7.0.0"
     ember-cli-htmlbars "^4.2.2"
