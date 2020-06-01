@@ -7122,12 +7122,7 @@ ember-resolver@^8.0.0:
     ember-cli-version-checker "^5.0.2"
     resolve "^1.15.1"
 
-ember-rfc176-data@^0.3.1, ember-rfc176-data@^0.3.12, ember-rfc176-data@^0.3.13:
-  version "0.3.13"
-  resolved "https://registry.yarnpkg.com/ember-rfc176-data/-/ember-rfc176-data-0.3.13.tgz#ed1712a26e65fec703655f35410414aa1982cf3b"
-  integrity sha512-m9JbwQlT6PjY7x/T8HslnXP7Sz9bx/pz3FrNfNi2NesJnbNISly0Lix6NV1fhfo46572cpq4jrM+/6yYlMefTQ==
-
-ember-rfc176-data@^0.3.13:
+ember-rfc176-data@^0.3.1, ember-rfc176-data@^0.3.13:
   version "0.3.13"
   resolved "https://registry.yarnpkg.com/ember-rfc176-data/-/ember-rfc176-data-0.3.13.tgz#ed1712a26e65fec703655f35410414aa1982cf3b"
   integrity sha512-m9JbwQlT6PjY7x/T8HslnXP7Sz9bx/pz3FrNfNi2NesJnbNISly0Lix6NV1fhfo46572cpq4jrM+/6yYlMefTQ==
@@ -13504,10 +13499,10 @@ prember-middleware@^0.1.0:
     ember-cli-babel "^6.6.0"
     prember "*"
 
-prember@*, prember@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/prember/-/prember-1.0.3.tgz#417c1fd4419b6e028c87477915d255ef8c045030"
-  integrity sha512-N4HanZE+elLgHnXGA0ti6L+zrxdRuAzAawea8qptJJ8oKMHhPHCcURBE9hAHgTNY3rl0vx8zrlIIr/94GRIhXA==
+prember@*, prember@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/prember/-/prember-1.0.4.tgz#1218369e5d3baef0ce1a9f05341476c9ae4b30dc"
+  integrity sha512-eqY65zIimju84/rD4hGtKALtH0vZwc9uhNHO5yHm4QvCUgLdTcB++mplFRUMnfJPnIa3bLUyac2tBTFxYp37WA==
   dependencies:
     broccoli-debug "^0.6.3"
     broccoli-merge-trees "^2.0.0"
