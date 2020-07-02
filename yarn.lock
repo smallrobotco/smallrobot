@@ -7366,16 +7366,16 @@ ember-cli-htmlbars@^5.1.2:
     strip-bom "^4.0.0"
     walk-sync "^2.1.0"
 
-ember-cli-image-transformer@4.0.1:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/ember-cli-image-transformer/-/ember-cli-image-transformer-4.0.1.tgz#b61cb2b782e263fe8eac7cf470f9cf48230b0f20"
-  integrity sha512-ny03bpmv1jB07A81N9F5fgt3HL0/g94p4XuoyzV2yhal9ftLb7gbsPKA4/X+dA/fLZo+tOWAZ/v4budoqMCIOA==
+ember-cli-image-transformer@4.0.2:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/ember-cli-image-transformer/-/ember-cli-image-transformer-4.0.2.tgz#37020f79f2cb8eddbb24b5984e66c822ccb89d45"
+  integrity sha512-Y3usnJ3Au+aHcBeAJwmeXFAOfsJ/WYqHNSA43Zt7kP6bujb48JFpX9dKeJR6Z10jFoDmmg+45bmLebLJMIbvXQ==
   dependencies:
     broccoli-caching-writer "^3.0.3"
     broccoli-funnel "^3.0.2"
     broccoli-merge-trees "^4.1.0"
-    ember-cli-babel "^7.17.2"
-    ember-cli-htmlbars "^4.2.2"
+    ember-cli-babel "^7.19.0"
+    ember-cli-htmlbars "^4.3.1"
     rsvp "^4.7.0"
     sharp "^0.25.1"
 
