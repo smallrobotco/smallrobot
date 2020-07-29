@@ -2,7 +2,7 @@
 import Application from '@ember/application';
 import Resolver from './resolver';
 import loadInitializers from 'ember-load-initializers';
-import config from 'my-app/config/environment';
+import config from 'smallrobotco/config/environment';
 
 const App = Application.extend({
   modulePrefix: config.modulePrefix,
