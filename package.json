@@ -95,5 +95,8 @@
     "last 1 Safari versions",
     "last 1 ios versions",
     "last 1 ChromeAndroid versions"
-  ]
+  ],
+  "volta": {
+    "node": "10.22.0"
+  }
 }
