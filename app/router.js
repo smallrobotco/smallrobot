@@ -1,8 +1,8 @@
-import EmberRouter from '@ember/routing/router';
+// import EmberRouter from '@ember/routing/router';
 // import { scheduleOnce } from '@ember/runloop';
 import { inject } from '@ember/service';
 import EmberRouterScroll from 'ember-router-scroll';
-import config from './config/environment';
+import config from 'smallrobotco/config/environment';
 
 
 class Router extends EmberRouterScroll {
