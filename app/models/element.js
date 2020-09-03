@@ -1,4 +1,6 @@
-import Model, { belongsTo, hasMany } from '@ember-data/model';
+import Model, {
+  hasMany
+} from '@ember-data/model';
 
 export default Model.extend({
   texts: hasMany('text'),
