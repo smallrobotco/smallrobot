@@ -30,7 +30,7 @@ export default Route.extend({
     return setProperties(this.headData, {
       title: 'Small Robot Co. | Contact Us',
       description:
-      'We are a Vancouver, BC based Web Design, Technical Consulting, Web Development, and Support company, specializing in Drupal, WordPress, Ember.js, websites and web apps.',
+        'We are a Vancouver, BC based Web Design, Technical Consulting, Web Development, and Support company, specializing in Drupal, WordPress, Vue.js, Ember.js, websites and web apps.',
       type: 'website',
       url: 'https://smallrobot.co/contact'
     });
