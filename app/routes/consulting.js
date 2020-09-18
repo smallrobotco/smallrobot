@@ -11,9 +11,9 @@ export default Route.extend({
 
   afterModel() {
     return setProperties(this.headData, {
-      title: 'Small Robot Co. | Consulting - Vue.js, Drupal, Wordpress, Ember.js, Web Apps',
+      title: 'Small Robot Co. | Consulting - Vuejs, Drupal, Wordpress, Ember.js, Web Apps',
       description:
-        'We are a Vancouver, BC based Web Design, Technical Consulting, Web Development, and Support company, specializing in Drupal, WordPress, Vue.js, Ember.js, websites and web apps.',
+        'We are a Vancouver, BC based Web Design, Technical Consulting, Web Development, and Support company, specializing in Drupal, WordPress, Vuejs, Ember.js, websites and web apps.',
       type: 'website',
       url: 'https://smallrobot.co/consulting'
     });
