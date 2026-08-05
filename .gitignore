@@ -1,28 +1,40 @@
 # See https://help.github.com/ignore-files/ for more about ignoring files.
 
-# compiled output
-/dist/
-/tmp/
-
 # dependencies
+node_modules/
 /bower_components/
-/node_modules/
+
+# build output — Nuxt
+/.nuxt/
+/.output/
+/.data/
+/dist/
+
+# build output — legacy Ember app (see legacy/)
+/legacy/dist/
+/legacy/tmp/
+
+# env
+.env
+.env.*
+!.env.example
 
 # misc
-/.env*
 /.pnp*
-/.sass-cache
+.sass-cache/
 /connect.lock
 /coverage/
 .DS_Store
 .idea/
 .vscode/
+*.log
 /libpeerconnection.log
-/npm-debug.log*
-/testem.log
-/yarn-error.log
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+/legacy/testem.log
 
-# ember-try
-/.node_modules.ember-try/
-/bower.json.ember-try
-/package.json.ember-try
+# ember-try (legacy)
+/legacy/.node_modules.ember-try/
+/legacy/bower.json.ember-try
+/legacy/package.json.ember-try
