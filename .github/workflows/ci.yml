@@ -4,6 +4,9 @@ on:
   push:
     branches: [main, vue]
   pull_request:
+  # Manual runs deploy whatever branch they are dispatched from — this is how a staging
+  # deploy of `vue` works before it merges to main.
+  workflow_dispatch:
 
 # Replaces .circleci/config.yml (Node 8) and .travis.yml (Node 6), both of which
 # had been dead for years. See docs/UPGRADE-PLAN.md.
@@ -35,3 +38,74 @@ jobs:
           name: static-site
           path: .output/public
           retention-days: 7
+          # Since v4.4 hidden files are excluded by default, which would silently drop
+          # .htaccess — the file the whole Apache setup depends on. The verify step in
+          # the deploy job would catch it, but better it never breaks.
+          include-hidden-files: true
+
+  # ---------------------------------------------------------------------------
+  # Deploy to the Virtualmin VPS (docs/UPGRADE-PLAN.md §5a).
+  #
+  # Builds happen in CI, never on the VPS, so a broken build cannot take the site
+  # down — the deploy only ever ships an artifact that already passed typecheck,
+  # tests and generate.
+  #
+  # Runs on push to main and on manual dispatch (any branch, for staging). Until the
+  # repository has deploy secrets configured, the job short-circuits with a notice
+  # instead of failing, so CI stays green while hosting is being set up.
+  #
+  # Required repository secrets:
+  #   DEPLOY_SSH_KEY   private key for a dedicated deploy keypair; its public half
+  #                    goes in ~/.ssh/authorized_keys of the Virtualmin domain user
+  #   DEPLOY_HOST      the VPS hostname
+  #   DEPLOY_USER      the Virtualmin domain user (NOT root) — files land owned by
+  #                    the right user with no chown gymnastics
+  #   DEPLOY_PATH      document root, e.g. /home/smallrobot/public_html
+  # ---------------------------------------------------------------------------
+  deploy:
+    needs: build
+    if: github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && github.ref == 'refs/heads/main')
+    runs-on: ubuntu-latest
+    # `secrets` is not usable in a job-level `if`, so expose presence via env instead.
+    env:
+      DEPLOY_CONFIGURED: ${{ secrets.DEPLOY_SSH_KEY != '' && secrets.DEPLOY_HOST != '' }}
+    steps:
+      - name: Check deploy secrets
+        if: env.DEPLOY_CONFIGURED != 'true'
+        run: echo "::notice::Deploy secrets not configured — skipping deploy. Set DEPLOY_SSH_KEY, DEPLOY_HOST, DEPLOY_USER, DEPLOY_PATH to enable."
+
+      - uses: actions/download-artifact@v4
+        if: env.DEPLOY_CONFIGURED == 'true'
+        with:
+          name: static-site
+          path: site
+
+      - name: Set up SSH
+        if: env.DEPLOY_CONFIGURED == 'true'
+        run: |
+          mkdir -p ~/.ssh
+          printf '%s\n' "${{ secrets.DEPLOY_SSH_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          # Fresh runner every time, so pin the host key on first contact. For a
+          # stricter setup, add a DEPLOY_KNOWN_HOSTS secret and write it here instead.
+          ssh-keyscan -H "${{ secrets.DEPLOY_HOST }}" >> ~/.ssh/known_hosts 2>/dev/null
+
+      - name: Rsync to VPS
+        if: env.DEPLOY_CONFIGURED == 'true'
+        run: |
+          # --delete keeps the docroot an exact mirror of the build: files removed from
+          # the site (old hashed bundles, deleted pages) disappear rather than rot.
+          # Not atomic — a visitor mid-deploy could see a torn state for a second or
+          # two. Acceptable here; the upgrade path is rsync to a timestamped dir and a
+          # symlink swap, which needs the vhost docroot pointed at the symlink first.
+          rsync -az --delete \
+            -e "ssh -i ~/.ssh/deploy_key" \
+            site/ "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:${{ secrets.DEPLOY_PATH }}/"
+
+      - name: Verify deployment
+        if: env.DEPLOY_CONFIGURED == 'true'
+        run: |
+          # The htaccess ships with the site; if it made it, everything did.
+          ssh -i ~/.ssh/deploy_key "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}" \
+            "test -f '${{ secrets.DEPLOY_PATH }}/.htaccess' && test -f '${{ secrets.DEPLOY_PATH }}/index.html'"
+          echo "::notice::Deployed to ${{ secrets.DEPLOY_HOST }}:${{ secrets.DEPLOY_PATH }}"

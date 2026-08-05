@@ -26,8 +26,34 @@ production (`npm run diff:prod`).
    cutover; see [docs/UPGRADE-PLAN.md](docs/UPGRADE-PLAN.md) §5a.
 2. **A visual pass** — text parity is verified, layout is not.
 3. **Delete `legacy/`** once 1 and 2 are settled.
-4. **Hosting** — Virtualmin vhost, `.htaccess` SPA fallback, TLS, rsync deploy, and the
-   three `smallrobot.org` → `smallrobot.co` 301s.
+4. **Hosting** — Virtualmin vhost + TLS + DNS. The Apache config (`public/.htaccess`,
+   tested against real httpd), the service-worker kill switch (`public/sw.js`), the
+   `smallrobot.org` 301s, and the CI deploy job are all in place; what remains is
+   server-side setup and repository secrets (see below).
+
+## Repository
+
+Canonical repo is `bmx269/smallrobot`. The old `smallrobotco/smallrobot` org repo is
+retired — Netlify watches it, which is exactly why nothing gets pushed there during the
+migration.
+
+## Deployment
+
+CI deploys `.output/public` to the VPS by rsync over SSH — on every push to `main`, and
+manually via *Actions → CI → Run workflow* from any branch (that is how `vue` gets a
+staging deploy before merging). Until the secrets below exist, the deploy job skips
+itself with a notice rather than failing.
+
+| Secret | Value |
+|---|---|
+| `DEPLOY_SSH_KEY` | private half of a dedicated deploy keypair; public half goes in the domain user's `~/.ssh/authorized_keys` |
+| `DEPLOY_HOST` | VPS hostname |
+| `DEPLOY_USER` | the Virtualmin domain user (not root) |
+| `DEPLOY_PATH` | document root, e.g. `/home/smallrobot/public_html` |
+
+Server prerequisites, one-time (see docs/UPGRADE-PLAN.md §5a): Virtualmin virtual
+server for `smallrobot.co` with `smallrobot.org` as an alias, Let's Encrypt for both,
+and `AllowOverride All` on the docroot so `.htaccess` is honoured.
 
 ## Requirements
 
