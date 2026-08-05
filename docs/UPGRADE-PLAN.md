@@ -404,10 +404,22 @@ Virtualmin, Apache rewrites, TLS, and the deploy pipeline against output you alr
 know renders correctly. Then upgrade the framework against a deploy path you trust.
 Doing both at once means a broken page gives you no way to tell which change caused it.
 
-This is straightforward here: the machine is **Intel (x86_64)** and Node 12.20.1 has
-official `darwin-x64` builds, so reviving the existing build is just
-`nvm install 12.20.1` (nvm is already at `/usr/local/bin/nvm`) + `yarn install`.
-There's no Apple-Silicon obstacle to work around.
+The machine is **Intel (x86_64)** and Node 12.20.1 has official `darwin-x64` builds, so
+there's no Apple-Silicon obstacle to reviving the old build.
+
+**Correction:** an earlier draft said nvm was already installed at
+`/usr/local/bin/nvm`. It is not — that path holds the decoy `nvm` *npm package*, which
+only prints "This is not the package you are looking for" (the same class of accidental
+global install as the `npx`/`to`/`update` junk deps). No version manager was usable.
+`asdf` 0.19 was installed but had no nodejs plugin; that plugin is now added, with
+**Node 24.19.0** installed and pinned in `.tool-versions` for the Nuxt app. Reviving the
+Ember build would need `asdf install nodejs 12.20.1` in `legacy/`.
+
+**Superseded:** the order below was overtaken by the decision to build the Nuxt app
+first and stand up the server afterward. Hosting work now happens after the port, not
+before it, so the framework rewrite is validated against Netlify-equivalent output
+locally (`npm run generate` + `npm run preview`) rather than against a live VPS. The
+§5a hosting requirements and blockers all still apply — only the ordering changed.
 
 Note the deploy artifact differs between the two steps: the current build still emits
 prember-prerendered HTML, so the Apache config you validate in step one is the
