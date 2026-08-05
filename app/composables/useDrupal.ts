@@ -84,6 +84,37 @@ export function bodyHtml(resource: Resource | null | undefined, field = 'body'):
 }
 
 /**
+ * Revalidate prerendered data in the browser.
+ *
+ * The static build bakes CMS content in at generate time, so what ships is only as
+ * fresh as the last deploy — production has been months stale for exactly this reason.
+ * This re-runs the fetch after hydration and again whenever the tab regains focus, so
+ * visitors see current Drupal content without waiting for a rebuild.
+ *
+ * The API sends proper CORS headers for the site origin (verified), so the browser can
+ * talk to it directly — the same thing the old Ember SPA did on every render, except
+ * here it is a background refresh over already-rendered HTML instead of a blocking
+ * fetch over a blank page. useAsyncData keeps the previous data while refreshing, so
+ * there is no flash; the DOM updates only if something actually changed.
+ *
+ * Must be called synchronously during setup (before any await) so the lifecycle hooks
+ * bind to the component instance.
+ */
+function revalidateOnClient(refresh: () => Promise<unknown>) {
+  if (import.meta.server) return
+
+  onMounted(() => {
+    refresh()
+
+    const onVisible = () => {
+      if (document.visibilityState === 'visible') refresh()
+    }
+    document.addEventListener('visibilitychange', onVisible)
+    onUnmounted(() => document.removeEventListener('visibilitychange', onVisible))
+  })
+}
+
+/**
  * Fetch a page by its Drupal `slug` attribute (`/about`, `/contact`, ...).
  *
  * The Ember routes each hardcoded a page UUID, which meant editors could not move or
@@ -91,7 +122,7 @@ export function bodyHtml(resource: Resource | null | undefined, field = 'body'):
  * instead.
  */
 export function usePage(slug: string) {
-  return useAsyncData(
+  const res = useAsyncData(
     `page:${slug}`,
     async () => {
       const doc = await get('page', {
@@ -102,11 +133,13 @@ export function usePage(slug: string) {
     },
     { deep: false },
   )
+  revalidateOnClient(res.refresh)
+  return res
 }
 
 /** All published articles, newest first. */
 export function useArticles() {
-  return useAsyncData(
+  const res = useAsyncData(
     'articles',
     async () => {
       const doc = await get('article', {
@@ -118,6 +151,8 @@ export function useArticles() {
     },
     { deep: false },
   )
+  revalidateOnClient(res.refresh)
+  return res
 }
 
 /**
@@ -128,7 +163,7 @@ export function useArticles() {
  * articles. The Ember app routed on `dashedTitle`, so we keep that to preserve URLs.
  */
 export function useArticle(dashedTitle: string) {
-  return useAsyncData(
+  const res = useAsyncData(
     `article:${dashedTitle}`,
     async () => {
       const doc = await get('article', {
@@ -139,6 +174,8 @@ export function useArticle(dashedTitle: string) {
     },
     { deep: false },
   )
+  revalidateOnClient(res.refresh)
+  return res
 }
 
 /** Raw fetchers, for build-time route generation where composables aren't available. */
