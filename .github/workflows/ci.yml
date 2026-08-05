@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  push:
+    branches: [main, vue]
+  pull_request:
+
+# Replaces .circleci/config.yml (Node 8) and .travis.yml (Node 6), both of which
+# had been dead for years. See docs/UPGRADE-PLAN.md.
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          # Kept in step with .tool-versions. Node 24 is the active LTS; Nuxt 4
+          # requires ^22.19 || ^24.11 || >=26, so 25 would not satisfy it.
+          node-version: '24.19.0'
+          cache: npm
+
+      - run: npm ci
+
+      - run: npm run typecheck
+
+      - run: npm test
+
+      # Hits the live Drupal API, so it fails if the backend is unreachable or its
+      # content model changes in a way that breaks the queries — worth knowing about.
+      - run: npm run generate
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: static-site
+          path: .output/public
+          retention-days: 7
