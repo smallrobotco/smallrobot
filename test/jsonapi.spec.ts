@@ -67,6 +67,64 @@ describe('normalize', () => {
       expect(file.uri).toMatch(/^\/sites\/default\/files\//)
     })
 
+    it('captures image alt text from the relationship meta', () => {
+      // Drupal puts alt/title/width/height on the resource *identifier*, not on the
+      // file. The old template read `element.image.alt` off the file, where it does
+      // not exist, so alt text was silently missing from every image.
+      const image = (page.section as Resource[])
+        .flatMap((s) => (s.column as Resource[]) ?? [])
+        .flatMap((c) => (c.element as Resource[]) ?? [])
+        .find((e) => e.type === 'image')!
+
+      const m = image.$meta?.image as Record<string, unknown>
+      expect(m).toBeDefined()
+      expect(m.alt).toBe('Drupal Ember Vuejs Wordpress Logos')
+      expect(m.width).toBe(100)
+    })
+
+    it('keeps relationship meta off the shared related object', () => {
+      // $meta belongs to the link, not the resource — otherwise two references to one
+      // file would fight over alt text on the same shared object.
+      const image = (page.section as Resource[])
+        .flatMap((s) => (s.column as Resource[]) ?? [])
+        .flatMap((c) => (c.element as Resource[]) ?? [])
+        .find((e) => e.type === 'image')!
+
+      const file = image.image as Resource
+      expect(file.alt).toBeUndefined()
+      // The file may carry $meta for its *own* outgoing links (Drupal puts meta on
+      // `uid`), but the alt from the incoming reference must not have leaked onto it.
+      expect(file.$meta?.alt).toBeUndefined()
+      expect(Object.values(file.$meta ?? {})).not.toContainEqual(
+        expect.objectContaining({ alt: 'Drupal Ember Vuejs Wordpress Logos' }),
+      )
+    })
+
+    it('omits $meta entirely when no reference carries meta', () => {
+      const bare = one({
+        data: { type: 'a', id: '1', relationships: { b: { data: { type: 'b', id: '2' } } } },
+      })!
+      expect(bare.$meta).toBeUndefined()
+    })
+
+    it('aligns hasMany meta with the relationship array', () => {
+      const r = one({
+        data: {
+          type: 'a',
+          id: '1',
+          relationships: {
+            things: {
+              data: [
+                { type: 'b', id: '1', meta: { alt: 'first' } },
+                { type: 'b', id: '2', meta: { alt: 'second' } },
+              ],
+            },
+          },
+        },
+      })!
+      expect(r.$meta?.things).toEqual([{ alt: 'first' }, { alt: 'second' }])
+    })
+
     it('gives repeated references the same object, not copies', () => {
       const all = new Map<string, Resource>()
       const walk = (r: Resource) => {

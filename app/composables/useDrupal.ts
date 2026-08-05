@@ -58,6 +58,32 @@ export function fileUrl(file: Resource | null | undefined): string | null {
 }
 
 /**
+ * Alt text for an image-ish resource's `image` reference.
+ *
+ * Drupal puts alt/title/width/height on the resource *identifier*, so it arrives in
+ * the normalizer's `$meta` bag rather than on the file. The old template read
+ * `element.image.alt` off the file, where it does not exist — every image on the site
+ * has been rendering without alt text.
+ */
+export function imageAlt(resource: Resource | null | undefined, rel = 'image'): string {
+  const m = resource?.$meta?.[rel]
+  const alt = Array.isArray(m) ? m[0]?.alt : m?.alt
+  return typeof alt === 'string' ? alt : ''
+}
+
+/**
+ * The HTML string out of a Drupal long-text field.
+ *
+ * These arrive as `{ value, format, processed }`, not as a bare string — `body.value`
+ * is what the old templates rendered through the `html-safe` helper.
+ */
+export function bodyHtml(resource: Resource | null | undefined, field = 'body'): string {
+  const f = resource?.[field] as { value?: unknown } | string | null | undefined
+  if (typeof f === 'string') return f
+  return typeof f?.value === 'string' ? f.value : ''
+}
+
+/**
  * Fetch a page by its Drupal `slug` attribute (`/about`, `/contact`, ...).
  *
  * The Ember routes each hardcoded a page UUID, which meant editors could not move or

@@ -14,11 +14,23 @@
 export interface ResourceIdentifier {
   type: string
   id: string
+  /** Drupal hangs image `alt` / `title` / `width` / `height` off the *reference*. */
+  meta?: Record<string, unknown>
 }
 
 export interface Resource extends ResourceIdentifier {
   /** True when the reference appeared in `relationships` but was never `included`. */
   __unresolved?: true
+  /**
+   * Meta from the resource identifiers this node points at, keyed by relationship
+   * name — a single object for belongsTo, an aligned array for hasMany.
+   *
+   * It lives here rather than on the related object because it describes the *link*,
+   * not the resource: the same file referenced from two places can carry different alt
+   * text, and merging it into the file would make those two references disagree about
+   * a shared object.
+   */
+  $meta?: Record<string, Record<string, unknown> | undefined | Array<Record<string, unknown> | undefined>>
   [key: string]: unknown
 }
 
@@ -26,7 +38,10 @@ interface RawResource {
   type: string
   id: string
   attributes?: Record<string, unknown>
-  relationships?: Record<string, { data?: ResourceIdentifier | ResourceIdentifier[] | null }>
+  relationships?: Record<
+    string,
+    { data?: ResourceIdentifier | ResourceIdentifier[] | null }
+  >
 }
 
 export interface JsonApiDocument {
@@ -71,8 +86,10 @@ export function normalize(doc: JsonApiDocument): Resource | Resource[] | null {
       const refs = rel.data
       if (Array.isArray(refs)) {
         node[name] = refs.map((ref) => resolve(nodes, ref))
+        if (refs.some((ref) => ref.meta)) meta(node)[name] = refs.map((ref) => ref.meta)
       } else if (refs) {
         node[name] = resolve(nodes, refs)
+        if (refs.meta) meta(node)[name] = refs.meta
       } else {
         node[name] = null
       }
@@ -97,6 +114,12 @@ export function normalize(doc: JsonApiDocument): Resource | Resource[] | null {
  * nearly every resource and is rarely included), so this is the common case, not an
  * edge case.
  */
+/** Lazily create the node's `$meta` bag, so nodes without relationship meta stay clean. */
+function meta(node: Resource): NonNullable<Resource['$meta']> {
+  node.$meta ??= {}
+  return node.$meta
+}
+
 function resolve(nodes: Map<string, Resource>, ref: ResourceIdentifier): Resource {
   const k = key(ref)
   let node = nodes.get(k)
@@ -105,6 +128,17 @@ function resolve(nodes: Map<string, Resource>, ref: ResourceIdentifier): Resourc
     nodes.set(k, node)
   }
   return node
+}
+
+/**
+ * Narrow an attribute to a string for class / style / text bindings.
+ *
+ * Resource attributes are typed `unknown` because the API is not statically described,
+ * and Vue rightly refuses `unknown` where it wants a ClassValue. Returns undefined for
+ * anything non-string so an absent attribute renders as nothing rather than "undefined".
+ */
+export function str(value: unknown): string | undefined {
+  return typeof value === 'string' && value ? value : undefined
 }
 
 /** Narrow a normalize() result to a single resource. */
