@@ -9,10 +9,16 @@ export default defineNuxtConfig({
   ssr: true,
 
   // The Drupal JSON:API backend. Was `host` + `namespace` in the Ember app's
-  // config/environment.js; override in deployment with NUXT_PUBLIC_API_BASE.
+  // config/environment.js. Override per-deployment with NUXT_PUBLIC_API_BASE /
+  // NUXT_PUBLIC_FILE_BASE rather than rebuilding.
+  //
+  // Two bases because file URIs are host-relative, not API-relative: a `file`
+  // resource's `uri` is `/sites/default/files/...`, which hangs off the host root and
+  // would 404 under /api.
   runtimeConfig: {
     public: {
       apiBase: 'https://api.smallrobot.co/api',
+      fileBase: 'https://api.smallrobot.co',
     },
   },
 })
