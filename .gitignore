@@ -8,7 +8,11 @@ node_modules/
 /.nuxt/
 /.output/
 /.data/
-/dist/
+/.nitro/
+/.cache/
+# no trailing slash: `nuxt generate` leaves `dist` as a symlink to .output/public,
+# and a trailing slash would only match a real directory
+/dist
 
 # build output — legacy Ember app (see legacy/)
 /legacy/dist/
