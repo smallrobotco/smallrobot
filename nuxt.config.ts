@@ -8,6 +8,21 @@ export default defineNuxtConfig({
   // The output is plain files, which is what the Virtualmin/Apache host wants.
   ssr: true,
 
+  nitro: {
+    prerender: {
+      // The crawler discovers every linked route on its own; /404 is linked from
+      // nowhere, so it must be listed. It renders through pages/[...slug].vue, which
+      // serves the Drupal page whose slug is /404 — giving a fully-styled error page at
+      // /404/index.html for Apache's ErrorDocument.
+      //
+      // The trailing slash is load-bearing: bare '/404' collides with Nitro's own
+      // 404.html special-case — a client-only SPA shell with an empty body (like
+      // 200.html) — and the shell wins the write. '/404/' maps to 404/index.html, which
+      // the shell does not touch.
+      routes: ['/404/'],
+    },
+  },
+
   // Ported wholesale from the Ember app — Sass is framework-independent. Includes
   // vendored Bootstrap 4 (84 files) plus the site's own ~10.
   css: ['~/assets/scss/app.scss'],

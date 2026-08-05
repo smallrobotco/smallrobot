@@ -12,10 +12,14 @@ useSeo({
   url: '/',
 })
 
-// Prerendering writes this to 404.html, which Apache serves as its ErrorDocument.
+// Any unmatched path is a genuine 404 — except the literal /404, which is prerendered
+// on purpose (nitro.prerender.routes) as Apache's ErrorDocument. That render must
+// return 200: Nitro refuses to write output files for routes that respond 404, and
+// Apache sets the real 404 status itself when serving an ErrorDocument internally.
 // Only present during SSR/prerender — there is no event on the client.
 const event = useRequestEvent()
-if (event) setResponseStatus(event, 404)
+const isErrorDocument = useRoute().path.replace(/\/+$/, '') === '/404'
+if (event && !isErrorDocument) setResponseStatus(event, 404)
 </script>
 
 <template>
