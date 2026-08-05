@@ -48,13 +48,21 @@ npm install
 | `npm test` | Unit tests (vitest) — the JSON:API normalizer, against real captured fixtures |
 | `npm run typecheck` | `nuxt typecheck` |
 | `npm run diff:prod` | Compare generated text content against live production, route by route |
+| `npm run diff:structure` | Compare DOM structure against production (catches lost wrapper elements) |
 | `npm run build` | Server build (not used — we deploy static output) |
 
-`npm run diff:prod` needs a `npm run generate` first. It is the main check that the
-port did not drop content — both this build and production are prerendered, so it
-compares real HTML. Expect small differences: the footer text changed deliberately,
-the contact form is absent on purpose, and production is a stale prerender whose CMS
-content predates the current build.
+Both diff commands need a `npm run generate` first, and both compare against live
+production — which is itself prerendered, so these are real HTML comparisons.
+
+Expect small text differences: the footer changed deliberately, the contact form is
+absent on purpose, and production is a stale prerender whose CMS content predates the
+current build (it is missing two CTA sections per page, and its footer says ©2023).
+
+`diff:structure` exists because this site's CSS is unusually sensitive to DOM shape.
+The Ember app relied on classic components' implicit wrapper elements, and the
+stylesheets key off both those wrappers and `:nth-child()` parity across them — so a
+missing wrapper silently unstyles whole sections without losing any text. Text parity
+alone will not catch it.
 
 `npm run generate` is the one that matters: it produces plain HTML/CSS/JS for the
 Apache host, and it replaces the old `prember` + `ember-cli-fastboot` +

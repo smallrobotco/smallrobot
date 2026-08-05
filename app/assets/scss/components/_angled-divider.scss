@@ -28,8 +28,8 @@
 
 
 .angled-divider--mirrored,
-.article.teaser:nth-child(even) .ember-view .angled-divider,
-.page-section:nth-child(even) .ember-view .angled-divider {
+.article.teaser:nth-child(even) .divider-wrap .angled-divider,
+.page-section:nth-child(even) .divider-wrap .angled-divider {
   -webkit-filter: FlipH;
   filter: FlipH;
   height: 2vw;
