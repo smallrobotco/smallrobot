@@ -17,6 +17,16 @@ if (!post.value) {
 const bio = computed(() => (post.value?.bio ?? null) as Resource | null)
 const photo = computed(() => (bio.value?.photo ?? null) as Resource | null)
 
+useSeo(() => ({
+  title: `${str(post.value?.title) ?? 'Ideas'} | Small Robot Co.`,
+  url: `/ideas/${str(post.value?.dashedTitle) ?? ''}`,
+  // The old route hardcoded type 'website' for articles; 'article' is what it should
+  // have been, and it lets the published_time and author tags below make sense.
+  type: 'article',
+  published: str(post.value?.created),
+  author: str(bio.value?.title),
+}))
+
 const heroStyle = computed(() => {
   const url = post.value?.heroBackgroundUrl
   return typeof url === 'string' && url ? { backgroundImage: `url("${url}")` } : undefined
@@ -25,7 +35,12 @@ const heroStyle = computed(() => {
 
 <template>
   <div v-if="post">
-    <!-- TODO(step 3): MainNav, once main-nav.hbs is ported. -->
+    <MainNav
+      hero
+      :nav-color="str(post.navColor)"
+      :hero-color="str(post.heroColor)"
+      :hero-overlay="str(post.heroOverlay)"
+    />
     <section class="hero-splash">
       <div
         class="hero-wrapper"
@@ -74,7 +89,7 @@ const heroStyle = computed(() => {
       </div>
     </div>
 
-    <!-- TODO(step 3): GlobalFooter -->
+    <GlobalFooter />
   </div>
   <LoadingSpinner v-else />
 </template>

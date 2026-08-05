@@ -1,5 +1,10 @@
 <script setup lang="ts">
 const { data: page } = await usePage('/contact')
+
+useSeo({
+  title: 'Small Robot Co. | Contact Us',
+  url: '/contact',
+})
 </script>
 
 <template>

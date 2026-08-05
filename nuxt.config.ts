@@ -12,6 +12,37 @@ export default defineNuxtConfig({
   // vendored Bootstrap 4 (84 files) plus the site's own ~10.
   css: ['~/assets/scss/app.scss'],
 
+  app: {
+    head: {
+      htmlAttrs: { lang: 'en' },
+      link: [
+        // Carried over from the old app/index.html. Nuxt supplies charset and viewport;
+        // the `X-UA-Compatible: IE=edge` meta is dropped, since IE is long dead and the
+        // browserslist no longer targets it.
+        { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
+        { rel: 'icon', type: 'image/png', sizes: '96x96', href: '/favicon-96x96.png' },
+        { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
+      ],
+      script: [
+        // Font Awesome 5 Pro, as the old index.html loaded it. The nav, footer and
+        // burger menu all use `fa-*` classes, so without this every icon vanishes.
+        //
+        // NOTE: this pins a 2018 release of a paid product, loaded from
+        // pro.fontawesome.com with an integrity hash. It still returns 200, but it is
+        // worth confirming the Font Awesome account is current — and eventually
+        // replacing ~8 icons with inline SVG, which would drop a blocking third-party
+        // request entirely.
+        {
+          src: 'https://pro.fontawesome.com/releases/v5.0.10/js/all.js',
+          integrity:
+            'sha384-+1nLPoB0gaUktsZJP+ycZectl3GX7wP8Xf2PE/JHrb7X1u7Emm+v7wJMbAcPr8Ge',
+          crossorigin: 'anonymous',
+          defer: true,
+        },
+      ],
+    },
+  },
+
   vite: {
     css: {
       preprocessorOptions: {

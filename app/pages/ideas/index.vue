@@ -8,6 +8,11 @@
  */
 const { data: page } = await usePage('/blog')
 const { data: articles } = await useArticles()
+
+useSeo({
+  title: 'Small Robot Co. | Our Ideas Written Down',
+  url: '/ideas',
+})
 </script>
 
 <template>
