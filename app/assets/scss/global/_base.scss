@@ -19,6 +19,15 @@ body {
   height: 100%;
 }
 
+// The burger menu is built on an unbroken height:100% chain — .ember-burger-menu is
+// height:100% + overflow:hidden, and .bm-content inside it is the real scroll container.
+// Nuxt inserts #__nuxt between body and the layout, and app.vue adds one more wrapper,
+// so both need to pass the height through or the whole layout collapses to zero.
+#__nuxt,
+#__nuxt > div {
+  height: 100%;
+}
+
 .container-fluid {
   max-width: 1440px;
 }
