@@ -29,14 +29,9 @@ jobs:
 
       - run: npm test
 
-      # Hits the live Drupal API, so it fails if the backend is unreachable or its
-      # content model changes in a way that breaks the queries — worth knowing about.
-      # The endpoints come from secrets; with them absent this fails loudly rather
-      # than shipping a build with no data.
+      # Content is in the repo (content/), so the build needs nothing external. Invalid
+      # content or a broken internal link fails this step (nitro.prerender.failOnError).
       - run: npm run generate
-        env:
-          NUXT_PUBLIC_API_BASE: ${{ secrets.NUXT_PUBLIC_API_BASE }}
-          NUXT_PUBLIC_FILE_BASE: ${{ secrets.NUXT_PUBLIC_FILE_BASE }}
 
       - uses: actions/upload-artifact@v7
         with:

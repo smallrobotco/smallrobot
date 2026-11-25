@@ -28,8 +28,9 @@
 @import 'vendor/burger-menu/animations/reveal';
 @import 'vendor/burger-menu/animations/menu-item/stack';
 
-@import 'bootstrap/bootstrap';
+@import 'bootstrap';
 
+@import 'global/bootstrap-overrides';
 @import 'global/animate';
 @import 'global/base';
 @import 'global/typography';

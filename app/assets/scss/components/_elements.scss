@@ -1,3 +1,9 @@
+// Name and title beside the author photo, taking the remaining width.
+.bio-details {
+  flex: 1 0 0%;
+  padding: 0 $grid-gutter-width * .5;
+}
+
 .author-bio {
   border-top: 1px solid $gray-200;
 

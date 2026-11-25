@@ -53,7 +53,7 @@ const year = new Date().getFullYear()
           </div>
 
           <div class="copyright col-12">
-            ©{{ year }} Small Robot Corp. All Rights Reserved. Built with Drupal + Nuxt.
+            ©{{ year }} Small Robot Corp. All Rights Reserved. Built with Nuxt.
           </div>
         </div>
       </div>

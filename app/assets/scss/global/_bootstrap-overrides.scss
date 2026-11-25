@@ -1,0 +1,109 @@
+// Changes to Bootstrap's own rules that its variables can't express. In the Bootstrap 4
+// days these were edits made directly inside the vendored Bootstrap files; they live
+// here now so Bootstrap itself stays untouched in node_modules.
+
+// Headings: 90% size and spacing below md. h3 is the small Raleway subhead.
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-bottom: $headings-margin-bottom * .9;
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: $headings-margin-bottom;
+  }
+
+  b,
+  strong {
+    font-weight: $font-weight-black;
+  }
+}
+
+@each $level, $size in (1: $h1-font-size, 2: $h2-font-size, 3: $h3-font-size, 4: $h4-font-size) {
+  h#{$level}, .h#{$level} {
+    font-size: $size * .9;
+
+    @include media-breakpoint-up(md) {
+      font-size: $size;
+    }
+  }
+}
+
+h3, .h3 {
+  font-family: $font-family-sans-serif-alt;
+  font-weight: 600;
+  margin-bottom: .5rem; // at every width: this follows the md rule above
+}
+
+// Links: underlined with a soft bottom border, which darkens on hover.
+a {
+  border-bottom: 1px solid $link-underline;
+
+  &:hover {
+    border-color: $link-hover-underline;
+  }
+}
+
+// Anchors with no href and no tabindex are not links; they look like their parent text.
+a:not([href]):not([tabindex]) {
+  &,
+  &:hover,
+  &:focus {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+// Buttons: uppercase labels, and the BS4 hover/active shading (darken by lightness)
+// in place of Bootstrap 5's mix-with-black.
+.btn {
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+@each $color, $value in $theme-colors {
+  .btn-#{$color} {
+    --#{$prefix}btn-hover-bg: #{darken($value, 7.5%)};
+    --#{$prefix}btn-hover-border-color: #{darken($value, 10%)};
+    --#{$prefix}btn-active-bg: #{darken($value, 7.5%)};
+    --#{$prefix}btn-active-border-color: #{darken($value, 10%)};
+    --#{$prefix}btn-focus-shadow-rgb: #{to-rgb($value)};
+  }
+}
+
+// Lists keep the browser's 40px indent (Bootstrap 5 resets it to 2rem).
+ol,
+ul {
+  padding-left: 40px;
+}
+
+// Inline SVGs sit on the text baseline (Bootstrap 5 centres them). The client logos
+// are sized and spaced around this.
+svg {
+  vertical-align: baseline;
+}
+
+small,
+.small {
+  font-weight: $font-weight-normal;
+}
+
+// Code: a grey chip for inline code, a padded grey block for <pre>.
+code {
+  padding: .2rem .4rem;
+  background-color: $gray-100;
+
+  a > & {
+    padding: 0;
+    background-color: inherit;
+  }
+}
+
+pre {
+  color: $gray-900;
+  background-color: $gray-100;
+  padding: 1.5rem;
+
+  code {
+    padding: 0;
+    background-color: transparent;
+  }
+}

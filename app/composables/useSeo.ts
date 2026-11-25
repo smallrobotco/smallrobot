@@ -2,11 +2,9 @@
  * Head tags, ported from head.hbs plus the per-route `setProperties(this.headData, ...)`
  * calls the Ember routes made.
  *
- * Not driven by Drupal's `metatag` field, even though every resource carries one. Its
- * contents are unusable: every page returns the *identical* site-wide generic title and
- * description, and its canonical points at the backend host rather
- * than the public domain. Wiring it up would mean duplicate titles across the whole site
- * and canonicals aimed at the API host. See docs/API-SCHEMA.md.
+ * Titles are set per route in app/pages rather than in content/. The old CMS's metatag
+ * field held one generic title and description for every page, so there was nothing
+ * per-page worth carrying over.
  */
 
 /** Site-wide default, matching the old head.hbs fallbacks. */

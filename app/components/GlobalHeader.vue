@@ -1,9 +1,7 @@
 <script setup lang="ts">
-import type { Resource } from '~/utils/jsonapi'
-
 /**
- * Ported from global-header.hbs, which was just a conditional around MainNav:
- * a page with `heroActive` got the `hero` class and the page's navColor, otherwise a
+ * Ported from global-header.hbs, which was just a conditional around MainNav: a page
+ * with a hero gets the transparent nav laid over it, in the given colour; otherwise a
  * bare MainNav.
  *
  * The wrapper <div> matters for a non-obvious reason: this was a classic Ember component,
@@ -13,16 +11,12 @@ import type { Resource } from '~/utils/jsonapi'
  * dividers, dropping this element shifts every section's parity and mirrors the wrong
  * ones.
  */
-const { page } = defineProps<{ page: Resource | null | undefined }>()
+const { hero = false, navColor } = defineProps<{ hero?: boolean; navColor?: string }>()
 </script>
 
 <template>
   <div class="global-header">
-    <MainNav
-      v-if="page?.heroActive"
-      hero
-      :nav-color="str(page.navColor)"
-    />
+    <MainNav v-if="hero" hero :nav-color="navColor" />
     <MainNav v-else />
   </div>
 </template>

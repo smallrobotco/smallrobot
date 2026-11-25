@@ -1,59 +1,45 @@
 <script setup lang="ts">
-import type { Resource } from '~/utils/jsonapi'
-
 /**
- * Ported from blog/post.hbs. The URL keeps the `dashedTitle` the Ember router used —
- * Drupal's own `path.alias` disagrees with it for every article, and the live inbound
- * links use dashedTitle. See docs/API-SCHEMA.md §4.
+ * Ported from blog/post.hbs. The URL segment is the article's file name,
+ * content/articles/<dashedTitle>.yml — the `dashedTitle` the Ember router used, kept so
+ * existing inbound links still resolve. A name with no published file 404s.
  */
 const route = useRoute()
-const { data: post } = await useArticle(String(route.params.dashedTitle))
-
-// A bad slug should 404 rather than prerender an empty shell.
-if (!post.value) {
-  throw createError({ statusCode: 404, statusMessage: 'Article not found', fatal: true })
-}
-
-const bio = computed(() => (post.value?.bio ?? null) as Resource | null)
-const photo = computed(() => (bio.value?.photo ?? null) as Resource | null)
+const post = await useArticle(String(route.params.dashedTitle))
+const author = computed(() => post.value.author)
 
 useSeo(() => ({
-  title: `${str(post.value?.title) ?? 'Ideas'} | Small Robot Co.`,
-  url: `/ideas/${str(post.value?.dashedTitle) ?? ''}`,
+  title: `${post.value.title} | Small Robot Co.`,
+  url: `/ideas/${post.value.slug}`,
   // The old route hardcoded type 'website' for articles; 'article' is what it should
   // have been, and it lets the published_time and author tags below make sense.
   type: 'article',
-  published: str(post.value?.created),
-  author: str(bio.value?.title),
+  published: post.value.date,
+  author: author.value?.name,
 }))
 
-const heroStyle = computed(() => {
-  const url = post.value?.heroBackgroundUrl
-  return typeof url === 'string' && url ? { backgroundImage: `url("${url}")` } : undefined
-})
+const heroStyle = computed(() =>
+  post.value.heroBackgroundUrl ? { backgroundImage: `url("${post.value.heroBackgroundUrl}")` } : undefined,
+)
 </script>
 
 <template>
-  <div v-if="post">
+  <div>
     <MainNav
       hero
-      :nav-color="str(post.navColor)"
-      :hero-color="str(post.heroColor)"
-      :hero-overlay="str(post.heroOverlay)"
+      :nav-color="post.navColor"
+      :hero-color="post.heroColor"
+      :hero-overlay="post.heroOverlay"
     />
     <section class="hero-splash">
-      <div
-        class="hero-wrapper"
-        :class="[str(post.heroColor), str(post.heroLayout)]"
-        :style="heroStyle"
-      >
-        <div class="overlay" :class="str(post.heroOverlay)">
+      <div class="hero-wrapper" :class="[post.heroColor, post.heroLayout]" :style="heroStyle">
+        <div class="overlay" :class="post.heroOverlay">
           <div class="container-fluid">
             <div class="row">
               <div class="hero-col">
                 <div class="hero-block">
                   <div class="hero-text">
-                    <h1 :class="str(post.navColor)">{{ post.title }}</h1>
+                    <h1 :class="post.navColor">{{ post.title }}</h1>
                   </div>
                 </div>
               </div>
@@ -65,24 +51,24 @@ const heroStyle = computed(() => {
 
     <div class="container-fluid">
       <div class="row">
-        <!-- eslint-disable-next-line vue/no-v-html -- trusted CMS body, as in the Ember app -->
-        <div class="body col-12 col-md-10 col-lg-8 py-3 pt-md-5 mx-auto" v-html="bodyHtml(post)" />
+        <!-- eslint-disable-next-line vue/no-v-html -- trusted content from the repo -->
+        <div class="body col-12 col-md-10 col-lg-8 py-3 pt-md-5 mx-auto" v-html="post.body" />
 
-        <div v-if="bio" class="author-bio col-12 col-md-10 col-lg-8 py-3 pb-md-5 mx-auto">
+        <div v-if="author" class="author-bio col-12 col-md-10 col-lg-8 py-3 pb-md-5 mx-auto">
           <div class="d-flex">
             <div class="bio-photo">
               <img
-                v-if="photo"
-                :src="fileUrl(photo) ?? undefined"
-                :alt="`portrait of ${bio.title}`"
+                v-if="author.photo"
+                :src="author.photo"
+                :alt="`portrait of ${author.name}`"
                 class="photo img-fluid"
               >
             </div>
-            <div class="bio-details col">
-              <div class="name">{{ bio.title }}</div>
-              <div class="title">{{ bio.professionalTitle }}</div>
-              <!-- eslint-disable-next-line vue/no-v-html -- trusted CMS body -->
-              <div class="bio-body" v-html="bodyHtml(bio)" />
+            <div class="bio-details">
+              <div class="name">{{ author.name }}</div>
+              <div class="title">{{ author.professionalTitle }}</div>
+              <!-- eslint-disable-next-line vue/no-v-html -- trusted content from the repo -->
+              <div class="bio-body" v-html="author.bio ?? ''" />
             </div>
           </div>
         </div>
@@ -91,5 +77,4 @@ const heroStyle = computed(() => {
 
     <GlobalFooter />
   </div>
-  <LoadingSpinner v-else />
 </template>

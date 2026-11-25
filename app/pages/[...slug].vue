@@ -2,10 +2,8 @@
 /**
  * Catch-all 404, replacing the Ember `notfound` route (`path: '/*path'`).
  *
- * The 404 body is itself CMS content — Drupal has a page at slug `/404`.
+ * The 404 body is itself content, in content/pages/404.yml.
  */
-const { data: page } = await usePage('/404')
-
 // The old notfound route pointed both title and canonical at the site root.
 useSeo({
   title: 'Small Robot Co. | Vancouver Web Design, Technical Consulting, App Development, & Support',
@@ -23,5 +21,25 @@ if (event && !isErrorDocument) setResponseStatus(event, 404)
 </script>
 
 <template>
-  <CmsPage :page="page" />
+  <GlobalHeader hero nav-color="nav-light" />
+
+  <!-- 404 Hero -->
+  <PageSection
+    hero
+    hero-size="tall"
+    background="section-background-green"
+    align="justify-content-center align-items-center"
+  >
+    <div class="col-12">
+      <h1 class="text-align-center"><strong>OH NOOOOOOOOO..............</strong></h1>
+
+      <h3 class="text-align-center">You found a broken link.</h3>
+    </div>
+  </PageSection>
+
+  <CtaSection />
+
+  <ClientsSection />
+
+  <GlobalFooter />
 </template>

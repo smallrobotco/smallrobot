@@ -9,11 +9,19 @@ export default defineNuxtConfig({
   ssr: true,
 
   nitro: {
+    // Blog posts and authors under content/, read by server/utils/content.ts as
+    // `assets:content`. Only the build reads them, since every route is prerendered.
+    // `dir` resolves against Nitro's srcDir, which is server/, hence the `..`.
+    serverAssets: [{ baseName: 'content', dir: '../content' }],
+
     prerender: {
+      // A route that errors — invalid content, a missing file, a link to a page that
+      // does not exist — fails `nuxt generate` instead of being skipped with a warning.
+      failOnError: true,
+
       // The crawler discovers every linked route on its own; /404 is linked from
-      // nowhere, so it must be listed. It renders through pages/[...slug].vue, which
-      // serves the Drupal page whose slug is /404 — giving a fully-styled error page at
-      // /404/index.html for Apache's ErrorDocument.
+      // nowhere, so it must be listed. It renders through pages/[...slug].vue — giving
+      // a fully-styled error page at /404/index.html for Apache's ErrorDocument.
       //
       // The trailing slash is load-bearing: bare '/404' collides with Nitro's own
       // 404.html special-case — a client-only SPA shell with an empty body (like
@@ -23,8 +31,7 @@ export default defineNuxtConfig({
     },
   },
 
-  // Ported wholesale from the Ember app — Sass is framework-independent. Includes
-  // vendored Bootstrap 4 (84 files) plus the site's own ~10.
+  // The site's own SCSS, on Bootstrap 5 from node_modules (see assets/scss/_bootstrap.scss).
   css: ['~/assets/scss/app.scss'],
 
   app: {
@@ -61,38 +68,14 @@ export default defineNuxtConfig({
   vite: {
     css: {
       preprocessorOptions: {
-        // Bootstrap 4 and the vendored burger-menu styles are written against the
-        // legacy @import API. Silencing the deprecation warnings rather than
-        // rewriting 88 vendored files to @use, which is not this port's job.
+        // Bootstrap 5.3 is written against Sass APIs that Dart Sass now deprecates
+        // (@import, global functions like darken(), if()); it can only be loaded with
+        // @import, so the site's SCSS uses it too. Only these deprecations are
+        // silenced; any other warning still prints.
         scss: {
-          silenceDeprecations: ['import', 'global-builtin', 'color-functions', 'mixed-decls'],
-          // Bootstrap 4 interpolates colour keywords (`#{$green}`) in a way modern Sass
-          // flags on every build. Filtered by message rather than silenced wholesale,
-          // so a genuine warning from our own SCSS still gets through.
-          logger: {
-            warn(message: string, options: unknown) {
-              if (message.includes('in interpolation here')) return
-              console.warn(message, options)
-            },
-          },
+          silenceDeprecations: ['import', 'global-builtin', 'color-functions', 'if-function'],
         },
       },
-    },
-  },
-
-  // The Drupal JSON:API backend. Supplied by environment, never hardcoded:
-  // NUXT_PUBLIC_API_BASE and NUXT_PUBLIC_FILE_BASE — repository secrets in CI, .env
-  // locally (see .env.example). `nuxt generate` bakes them into the static output.
-  //
-  // Two bases because file URIs are host-relative, not API-relative: a `file`
-  // resource's `uri` is `/sites/default/files/...`, which hangs off the host root and
-  // would 404 under the API prefix. The empty defaults make a missing environment fail
-  // loudly at generate time (every fetch errors) instead of shipping a half-working
-  // build.
-  runtimeConfig: {
-    public: {
-      apiBase: '',
-      fileBase: '',
     },
   },
 })

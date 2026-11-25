@@ -18,12 +18,15 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "marked": "^15.0.12",
     "nuxt": "^4.5.1",
     "swiper": "^14.0.7",
     "vue": "^3.5.40",
-    "vue-router": "^5.2.0"
+    "vue-router": "^5.2.0",
+    "yaml": "^2.8.1"
   },
   "devDependencies": {
+    "bootstrap": "^5.3.8",
     "sass": "^1.80.0",
     "typescript": "^5.9.3",
     "vitest": "^4.1.10",

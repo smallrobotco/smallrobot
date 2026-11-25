@@ -2,9 +2,9 @@
 /**
  * Ported from footer-nav.hbs.
  *
- * The original also had commented-out links to `work` and `pricing`. Those pages do
- * exist and are published in Drupal, but had no route in the Ember app, so the links
- * were deliberately disabled. Left out here too — see docs/API-SCHEMA.md §4.
+ * The original also had commented-out links to `work` and `pricing`. Those pages existed
+ * in the old CMS but never had a route, so the links were deliberately disabled. Left
+ * out here too; neither page was carried over into content/.
  */
 const COMPANY = [
   { to: '/about', label: 'About Us' },

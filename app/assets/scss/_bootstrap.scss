@@ -1,0 +1,21 @@
+// Bootstrap 5, from node_modules, with only the parts this site uses: reboot and type,
+// the grid, buttons, and the utility classes. No Bootstrap JavaScript is loaded, so
+// the interactive components (dropdowns, modals, ...) are left out entirely.
+
+@import 'bootstrap/scss/functions';
+@import 'variables';
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/variables-dark';
+@import 'bootstrap/scss/maps';
+@import 'bootstrap/scss/mixins';
+@import 'bootstrap/scss/utilities';
+
+@import 'bootstrap/scss/root';
+@import 'bootstrap/scss/reboot';
+@import 'bootstrap/scss/type';
+@import 'bootstrap/scss/images';
+@import 'bootstrap/scss/containers';
+@import 'bootstrap/scss/grid';
+@import 'bootstrap/scss/buttons';
+
+@import 'bootstrap/scss/utilities/api';
